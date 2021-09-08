@@ -61,12 +61,21 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // Image.asset("assets/loading_screen.svg"),
-            SvgPicture.asset(
-              'assets/loading_screen.svg',
-              // height: 20.0,
-              // width: 20.0,
-              allowDrawingOutsideViewBox: false,
+
+            SizedBox(
+              height: 100,
+              child: SvgPicture.asset(
+              "assets/images/image1.svg",
+              semanticsLabel: 'Acme Logo'
+        ),
             ),
+
+            // SvgPicture.asset(
+            //   'assets/image14.svg',
+            //   // height: 20.0,
+            //   // width: 20.0,
+            //   allowDrawingOutsideViewBox: false,
+            // ),
           ],
         ),
       ),
