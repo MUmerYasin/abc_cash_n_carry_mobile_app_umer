@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'Helpers/help_button.dart';
+import 'generated/assets_images_path.dart';
+
 void main() => runApp(
   DevicePreview(
     enabled: !kReleaseMode,
@@ -62,13 +65,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             // Image.asset("assets/loading_screen.svg"),
 
-            SizedBox(
-              height: 100,
-              child: SvgPicture.asset(
-              "assets/images/image1.svg",
-              semanticsLabel: 'Acme Logo'
-        ),
-            ),
+            SmallBlueBackgroundButton(),
+
+
+            // SizedBox(
+            //   height: 100,
+            //   child: SvgPicture.asset(
+            //       imagePathCancelIcon,
+            //   semanticsLabel: 'Acme Logo'
+            //   ),
+            // ),
 
             // SvgPicture.asset(
             //   'assets/image14.svg',
