@@ -1,4 +1,5 @@
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
+import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,23 +26,36 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return  TextFormField(
-      validator: (widget.validate),
-      keyboardType: (widget.inputText),
-      inputFormatters: [LengthLimitingTextInputFormatter(widget.format)],
-      obscureText: (widget.obsure) ,
-      minLines: 1,
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 2),
-          labelText: (widget.text),labelStyle:
-      TextStyle(fontSize: 16,
-        fontFamily: textFontFamilySegoeUI,
+
+    return  SizedBox(
+      width: MediaQuery.of(context).size.width*.85,
+      child: TextFormField(
+        cursorColor: HeadingTextColor,
+        // cursorHeight: 30.0,
+        validator: (widget.validate),
+        keyboardType: (widget.inputText),
+        inputFormatters: [LengthLimitingTextInputFormatter(widget.format)],
+        obscureText: (widget.obsure) ,
+        minLines: 1,
+        decoration: InputDecoration(
+            border:InputBorder.none,
+            fillColor: Colors.white,
+            filled: true,
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: HeadingTextColor,width: 1.5 ),
+            ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: HeadingTextColor,width: 1.5 ),
+            ),
+            contentPadding:  EdgeInsets.only(left: 10.0, right: 10.0, top: 12.0, bottom: 12.0),
+            labelText: (widget.text),
+            labelStyle: loginTextFieldStyle,
+            // focusColor:TextFieldTitleColor,
+            // hoverColor:TextFieldTitleColor,
+            suffixIcon: (widget.Iconss)
+        ),
 
       ),
-
-          suffixIcon: (widget.Iconss)
-      ),
-
     );
   }
 }

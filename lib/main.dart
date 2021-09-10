@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'Configs/Strings/product_details_strings.dart';
 import 'Configs/Strings/screen_titles_strings.dart';
 import 'Helpers/help_button.dart';
+import 'Screens/abc_login_screen.dart';
 import 'Screens/abc_splash_screen.dart';
 import 'generated/assets_images_path.dart';
 
@@ -29,8 +30,9 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context), // Add the locale here
       builder: DevicePreview.appBuilder, // Add the builder here
       // home: MyHomePage(title: ''),
-      home: SplashScreen(),// Front End Complete
+      // home: SplashScreen(),// Front End Complete
       // home: WelcomeToABCScreen(),// Front End Complete
+      home: ABCLoginScreen(),// Front End Complete
     );
   }
 }

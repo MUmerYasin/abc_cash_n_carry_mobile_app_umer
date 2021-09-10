@@ -32,6 +32,8 @@ const Color TextFieldTitleColor = Color(0xffA6A6A6);
 const Color TextFieldToolTipColor = Color(0xff404040);
 const Color SearchFieldTextTipColor = Color(0xff818181);
 
+const Color notHaveAccountTextColor = Color(0xffa3a3a3);
+
 
 const Color SimpleTextColor = Color(0xff3C3C3C);
 

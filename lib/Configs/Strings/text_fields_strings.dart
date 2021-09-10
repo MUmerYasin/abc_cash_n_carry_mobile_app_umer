@@ -12,8 +12,8 @@ const String aBC_Cash_N_Carry_StringAddressLine ='Address Line';
 const String aBC_Cash_N_Carry_StringCity ='City';
 const String aBC_Cash_N_Carry_StringAddress ='Address';
 
-const String aBC_Cash_N_Carry_StringDoNotHaveAnAccount ='Don’t have an account ?';
-const String aBC_Cash_N_Carry_StringAlreadyHaveAnAccount ='Already have an account ?';
+const String aBC_Cash_N_Carry_StringDoNotHaveAnAccount ='Don’t have an account?  ';
+const String aBC_Cash_N_Carry_StringAlreadyHaveAnAccount ='Already have an account?  ';
 const String aBC_Cash_N_Carry_StringSearchYourProduct ='Search Your Product';
 
 
@@ -44,7 +44,7 @@ const String aBC_Cash_N_Carry_StringTotalValue ='\$160.00';
 ///Buttons Name in Strings
 const String aBC_Cash_N_Carry_StringShopNow ='SHOP NOW';
 const String aBC_Cash_N_Carry_StringLogin ='Log in';
-const String aBC_Cash_N_Carry_StringSignup ='Signup';
+const String aBC_Cash_N_Carry_StringSignup ='Sign up';
 const String aBC_Cash_N_Carry_StringRating ='4.5';
 const String aBC_Cash_N_Carry_StringMore ='More';
 const String aBC_Cash_N_Carry_StringSelectSize ='Select Size';
@@ -78,3 +78,9 @@ const String aBC_Cash_N_Carry_StringMyOrders ='My Orders';
 const String aBC_Cash_N_Carry_StringLanguage ='Language';
 const String aBC_Cash_N_Carry_StringSettings ='Settings';
 
+///
+/// validate
+const String aBC_Validate_StringEmailRequired ='Email Field is Required';
+const String aBC_Validate_StringPasswordRequired ='Password Field is Required';
+const String aBC_Validate_StringCorrectEmail ='Please Enter Correct Email Address ';
+const String aBC_Validate_StringCorrectPassword ='Please Enter Correct Password ';

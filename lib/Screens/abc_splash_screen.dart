@@ -20,15 +20,17 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
       Duration(seconds: 6),
-          () => Navigator.of(context).pushReplacement(CupertinoPageRoute(
-        builder: (BuildContext context) =>WelcomeToABCScreen(), ),),);
+      () => Navigator.of(context).pushReplacement(
+        CupertinoPageRoute(
+          builder: (BuildContext context) => WelcomeToABCScreen(),
+        ),
+      ),
+    );
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         backgroundColor: Color(0xFF659cf8),
         body: Container(
           decoration: BoxDecoration(
@@ -53,9 +55,9 @@ class _SplashScreenState extends State<SplashScreen> {
                       imagePathLoadingScreen,
                       height: 200.0,
                       width: 200.0,
-                      fit : BoxFit.contain,
+                      fit: BoxFit.contain,
                       // bundle:
-                      alignment : Alignment.center,
+                      alignment: Alignment.center,
                       allowDrawingOutsideViewBox: false,
                     ),
                     SvgPicture.asset(
@@ -69,17 +71,17 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ],
                 ),
-
-
               ),
               Container(
-                decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                child: Icon(CupertinoIcons.question, color: ButtonWhiteTextColor,),
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.white)),
+                child: Icon(
+                  CupertinoIcons.question,
+                  color: ButtonWhiteTextColor,
+                ),
               )
             ],
           ),
-        )
-    );
+        ));
   }
 }
-
