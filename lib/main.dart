@@ -1,3 +1,4 @@
+import 'package:abc_cash_n_carry/Screens/abc_welcome_to_bolt.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder, // Add the builder here
       // home: MyHomePage(title: ''),
       home: SplashScreen(),// Front End Complete
+      // home: WelcomeToABCScreen(),// Front End Complete
     );
   }
 }

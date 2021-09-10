@@ -53,12 +53,6 @@ class SmallBlueBackgroundButton extends StatelessWidget {
 //use in Back Button in top of all screen
 class CustomBackScreenButton extends StatelessWidget {
   const CustomBackScreenButton({Key? key}) : super(key: key);
-
-//   @override
-//   _CustomBackScreenButtonState createState() => _CustomBackScreenButtonState();
-// }
-//
-// class _CustomBackScreenButtonState extends State<CustomBackScreenButton> {
   @override
   Widget build(BuildContext context) {
     return Column(

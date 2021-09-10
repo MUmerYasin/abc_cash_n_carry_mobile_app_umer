@@ -2,7 +2,8 @@
 
 const String aBC_Cash_N_Carry_StringTime ='Time';
 const String aBC_Cash_N_Carry_StringTimeValue ='9:41';
-const String aBC_Cash_N_Carry_StringWelcomeToBolt ='Welcome to Bolt';
+const String aBC_Cash_N_Carry_StringWelcomeTo ='Welcome to ';
+const String aBC_Cash_N_Carry_StringABC ='ABC';
 const String aBC_Cash_N_Carry_StringExploreUs ='Explore Us';
 const String aBC_Cash_N_Carry_StringLogin ='Login';
 const String aBC_Cash_N_Carry_StringSignup ='Signup';

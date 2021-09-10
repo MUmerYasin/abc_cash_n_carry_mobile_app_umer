@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: 6),
           () => Navigator.of(context).pushReplacement(CupertinoPageRoute(
-        builder: (BuildContext context) =>WelcomeToBoltScreen(), ),),);
+        builder: (BuildContext context) =>WelcomeToABCScreen(), ),),);
   }
 
 
@@ -31,6 +31,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
         backgroundColor: Color(0xFF659cf8),
         body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment(0.0, -1.0),
+              end: Alignment(0.0, 1.0),
+              colors: [SliderBlueTextColor, abc_cash_n_carry_Color8],
+              stops: [0.0, 1.0],
+            ),
+          ),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Column(
