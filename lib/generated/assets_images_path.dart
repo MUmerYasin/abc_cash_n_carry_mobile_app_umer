@@ -35,6 +35,7 @@ const String imagePathLightBlackScreenButton = imagesMainPath + 'light_black_scr
 const String imagePathLightSearchBarIcon = imagesMainPath + 'light_search_bar_icon.svg';
 const String imagePathLike = imagesMainPath + 'like.svg';
 const String imagePathLoadingScreen = imagesMainPath + 'loading_screen.svg';
+const String imagePathCartColorLogo = imagesMainPath + 'cart_color_logo.svg';
 const String imagePathMenuBar = imagesMainPath + 'menu_bar.svg';
 const String imagePathNoNotification = imagesMainPath + 'no_notification.svg';
 const String imagePathNotification = imagesMainPath + 'notification.svg';

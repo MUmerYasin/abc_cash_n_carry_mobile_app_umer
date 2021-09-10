@@ -22,6 +22,8 @@ const String aBC_Cash_N_Carry_StringDiscount ='Discount';
 const String aBC_Cash_N_Carry_StringSubtotal ='Subtotal';
 const String aBC_Cash_N_Carry_StringTotal ='Total';
 
+const String aBC_Cash_N_Carry_Search ='Search';
+
 /// Text Field Values Strings
 const String aBC_Cash_N_Carry_StringEmailValues ='Helloistiakgmail.com';
 const String aBC_Cash_N_Carry_StringNameValue ='Istiak Mahmud Remon';

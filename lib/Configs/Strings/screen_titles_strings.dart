@@ -1,5 +1,7 @@
 /// Screen Titles names
 
+const String screenTitlesABCCashAndCarry ='ABC Cash & Carry';
+
 const String screenTitlesLoadingScreen ='Loading screen';
 const String screenTitles1stScreen ='1st Screen';
 const String screenTitlesLoginPage ='Login';

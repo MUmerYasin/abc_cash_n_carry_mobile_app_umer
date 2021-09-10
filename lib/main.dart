@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'Configs/Strings/product_details_strings.dart';
+import 'Configs/Strings/screen_titles_strings.dart';
 import 'Helpers/help_button.dart';
+import 'Screens/abc_splash_screen.dart';
 import 'generated/assets_images_path.dart';
 
 void main() => runApp(
@@ -17,75 +20,73 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ABC Cash and Carry',
+      title: screenTitlesABCCashAndCarry,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
 
       locale: DevicePreview.locale(context), // Add the locale here
       builder: DevicePreview.appBuilder, // Add the builder here
-      home: MyHomePage(title: ''),
+      // home: MyHomePage(title: ''),
+      home: SplashScreen(),// Front End Complete
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Image.asset("assets/loading_screen.svg"),
-
-            SmallBlueBackgroundButton(),
 
 
-            // SizedBox(
-            //   height: 100,
-            //   child: SvgPicture.asset(
-            //       imagePathCancelIcon,
-            //   semanticsLabel: 'Acme Logo'
-            //   ),
-            // ),
 
-            // SvgPicture.asset(
-            //   'assets/image14.svg',
-            //   // height: 20.0,
-            //   // width: 20.0,
-            //   allowDrawingOutsideViewBox: false,
-            // ),
-          ],
-        ),
-      ),
-     // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+
+//
+// class MyHomePage extends StatefulWidget {
+//   MyHomePage({Key? key, required this.title}) : super(key: key);
+//
+//
+//   final String title;
+//
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
+//
+// class _MyHomePageState extends State<MyHomePage> {
+//
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     return Scaffold(
+//       appBar: AppBar(
+//
+//         title: Text(widget.title),
+//       ),
+//       body: Center(
+//
+//         child: Column(
+//
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             // Image.asset("assets/loading_screen.svg"),
+//
+//             SmallBlueBackgroundButton(child: aBC_Cash_N_Carry_StringLogin,onPressed: (){},),
+//
+//
+//             // SizedBox(
+//             //   height: 100,
+//             //   child: SvgPicture.asset(
+//             //       imagePathCancelIcon,
+//             //   semanticsLabel: 'Acme Logo'
+//             //   ),
+//             // ),
+//
+//             // SvgPicture.asset(
+//             //   'assets/image14.svg',
+//             //   // height: 20.0,
+//             //   // width: 20.0,
+//             //   allowDrawingOutsideViewBox: false,
+//             // ),
+//           ],
+//         ),
+//       ),
+//      // This trailing comma makes auto-formatting nicer for build methods.
+//     );
+//   }
+// }
