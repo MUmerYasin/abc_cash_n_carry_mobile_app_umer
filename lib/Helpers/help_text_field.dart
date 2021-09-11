@@ -8,7 +8,7 @@ import 'package:flutter_svg/svg.dart';
 
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({Key? key, required this.text, this.validate, this.obsure, this.Iconss, this.inputText, this.format}) : super(key: key);
+  const CustomTextField({Key? key, required this.text, this.hintText, this.validate, this.obsure, this.Iconss, this.inputText, this.format}) : super(key: key);
 
   final String text;
   final validate;
@@ -16,6 +16,7 @@ class CustomTextField extends StatefulWidget {
   final inputText;
   final format;
   final Iconss;
+  final String? hintText;
 
   @override
   _CustomTextFieldState createState() => _CustomTextFieldState();
@@ -31,21 +32,25 @@ class _CustomTextFieldState extends State<CustomTextField> {
       width: MediaQuery.of(context).size.width*.85,
       child: TextFormField(
         cursorColor: HeadingTextColor,
+
         // cursorHeight: 30.0,
         validator: (widget.validate),
         keyboardType: (widget.inputText),
         inputFormatters: [LengthLimitingTextInputFormatter(widget.format)],
+
         obscureText: (widget.obsure) ,
         minLines: 1,
         decoration: InputDecoration(
+            hintText: widget.hintText,
+            hintStyle: loginHintTextFieldStyle,
             border:InputBorder.none,
             fillColor: Colors.white,
             filled: true,
             enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: HeadingTextColor,width: 1.5 ),
+              borderSide: BorderSide(color: TextFieldBorderColor,width: 1.5 ),
             ),
             focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: HeadingTextColor,width: 1.5 ),
+              borderSide: BorderSide(color: TextFieldBorderColor,width: 1.5 ),
             ),
             contentPadding:  EdgeInsets.only(left: 10.0, right: 10.0, top: 12.0, bottom: 12.0),
             labelText: (widget.text),

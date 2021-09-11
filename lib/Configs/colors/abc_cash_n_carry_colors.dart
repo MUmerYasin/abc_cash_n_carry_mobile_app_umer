@@ -31,6 +31,7 @@ const Color PriceBlueTextColor = Color(0xff374ABE);
 const Color TextFieldTitleColor = Color(0xffA6A6A6);
 const Color TextFieldToolTipColor = Color(0xff404040);
 const Color SearchFieldTextTipColor = Color(0xff818181);
+const Color TextFieldBorderColor = Color(0xffdadada);
 
 const Color notHaveAccountTextColor = Color(0xffa3a3a3);
 

@@ -1,15 +1,8 @@
-import 'package:abc_cash_n_carry/Screens/abc_welcome_to_bolt.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
-import 'Configs/Strings/product_details_strings.dart';
 import 'Configs/Strings/screen_titles_strings.dart';
-import 'Helpers/help_button.dart';
-import 'Screens/abc_login_screen.dart';
-import 'Screens/abc_splash_screen.dart';
-import 'generated/assets_images_path.dart';
+import 'Screens/abc_signup_screen.dart';
 
 void main() => runApp(
   DevicePreview(
@@ -32,7 +25,8 @@ class MyApp extends StatelessWidget {
       // home: MyHomePage(title: ''),
       // home: SplashScreen(),// Front End Complete
       // home: WelcomeToABCScreen(),// Front End Complete
-      home: ABCLoginScreen(),// Front End Complete
+      // home: ABCLoginScreen(),// Front End Complete
+      home: ABCSignupScreen(),// Front End Complete
     );
   }
 }

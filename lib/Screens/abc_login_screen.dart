@@ -4,7 +4,9 @@ import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_text_field.dart';
+import 'package:abc_cash_n_carry/Screens/abc_signup_screen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class ABCLoginScreen extends StatefulWidget {
@@ -53,6 +55,7 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                   child: CustomTextField(
                     text: aBC_Cash_N_Carry_StringEmail,
                     inputText: TextInputType.emailAddress,
+                    hintText:aBC_Cash_N_Carry_StringEmailValues,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -81,6 +84,7 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                   child: CustomTextField(
                       text: aBC_Cash_N_Carry_StringPassword,
                       inputText: TextInputType.visiblePassword,
+                    hintText:aBC_Cash_N_Carry_StringPasswordValues,
                       validate: (value) {
                         if (value!.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -138,12 +142,12 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                           children: [
                             /// Signup
                             TextSpan(
-                              // recognizer: TapGestureRecognizer()..onTap=(){
-                              //   Navigator.push(
-                              //     context,
-                              //      CupertinoPageRoute(builder: (context) => SignUp()),
-                              //   );
-                              // },
+                              recognizer: TapGestureRecognizer()..onTap=(){
+                                Navigator.push(
+                                  context,
+                                   CupertinoPageRoute(builder: (context) => ABCSignupScreen()),
+                                );
+                              },
                               text: aBC_Cash_N_Carry_StringSignup,
                               style: notHaveAccountSignUpStyle,
                             )

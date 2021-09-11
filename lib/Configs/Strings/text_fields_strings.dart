@@ -25,8 +25,9 @@ const String aBC_Cash_N_Carry_StringTotal ='Total';
 const String aBC_Cash_N_Carry_Search ='Search';
 
 /// Text Field Values Strings
-const String aBC_Cash_N_Carry_StringEmailValues ='Helloistiakgmail.com';
-const String aBC_Cash_N_Carry_StringNameValue ='Istiak Mahmud Remon';
+const String aBC_Cash_N_Carry_StringEmailValues ='mumeryasin123456789@gmail.com';
+const String aBC_Cash_N_Carry_StringPasswordValues ='*********';
+const String aBC_Cash_N_Carry_StringNameValue ='Muhammad Umer Yasin';
 const String aBC_Cash_N_Carry_StringMale ='Male';
 const String aBC_Cash_N_Carry_StringFemale ='Female';
 const String aBC_Cash_N_Carry_StringAddressValue ='Shewrapara, Mirpur, Dhaka-1216, House no: 938, Road no: 9';
@@ -82,5 +83,8 @@ const String aBC_Cash_N_Carry_StringSettings ='Settings';
 /// validate
 const String aBC_Validate_StringEmailRequired ='Email Field is Required';
 const String aBC_Validate_StringPasswordRequired ='Password Field is Required';
+const String aBC_Validate_StringUserNameRequired ='User Name Field is Required';
+
+
 const String aBC_Validate_StringCorrectEmail ='Please Enter Correct Email Address ';
 const String aBC_Validate_StringCorrectPassword ='Please Enter Correct Password ';
