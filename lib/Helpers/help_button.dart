@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 //use in All Buttons
 class SmallBlueBackgroundButton extends StatelessWidget {
@@ -67,6 +68,58 @@ class CustomBackScreenButton extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+
+//use in Add Card Buttons
+class AddCardButton extends StatelessWidget {
+
+  Function()? onPressed;
+  String? child;
+  AddCardButton({this.onPressed, this.child,});
+
+  @override
+  Widget build(BuildContext context) {
+    return
+      Container(
+        height: 50.0,
+        width: MediaQuery.of(context).size.width*.85,
+        decoration: BoxDecoration(
+
+          // borderRadius: BorderRadius.circular(6.0),
+
+        ),
+        child:
+
+          DottedBorder(
+            color: SliderBlueTextColor,
+            dashPattern: [3, 6,],
+            // padding : const EdgeInsets.all(8),
+            strokeWidth: 3,
+
+            // borderType: BorderType.RRect,
+            // radius: Radius.circular(12),
+            padding: EdgeInsets.all(8),
+
+
+            child:Center(
+              child: TextButton(
+                style: ElevatedButton.styleFrom(primary: Colors.transparent,
+                  onSurface: Colors.transparent,
+                  shadowColor: Colors.transparent,),
+
+                onPressed: onPressed,
+
+                child: Text(
+                  child ?? '',
+                  style: addCardButtonStyle,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ),
+      );
   }
 }
 

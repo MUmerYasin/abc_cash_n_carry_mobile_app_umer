@@ -39,7 +39,7 @@ const String aBC_StringCityValue ='Dhaka';
 const String aBC_StringShippingValue ='\$10.00';
 const String aBC_StringPercentageValue ='5%';
 const String aBC_StringSubtotalValue ='\$160.00';
-const String aBC_StringTotalValue ='\$160.00';
+const String aBC_StringTotalValue ='\$162.00';
 
 
 ///Buttons Name in Strings

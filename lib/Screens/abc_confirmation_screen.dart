@@ -1,15 +1,11 @@
-import 'dart:async';
-
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
-import 'package:abc_cash_n_carry/Screens/abc_welcome_to_bolt.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:flutter/material.dart';
 
 class ABCConfirmationScreen extends StatefulWidget {
   const ABCConfirmationScreen({Key? key}) : super(key: key);
