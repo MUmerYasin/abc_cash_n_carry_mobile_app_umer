@@ -24,3 +24,6 @@ const TextStyle loginHintTextFieldStyle=TextStyle(color: HeadingTextColor, heigh
 
 const TextStyle notHaveAccountStyle=TextStyle(color: notHaveAccountTextColor,letterSpacing: -0.3376470069885254,fontSize: 14.0,height: 2.5, fontFamily: textFontFamilySegoeUI,);
 const TextStyle notHaveAccountSignUpStyle=TextStyle(color: SimpleTextColor,letterSpacing: -0.3376470069885254,fontSize: 14.0,height: 2.5, fontFamily: textFontFamilySegoeUI,);
+
+const TextStyle confirmationStyle=TextStyle(color: SecondHeadingTextColor,fontSize: 30.0,height: 2.5, fontFamily: textFontFamilySegoeUI,);
+const TextStyle youHaveSuccessfullyStyle=TextStyle(color: SecondHeadingTextLightColor,letterSpacing: 0.196,fontSize: 14.0,height: 1.0, fontFamily: textFontFamilySegoeUI,);
