@@ -9,14 +9,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class ABCSignupScreen extends StatefulWidget {
-  const ABCSignupScreen({Key? key}) : super(key: key);
+class ABCCreateAddressScreen extends StatefulWidget {
+  const ABCCreateAddressScreen({Key? key}) : super(key: key);
 
   @override
-  _ABCSignupScreenState createState() => _ABCSignupScreenState();
+  _ABCCreateAddressScreenState createState() => _ABCCreateAddressScreenState();
 }
 
-class _ABCSignupScreenState extends State<ABCSignupScreen> {
+class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
   GlobalKey<FormState> signupKey = GlobalKey<FormState>();
   bool _isVisible = false;
 
@@ -28,7 +28,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 70.0,
+          top: 65.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -42,12 +42,12 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                 CustomBackScreenButton(),
 
                 ///screen Title Login
-                Text(screenTitlesSignUp, style: loginStyle),
+                Text(screenTitlesCreateAddress, style: loginStyle),
 
                 /// NAME Custom Text Field
                 Padding(
                   padding: const EdgeInsets.only(
-                    top: 40,
+                    top: 16,
                   ),
                   child: CustomTextField(
                     text: aBC_Cash_N_Carry_StringName,
@@ -67,97 +67,115 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                   ),
                 ),
 
-                /// Email Custom Text Field
+                /// Address lane Custom Text Field
                 Padding(
                   padding: const EdgeInsets.only(
-                    top: 25,
+                    top: 16,
                   ),
                   child: CustomTextField(
-                    text: aBC_Cash_N_Carry_StringEmail,
-                    inputText: TextInputType.emailAddress,
-                    hintText: aBC_Cash_N_Carry_StringEmailValues,
+                    text: aBC_Cash_N_Carry_StringAddressLine,
+                    inputText: TextInputType.streetAddress,
+                    hintText: aBC_Cash_N_Carry_StringAddressLineValue,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_cash_n_carry_Color9,
-                            content: Text(aBC_Validate_StringEmailRequired),
+                            content: Text(aBC_Validate_StringAddressLineRequired),
                           ),
                         );
-                      }
-                      if (value) {
-                        if (RegExp(
-                                r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                            .hasMatch(value)) {
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              backgroundColor: abc_cash_n_carry_Color9,
-                              content: Text(aBC_Validate_StringCorrectEmail),
-                            ),
-                          );
-                        }
                       }
                     },
                     obsure: false,
                   ),
                 ),
 
-                /// Password Custom Text Field
+                /// City Custom Text Field
                 Padding(
                   padding: const EdgeInsets.only(
-                    top: 25,
+                    top: 16,
                   ),
                   child: CustomTextField(
-                    text: aBC_Cash_N_Carry_StringPassword,
-                    inputText: TextInputType.visiblePassword,
-                    hintText: aBC_Cash_N_Carry_StringPasswordValues,
+                    text: aBC_Cash_N_Carry_StringCity,
+                    inputText: TextInputType.streetAddress,
+                    hintText: aBC_Cash_N_Carry_StringCityValue,
                     validate: (value) {
                       if (value!.isEmpty) {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
                             backgroundColor: abc_cash_n_carry_Color9,
-                            content: Text(aBC_Validate_StringEmailRequired)));
+                            content: Text(aBC_Validate_StringCityRequired),
+                          ),
+                        );
                       }
                     },
-                    obsure: _isVisible,
-                    Iconss: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          setState(() {
-                            _isVisible = !_isVisible;
-                          });
-                        });
-                      },
-                      icon: _isVisible
-                          ? Icon(
-                              Icons.remove_red_eye,
-                              color: TextFieldTitleColor,
-                            )
-                          : Icon(
-                              Icons.visibility_off,
-                              color: TextFieldTitleColor,
-                            ),
-                    ),
+                    obsure: false,
+                  ),
+                ),
+
+                /// Postal Code Custom Text Field
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 16,
+                  ),
+                  child: CustomTextField(
+                    text: aBC_Cash_N_Carry_StringPostalCode,
+                    inputText: TextInputType.number,
+                    hintText: aBC_Cash_N_Carry_StringPostalCodeValue,
+                    validate: (value) {
+                      if (value!.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: abc_cash_n_carry_Color9,
+                            content: Text(aBC_Validate_StringPostalCodeRequired),
+                          ),
+                        );
+                      }
+                    },
+                    obsure: false,
+                  ),
+                ),
+
+                /// Phone Number Custom Text Field
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 16,
+                  ),
+                  child: CustomTextField(
+                    text: aBC_Cash_N_Carry_StringPhoneNumber,
+                    inputText: TextInputType.phone,
+                    hintText: aBC_Cash_N_Carry_StringPhoneNumberValue,
+                    validate: (value) {
+                      if (value!.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: abc_cash_n_carry_Color9,
+                            content: Text(aBC_Validate_StringPhoneNumberRequired),
+                          ),
+                        );
+                      }
+                    },
+                    obsure: false,
                   ),
                 ),
 
                 SizedBox(
-                  height: 30.0,
+                  height: 8.0,
                 ),
 
-                /// Signup Button
+                /// Add Address Button
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 30.0),
                   child: Center(
                     child: SmallBlueBackgroundButton(
-                      child: aBC_Cash_N_Carry_StringSignup,
+                      child: aBC_Cash_N_Carry_StringAddAddress,
                       onPressed: () {
                         setState(() {
                           if (signupKey.currentState!.validate()) {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(
-                                  builder: (context) => ABCSignupScreen()),
+                                  builder: (context) => ABCCreateAddressScreen()),
                             );
                           }
                         });
@@ -166,33 +184,8 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                   ),
                 ),
 
-                /// String Do Not Have An Account /// Signup
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                          text: aBC_Cash_N_Carry_StringAlreadyHaveAnAccount,
-                          style: notHaveAccountStyle,
-                          children: [
-                            /// Login
-                            TextSpan(
-                              recognizer: TapGestureRecognizer()..onTap=(){
-                                Navigator.push(
-                                  context,
-                                   CupertinoPageRoute(builder: (context) => ABCLoginScreen()),
-                                );
-                              },
-                              text: aBC_Cash_N_Carry_StringLogin,
-                              style: notHaveAccountSignUpStyle,
-                            )
-                          ]),
-                    ),
-                  ],
-                ),
                 SizedBox(
-                  height: 20.0,
+                  height: 8.0,
                 )
               ],
             ),

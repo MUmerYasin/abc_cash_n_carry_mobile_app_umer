@@ -84,6 +84,10 @@ const String aBC_Cash_N_Carry_StringSettings ='Settings';
 const String aBC_Validate_StringEmailRequired ='Email Field is Required';
 const String aBC_Validate_StringPasswordRequired ='Password Field is Required';
 const String aBC_Validate_StringUserNameRequired ='User Name Field is Required';
+const String aBC_Validate_StringAddressLineRequired ='Address Line Field is Required';
+const String aBC_Validate_StringCityRequired ='City Field is Required';
+const String aBC_Validate_StringPostalCodeRequired ='Postal Code Field is Required';
+const String aBC_Validate_StringPhoneNumberRequired ='Phone Number Field is Required';
 
 
 const String aBC_Validate_StringCorrectEmail ='Please Enter Correct Email Address ';
