@@ -89,7 +89,7 @@ class _SearchBarTextFieldState extends State<SearchBarTextField> {
             child: TextFormField(
               minLines: 1,
               decoration: InputDecoration(
-                  hintText: aBC_Cash_N_Carry_Search,
+                  hintText: aBC_Search,
                   labelStyle: TextStyle(fontSize: 19,
                     fontFamily: textFontFamilySegoeUI,
                   ),

@@ -53,13 +53,13 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                     top: 50,
                   ),
                   child: CustomTextField(
-                    text: aBC_Cash_N_Carry_StringEmail,
+                    text: aBC_StringEmail,
                     inputText: TextInputType.emailAddress,
-                    hintText:aBC_Cash_N_Carry_StringEmailValues,
+                    hintText:aBC_StringEmailValues,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            backgroundColor: abc_cash_n_carry_Color9,
+                            backgroundColor: abc_Color9,
                             content: Text(aBC_Validate_StringEmailRequired),),);
 
                       }
@@ -68,7 +68,7 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                           .hasMatch(value)) {}
                       else{
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        backgroundColor: abc_cash_n_carry_Color9,
+                        backgroundColor: abc_Color9,
                         content: Text(aBC_Validate_StringCorrectEmail),),);
                       }
                       },
@@ -82,13 +82,13 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                     top: 25,
                   ),
                   child: CustomTextField(
-                      text: aBC_Cash_N_Carry_StringPassword,
+                      text: aBC_StringPassword,
                       inputText: TextInputType.visiblePassword,
-                    hintText:aBC_Cash_N_Carry_StringPasswordValues,
+                    hintText:aBC_StringPasswordValues,
                       validate: (value) {
                         if (value!.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              backgroundColor: abc_cash_n_carry_Color9,
+                              backgroundColor: abc_Color9,
                               content: Text(aBC_Validate_StringEmailRequired)));
                         }
                       },
@@ -113,7 +113,7 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                   margin: EdgeInsets.symmetric(vertical: 30.0),
                   child: Center(
                     child: SmallBlueBackgroundButton(
-                      child: aBC_Cash_N_Carry_StringLogin,
+                      child: aBC_StringLogin,
                       onPressed: () {
                         setState(() {
                           if( loginKey.currentState!.validate()){
@@ -137,7 +137,7 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                     RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
-                          text: aBC_Cash_N_Carry_StringDoNotHaveAnAccount,
+                          text: aBC_StringDoNotHaveAnAccount,
                           style: notHaveAccountStyle,
                           children: [
                             /// Signup
@@ -148,7 +148,7 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                                    CupertinoPageRoute(builder: (context) => ABCSignupScreen()),
                                 );
                               },
-                              text: aBC_Cash_N_Carry_StringSignup,
+                              text: aBC_StringSignup,
                               style: notHaveAccountSignUpStyle,
                             )
                           ]),

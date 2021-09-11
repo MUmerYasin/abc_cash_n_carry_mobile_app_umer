@@ -4,6 +4,7 @@ import 'package:device_preview/device_preview.dart';
 import 'Configs/Strings/screen_titles_strings.dart';
 import 'Screens/abc_create_address_screen.dart';
 import 'Screens/abc_signup_screen.dart';
+import 'Screens/abc_user_profile_screen.dart';
 
 void main() => runApp(
   DevicePreview(
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       // home: WelcomeToABCScreen(),// Front End Complete
       // home: ABCLoginScreen(),// Front End Complete
       // home: ABCSignupScreen(),// Front End Complete
-      home: ABCCreateAddressScreen(),// Front End Complete
+      // home: ABCCreateAddressScreen(),// Front End Complete
+      home: ABCUserProfileScreen(),// Front End Complete
     );
   }
 }

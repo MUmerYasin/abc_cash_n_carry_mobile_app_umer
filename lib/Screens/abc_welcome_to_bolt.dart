@@ -30,11 +30,11 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
                 children: [
                   RichText(
                     text: TextSpan(
-                        text: aBC_Cash_N_Carry_StringWelcomeTo,
+                        text: aBC_StringWelcomeTo,
                         style: welcomeToABCStyle,
                         children: [
                           TextSpan(
-                            text: aBC_Cash_N_Carry_StringABC,
+                            text: aBC_StringABC,
                             style: aBCStyle,
                           ),
                         ]),
@@ -48,7 +48,7 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(aBC_Cash_N_Carry_StringExploreUs, style: exploreUsStyle),
+                Text(aBC_StringExploreUs, style: exploreUsStyle),
               ],
             ),
             Container(
@@ -62,7 +62,7 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
               ),
             ),
             SmallBlueBackgroundButton(
-              child: aBC_Cash_N_Carry_StringLogin,
+              child: aBC_StringLogin,
               onPressed: () {
                 setState(() {
                   Navigator.push(
@@ -75,7 +75,7 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
             TextButton(
                 onPressed: () {},
                 child: Text(
-                  aBC_Cash_N_Carry_StringSignup,
+                  aBC_StringSignup,
                   style: signUpButtonStyle,
                 )),
             SizedBox(

@@ -29,7 +29,7 @@ class SmallBlueBackgroundButton extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment(-0.95, 0.0),
             end: Alignment(1.0, 0.0),
-            colors: [SliderBlueTextColor, abc_cash_n_carry_Color8],
+            colors: [SliderBlueTextColor, abc_Color8],
             stops: [0.0, 1.0],
           ),
         ),

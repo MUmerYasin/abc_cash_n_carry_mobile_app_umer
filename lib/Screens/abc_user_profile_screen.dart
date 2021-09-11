@@ -9,14 +9,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class ABCCreateAddressScreen extends StatefulWidget {
-  const ABCCreateAddressScreen({Key? key}) : super(key: key);
+class ABCUserProfileScreen extends StatefulWidget {
+  const ABCUserProfileScreen({Key? key}) : super(key: key);
 
   @override
-  _ABCCreateAddressScreenState createState() => _ABCCreateAddressScreenState();
+  _ABCUserProfileScreenState createState() => _ABCUserProfileScreenState();
 }
 
-class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
+class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
   GlobalKey<FormState> signupKey = GlobalKey<FormState>();
   bool _isVisible = false;
 
@@ -42,7 +42,7 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                 CustomBackScreenButton(),
 
                 ///screen Title Login
-                Text(screenTitlesCreateAddress, style: loginStyle),
+                Text(screenTitlesProfile, style: loginStyle),
 
                 /// NAME Custom Text Field
                 Padding(
@@ -113,23 +113,52 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                   ),
                 ),
 
-                /// Postal Code Custom Text Field
+                /// Gender Custom Text Field
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 16,
                   ),
                   child: CustomTextField(
-                    text: aBC_StringPostalCode,
-                    inputText: TextInputType.number,
-                    hintText: aBC_StringPostalCodeValue,
+                    text: aBC_StringGender,
+                    inputText: TextInputType.streetAddress,
+                    hintText: aBC_StringMale,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringPostalCodeRequired),
+                            content: Text(aBC_Validate_StringGenderRequired),
                           ),
                         );
+                      }
+                    },
+                    obsure: false,
+                  ),
+                ),
+
+                /// Email Custom Text Field
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 16,
+                  ),
+                  child: CustomTextField(
+                    text: aBC_StringEmail,
+                    inputText: TextInputType.emailAddress,
+                    hintText:aBC_StringEmailValues,
+                    validate: (value) {
+                      if (value!.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          backgroundColor: abc_Color9,
+                          content: Text(aBC_Validate_StringEmailRequired),),);
+
+                      }
+                      if (RegExp(
+                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          .hasMatch(value)) {}
+                      else{
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          backgroundColor: abc_Color9,
+                          content: Text(aBC_Validate_StringCorrectEmail),),);
                       }
                     },
                     obsure: false,
@@ -163,19 +192,19 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                   height: 8.0,
                 ),
 
-                /// Add Address Button
+                /// Add Profile Button
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 30.0),
                   child: Center(
                     child: SmallBlueBackgroundButton(
-                      child: aBC_StringAddAddress,
+                      child: screenTitlesAddProfile,
                       onPressed: () {
                         setState(() {
                           if (signupKey.currentState!.validate()) {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(
-                                  builder: (context) => ABCCreateAddressScreen()),
+                                  builder: (context) => ABCUserProfileScreen()),
                             );
                           }
                         });

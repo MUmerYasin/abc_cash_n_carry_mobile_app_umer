@@ -50,14 +50,14 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                     top: 40,
                   ),
                   child: CustomTextField(
-                    text: aBC_Cash_N_Carry_StringName,
+                    text: aBC_StringName,
                     inputText: TextInputType.name,
-                    hintText: aBC_Cash_N_Carry_StringNameValue,
+                    hintText: aBC_StringNameValue,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            backgroundColor: abc_cash_n_carry_Color9,
+                            backgroundColor: abc_Color9,
                             content: Text(aBC_Validate_StringUserNameRequired),
                           ),
                         );
@@ -73,14 +73,14 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                     top: 25,
                   ),
                   child: CustomTextField(
-                    text: aBC_Cash_N_Carry_StringEmail,
+                    text: aBC_StringEmail,
                     inputText: TextInputType.emailAddress,
-                    hintText: aBC_Cash_N_Carry_StringEmailValues,
+                    hintText: aBC_StringEmailValues,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            backgroundColor: abc_cash_n_carry_Color9,
+                            backgroundColor: abc_Color9,
                             content: Text(aBC_Validate_StringEmailRequired),
                           ),
                         );
@@ -92,7 +92,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              backgroundColor: abc_cash_n_carry_Color9,
+                              backgroundColor: abc_Color9,
                               content: Text(aBC_Validate_StringCorrectEmail),
                             ),
                           );
@@ -109,13 +109,13 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                     top: 25,
                   ),
                   child: CustomTextField(
-                    text: aBC_Cash_N_Carry_StringPassword,
+                    text: aBC_StringPassword,
                     inputText: TextInputType.visiblePassword,
-                    hintText: aBC_Cash_N_Carry_StringPasswordValues,
+                    hintText: aBC_StringPasswordValues,
                     validate: (value) {
                       if (value!.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            backgroundColor: abc_cash_n_carry_Color9,
+                            backgroundColor: abc_Color9,
                             content: Text(aBC_Validate_StringEmailRequired)));
                       }
                     },
@@ -150,7 +150,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                   margin: EdgeInsets.symmetric(vertical: 30.0),
                   child: Center(
                     child: SmallBlueBackgroundButton(
-                      child: aBC_Cash_N_Carry_StringSignup,
+                      child: aBC_StringSignup,
                       onPressed: () {
                         setState(() {
                           if (signupKey.currentState!.validate()) {
@@ -173,7 +173,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                     RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
-                          text: aBC_Cash_N_Carry_StringAlreadyHaveAnAccount,
+                          text: aBC_StringAlreadyHaveAnAccount,
                           style: notHaveAccountStyle,
                           children: [
                             /// Login
@@ -184,7 +184,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                                    CupertinoPageRoute(builder: (context) => ABCLoginScreen()),
                                 );
                               },
-                              text: aBC_Cash_N_Carry_StringLogin,
+                              text: aBC_StringLogin,
                               style: notHaveAccountSignUpStyle,
                             )
                           ]),
