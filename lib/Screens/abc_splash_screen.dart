@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 6),
+      Duration(seconds: 60),
       () => Navigator.of(context).pushReplacement(
         CupertinoPageRoute(
           builder: (BuildContext context) => WelcomeToABCScreen(),

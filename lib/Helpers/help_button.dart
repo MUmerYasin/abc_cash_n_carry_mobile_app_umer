@@ -65,12 +65,54 @@ class CustomBackScreenButton extends StatelessWidget {
           child: SvgPicture.asset(
               imagePathBackScreenButton,
           ),
-        )
+        ),
       ],
     );
   }
 }
 
+//use in Notification button in top of all screen
+class CustomNotificationScreenButton extends StatelessWidget {
+  const CustomNotificationScreenButton({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: SvgPicture.asset(
+            imagePathBackScreenButton,
+          ),
+        ),
+        SizedBox(
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Icon(CupertinoIcons.bell_fill),
+                ),
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: SvgPicture.asset(
+                  imagePathFilter,
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
 
 //use in Add Card Buttons
 class AddCardButton extends StatelessWidget {

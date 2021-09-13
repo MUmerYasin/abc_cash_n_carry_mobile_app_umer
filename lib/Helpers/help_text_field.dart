@@ -4,6 +4,7 @@ import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart'
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 
 
@@ -79,25 +80,27 @@ class _SearchBarTextFieldState extends State<SearchBarTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 8.0,right: 8,top: 15),
-      child: Container(
-        height: MediaQuery.of(context).size.height/12,
-        child: Card(
-            elevation: 7,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8)
-            ),
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width*0.9,
+
+        child: Neumorphic(
+          style: NeumorphicStyle(
+            color: Colors.white,
+          ),
+            // elevation: 7,
+            // shape: RoundedRectangleBorder(
+            //     borderRadius: BorderRadius.circular(8)
+            // ),
             child: TextFormField(
               minLines: 1,
               decoration: InputDecoration(
                   hintText: aBC_Search,
-                  labelStyle: TextStyle(fontSize: 19,
-                    fontFamily: textFontFamilySegoeUI,
-                  ),
+                  labelStyle: SearchTextFieldStyle,
 
-                  contentPadding: EdgeInsets.symmetric(vertical: 20,horizontal: 30),
+                  contentPadding: EdgeInsets.symmetric(vertical: 12,horizontal: 3),
                   border: InputBorder.none,
                   prefixIcon: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15.0,horizontal: 10),
+                    padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 10),
                     child: Icon(CupertinoIcons.search),
                   )
               ),

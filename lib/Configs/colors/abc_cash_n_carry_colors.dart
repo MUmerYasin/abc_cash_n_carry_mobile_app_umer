@@ -15,6 +15,10 @@ const Color abc_Color10 = Color(0xffFB5895);
 const Color abc_Color11 = Color(0xffFB5895);
 const Color abc_Color12 = Color(0xff667EEA);
 
+const Color abc_CategoriesListViewBlack = Color(0x1f000000);
+const Color abc_CategoriesListViewLightBlue = Color(0xbf667eea);
+const Color abc_CategoriesListViewBlue = Color(0xbf64b6ff);
+
 const Color ButtonWhiteTextColor = Color(0xffFFFFFF);
 
 const Color HeadingTextColor = Color(0xff707070);

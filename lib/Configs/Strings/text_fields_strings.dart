@@ -22,7 +22,7 @@ const String aBC_StringDiscount ='Discount';
 const String aBC_StringSubtotal ='Subtotal';
 const String aBC_StringTotal ='Total';
 
-const String aBC_Search ='Search';
+const String aBC_Search ='Search Your Product';
 
 /// Text Field Values Strings
 const String aBC_StringEmailValues ='mumeryasin123456789@gmail.com';
