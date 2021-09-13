@@ -42,6 +42,16 @@ const String aBC_StringSubtotalValue ='\$160.00';
 const String aBC_StringTotalValue ='\$162.00';
 
 
+//Address
+const String aBC_StringCityAddressValue ='Shewrapara, Mirpur, Dhaka-1216';
+const String aBC_StringHomeNoValue ='House no: 938';
+const String aBC_StringRoadNoValue ='Road no: 9';
+
+const String aBC_StringCityAddress2Value ='Chatkhil, Noakhali';
+const String aBC_StringHomeNo2Value =' House no: 22';
+const String aBC_StringRoadNo2Value ='Road no: 7';
+
+
 ///Buttons Name in Strings
 const String aBC_StringShopNow ='SHOP NOW';
 const String aBC_StringLogin ='Log in';

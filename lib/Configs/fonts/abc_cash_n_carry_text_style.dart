@@ -31,3 +31,5 @@ const TextStyle youHaveSuccessfullyStyle=TextStyle(color: SecondHeadingTextLight
 
 const TextStyle SubTotalStyle=TextStyle(color: ProductSubHeadingTextColor,letterSpacing: 0.23800000000000002, fontSize: 17.0,height: 1.0, fontFamily: textFontFamilySegoeUI,);
 const TextStyle SubTotalPriceStyle=TextStyle(color: SecondHeadingTextColor,letterSpacing: 0.23800000000000002, fontSize: 17.0,height: 1.0, fontFamily: textFontFamilySegoeUI,);
+
+const TextStyle AddressScreenRadioButtonStyle=TextStyle(color: SecondHeadingTextColor,fontSize: 16.0,height: 1.5, fontFamily: textFontFamilySegoeUI,);
