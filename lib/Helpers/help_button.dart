@@ -83,7 +83,7 @@ class CustomNotificationScreenButton extends StatelessWidget {
             Navigator.pop(context);
           },
           child: SvgPicture.asset(
-            imagePathBackScreenButton,
+            imagePathMenuBar,
           ),
         ),
         SizedBox(

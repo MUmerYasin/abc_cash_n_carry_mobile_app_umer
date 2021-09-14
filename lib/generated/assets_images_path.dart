@@ -18,6 +18,11 @@ const String imagePathDivider = imagesMainPath + 'divider.svg';
 const String imagePathFilter = imagesMainPath + 'filter.svg';
 const String imagePathIcon_loading_screen = imagesMainPath + 'icon_loading_screen.svg';
 const String imagePathImage1 = imagesMainPath + 'image1.svg';
+
+const String imagePathPngImage1 = imagesMainPath + 'image1.png';
+const String imagePathPngImage2 = imagesMainPath + 'image2.png';
+const String imagePathPngImage3 = imagesMainPath + 'image3.png';
+
 const String imagePathImage2 = imagesMainPath + 'image2.svg';
 const String imagePathImage3 = imagesMainPath + 'image3.svg';
 // const String imagePathImage4 = imagesMainPath + 'image4.svg';
