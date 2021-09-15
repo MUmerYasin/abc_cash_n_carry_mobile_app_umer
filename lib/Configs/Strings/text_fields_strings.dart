@@ -82,12 +82,13 @@ const String aBC_StringOrderAgain ='Order Again';
 const String screenTitlesAddProfile ='Add Profile';
 
 /// Main Menu
-const String aBC_StringHome ='Home';
-const String aBC_StringMyCart ='My Cart';
-const String aBC_StringFavorite ='Favorite';
-const String aBC_StringMyOrders ='My Orders';
-const String aBC_StringLanguage ='Language';
-const String aBC_StringSettings ='Settings';
+const String aBC_MainMenuString_Home ='Home';
+const String aBC_MainMenuString_Profile ='Profile';
+const String aBC_MainMenuString_MyCart ='My Cart';
+const String aBC_MainMenuString_Favorite ='Favorite';
+const String aBC_MainMenuString_MyOrders ='My Orders';
+const String aBC_MainMenuString_Language ='Language';
+const String aBC_MainMenuString_Settings ='Settings';
 
 ///
 /// validate

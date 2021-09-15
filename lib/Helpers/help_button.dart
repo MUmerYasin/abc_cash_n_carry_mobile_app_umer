@@ -7,6 +7,8 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:dotted_border/dotted_border.dart';
 
+import 'help_drawer.dart';
+
 //use in All Buttons
 class SmallBlueBackgroundButton extends StatelessWidget {
 
@@ -73,14 +75,68 @@ class CustomBackScreenButton extends StatelessWidget {
 
 //use in Notification button in top of all screen
 class CustomNotificationScreenButton extends StatelessWidget {
-  const CustomNotificationScreenButton({Key? key}) : super(key: key);
+  // String _selection = "Value1";
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+   CustomNotificationScreenButton({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         InkWell(
           onTap: (){
-            Navigator.pop(context);
+            Scaffold.of(context).openDrawer();
+            // _scaffoldKey.currentState!.openDrawer();
+            // NavDrawer();
+
+            // ListenToDrawerEvent();
+            // Scaffold(
+            //   drawer: NavigationDrawer(),
+            // );
+            // CustomDrawer();
+            // Navigator.pop(context);
+
+            // PopupMenuButton<String>(
+            //   onSelected: (String value) {
+            //     // setState(() {
+            //     //   _selection = value;
+            //     // });
+            //     // setState(() { _selection = value; });
+            //   },
+            //
+            //
+            //   // child: ListTile(
+            //   //   leading: IconButton(
+            //   //     icon: Icon(Icons.add_alarm),
+            //   //     onPressed: () {
+            //   //       print('Hello world');
+            //   //     },
+            //   //   ),
+            //   //   title: Text('Title'),
+            //   //   // subtitle: Column(
+            //   //   //   children: <Widget>[
+            //   //   //     Text('Sub title'),
+            //   //   //     Text(_selection == null ? 'Nothing selected yet' : _selection.toString()),
+            //   //   //   ],
+            //   //   // ),
+            //   //   trailing: Icon(Icons.account_circle),
+            //   // ),
+            //   itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+            //     const PopupMenuItem<String>(
+            //       value: 'Value1',
+            //       child: Text('Choose value 1'),
+            //     ),
+            //     const PopupMenuItem<String>(
+            //       value: 'Value2',
+            //       child: Text('Choose value 2'),
+            //     ),
+            //     const PopupMenuItem<String>(
+            //       value: 'Value3',
+            //       child: Text('Choose value 3'),
+            //     ),
+            //   ],
+            // );
           },
           child: SvgPicture.asset(
             imagePathMenuBar,
@@ -108,7 +164,7 @@ class CustomNotificationScreenButton extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
       ],
     );
   }

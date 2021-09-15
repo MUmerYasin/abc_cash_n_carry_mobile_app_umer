@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 gotoScreen({BuildContext? context,Widget? screen}){
   Navigator.push(context!,
-      MaterialPageRoute(builder: (context) {
+      CupertinoPageRoute(builder: (context) {
         return screen??ABCLoginScreen();
       }));
 }

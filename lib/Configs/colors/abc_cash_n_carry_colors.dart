@@ -46,3 +46,6 @@ const Color notHaveAccountTextColor = Color(0xffa3a3a3);
 
 const Color SimpleTextColor = Color(0xff3C3C3C);
 
+//Drawer color
+const Color drawerTextColor = Color(0xff696969);
+

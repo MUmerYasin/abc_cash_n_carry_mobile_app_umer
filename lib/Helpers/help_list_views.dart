@@ -152,7 +152,7 @@ class CustomProductListViewSingleItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: SizedBox(
-        height: 200.0,
+        height: 190.0,
         width: 130.0,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -205,7 +205,7 @@ class CustomFeaturedListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200.0,
+      height: 190.0,
       width: double.infinity,
       child: ListView(
         scrollDirection : Axis.horizontal,
@@ -267,4 +267,78 @@ class CustomFeaturedListView extends StatelessWidget {
     );
   }
 }
+
+
+
+/// Best Sell Product
+/// Cell CustomProductListViewSingleItems() in List View
+class CustomBestSellListView extends StatelessWidget {
+  const CustomBestSellListView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 190.0,
+      width: double.infinity,
+      child: ListView(
+        scrollDirection : Axis.horizontal,
+        shrinkWrap : true,
+        children: [
+          CustomProductListViewSingleItems(
+            priceText: aBC_Cash_N_Carry_StringPrice,
+            nameText: aBC_StringWomanTShirt,
+            imagePaths: imagePathProductImage1,
+            screen: ABCLoginScreen(),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CustomProductListViewSingleItems(
+            priceText: aBC_Cash_N_Carry_StringPrice,
+            nameText: aBC_StringManTShirt,
+            imagePaths: imagePathProductImage5,
+            screen: ABCLoginScreen(),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CustomProductListViewSingleItems(
+            priceText: aBC_Cash_N_Carry_StringPrice,
+            nameText: aBC_StringWomanTShirt,
+            imagePaths: imagePathProductImage6,
+            screen: ABCLoginScreen(),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CustomProductListViewSingleItems(
+            priceText: aBC_Cash_N_Carry_StringPrice,
+            nameText: aBC_StringWomanTShirt,
+            imagePaths: imagePathProductImage1,
+            screen: ABCLoginScreen(),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CustomProductListViewSingleItems(
+            priceText: aBC_Cash_N_Carry_StringPrice,
+            nameText: aBC_StringManTShirt,
+            imagePaths: imagePathProductImage5,
+            screen: ABCLoginScreen(),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CustomProductListViewSingleItems(
+            priceText: aBC_Cash_N_Carry_StringPrice,
+            nameText: aBC_StringWomanTShirt,
+            imagePaths: imagePathProductImage6,
+            screen: ABCLoginScreen(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 

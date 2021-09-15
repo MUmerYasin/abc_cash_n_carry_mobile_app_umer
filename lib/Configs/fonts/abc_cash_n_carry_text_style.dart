@@ -42,3 +42,6 @@ const TextStyle SubTotalPriceStyle=TextStyle(color: SecondHeadingTextColor,lette
 const TextStyle AddressScreenRadioButtonStyle=TextStyle(color: SecondHeadingTextColor,fontSize: 16.0,height: 1.5, fontFamily: textFontFamilySegoeUI,);
 
 const TextStyle categoriesListViewHeadingStyle=TextStyle(color: ButtonWhiteTextColor,fontSize: 16.0,fontWeight: FontWeight.w600, height: 1.5, fontFamily: textFontFamilySegoeUI,);
+
+//drawer
+const TextStyle drawerTextStyle=TextStyle(color: drawerTextColor,fontSize: 24.0,height: 1.8, fontFamily: textFontFamilySegoeUI,);
