@@ -52,4 +52,12 @@ const String imagePathWelcomeToBolt = imagesMainPath + 'welcome_to_bolt.svg';
 // const String imagePath = imagesMainPath + '';
 
 
+// Product Images
+const String imagePathProductImage1 = imagesMainPath + 'product_image01.png';
+const String imagePathProductImage2 = imagesMainPath + 'product_image02.png';
+const String imagePathProductImage3 = imagesMainPath + 'product_images03.png';
+const String imagePathProductImage4 = imagesMainPath + 'product_image04.png';
+const String imagePathProductImage5 = imagesMainPath + 'product_images05.png';
+const String imagePathProductImage6 = imagesMainPath + 'product_image06.png';
+const String imagePathProductImage7 = imagesMainPath + 'product_images07.png';
 

@@ -40,6 +40,8 @@ const String aBC_StringBlezer ='Blezer';
 const String aBC_StringPage1 ='Page 1';
 const String aBC_StringSymbols ='Symbols';
 
+const String aBC_Cash_N_Carry_StringPrice ='\$ 55.00';
+
 // const String aBC_Cash_N_Carry_StringOrderAgain ='Order Again';
 // const String aBC_Cash_N_Carry_StringPlusPoint ='plus point';
 // const String aBC_Cash_N_Carry_StringOrderAgain ='Order Again';
@@ -94,7 +96,7 @@ const String aBC_StringSymbols ='Symbols';
 // const String aBC_Cash_N_Carry_StringShopNow ='SHOP NOW';
 // const String aBC_Cash_N_Carry_StringFeatured ='Featured';
 // const String aBC_Cash_N_Carry_StringSearchYourProduct ='Search Your Product';
-// const String aBC_Cash_N_Carry_StringPrice ='\$55.00';
+
 // const String aBC_Cash_N_Carry_StringEmail ='Email';
 // const String aBC_Cash_N_Carry_StringEmailValues ='Helloistiakgmail.com';
 // const String aBC_Cash_N_Carry_StringPassword ='Password';
