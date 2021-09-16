@@ -61,3 +61,6 @@ const String imagePathProductImage5 = imagesMainPath + 'product_images05.png';
 const String imagePathProductImage6 = imagesMainPath + 'product_image06.png';
 const String imagePathProductImage7 = imagesMainPath + 'product_images07.png';
 
+//Product Slider Image
+const String imagePathProductSlider1 = imagesMainPath + 'product_slider.png';
+

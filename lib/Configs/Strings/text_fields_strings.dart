@@ -64,6 +64,10 @@ const String aBC_StringClothSizeXXL ='XXL';
 const String aBC_StringClothSizeL ='L';
 const String aBC_StringClothSizeM ='M';
 const String aBC_StringClothSizeS ='S';
+const String aBC_StringClothSizeBlack ='Black';
+const String aBC_StringClothSizeWhite ='White';
+const String aBC_StringClothSizeRed ='Red';
+
 const String aBC_StringBuyNow ='BUY NOW';
 const String aBC_StringAddToCart ='ADD TO CART';
 const String aBC_StringContinue ='Continue';

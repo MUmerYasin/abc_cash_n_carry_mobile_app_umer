@@ -45,3 +45,21 @@ const TextStyle categoriesListViewHeadingStyle=TextStyle(color: ButtonWhiteTextC
 
 //drawer
 const TextStyle drawerTextStyle=TextStyle(color: drawerTextColor,fontSize: 24.0,height: 1.8, fontFamily: textFontFamilySegoeUI,);
+
+// Screen Feature
+const TextStyle FeatureTextStyle=TextStyle(color: SecondHeadingTextColor,fontSize: 30.0,height: 1.8, fontFamily: textFontFamilySegoeUI,);
+
+///Item Details Screen
+const TextStyle productItemNameTextStyle=TextStyle(color: PriceTextColor,fontSize: 25.0,height: 1.8, fontFamily: textFontFamilySegoeUI,);
+const TextStyle discountPriceTextStyle=TextStyle(color: SliderBlueTextColor,fontSize: 20.0,height: 1.8, fontFamily: textFontFamilySegoeUI,);
+const TextStyle originalPriceTextStyle=TextStyle(color: PriceTextColor,fontSize: 18.0,height: 1.8, decoration: TextDecoration.lineThrough, fontFamily: textFontFamilySegoeUI,);
+const TextStyle ReviewWhiteTextStyle=TextStyle(color: ButtonWhiteTextColor,fontSize: 18.0, fontFamily: textFontFamilySegoeUI, );
+
+const TextStyle productReviewTextStyle=TextStyle(color: PriceTextColor,fontSize: 18.0,height: 1, fontFamily: textFontFamilySegoeUI,);
+const TextStyle productTotalReviewTextStyle=TextStyle(color: SliderBlueTextColor,fontSize: 15.0,fontWeight: FontWeight.w600, height: 1, fontFamily: textFontFamilySegoeUI,);
+const TextStyle productDescriptionTextStyle=TextStyle(color: PriceTextColor,fontSize: 16.0, height: 1.2000000476837158, fontFamily: textFontFamilySegoeUI,);
+const TextStyle productDescriptionDetailsTextStyle=TextStyle(color: SecondHeadingTextLightColor,fontSize: 14.0, height: 1.6428571428571428, fontFamily: textFontFamilySegoeUI,);
+const TextStyle moreTextStyle=TextStyle(color: MoreBlueTextColor,fontWeight: FontWeight.w700, fontSize: 14.0, height: 1.6428571428571428, fontFamily: textFontFamilySegoeUI,);
+const TextStyle SelectSizeTextStyle=TextStyle(color: PriceTextColor,fontWeight: FontWeight.w600, fontSize: 18.0, fontFamily: textFontFamilySegoeUI,);
+const TextStyle buyNowTextStyle=TextStyle(color: ButtonWhiteTextColor,fontWeight: FontWeight.w600, fontSize: 20.0, fontFamily: textFontFamilySegoeUI,);
+const TextStyle addToCartTextStyle=TextStyle(color: PriceTextColor,fontWeight: FontWeight.w600, fontSize: 20.0, fontFamily: textFontFamilySegoeUI,);

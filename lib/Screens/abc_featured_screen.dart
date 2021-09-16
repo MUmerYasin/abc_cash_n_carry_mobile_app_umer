@@ -1,5 +1,6 @@
 import 'package:abc_cash_n_carry/Configs/Strings/listview_Data_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
+import 'package:abc_cash_n_carry/Configs/Strings/screen_titles_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
@@ -12,19 +13,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-import 'abc_favorite_screen.dart';
-import 'abc_featured_screen.dart';
 import 'abc_login_screen.dart';
 
-class ABCHomeVersionOneScreen extends StatefulWidget {
-  const ABCHomeVersionOneScreen({Key? key}) : super(key: key);
+class ABCFeaturedScreen extends StatefulWidget {
+  const ABCFeaturedScreen({Key? key}) : super(key: key);
 
   @override
-  _ABCHomeVersionOneScreenState createState() =>
-      _ABCHomeVersionOneScreenState();
+  _ABCFeaturedScreenState createState() => _ABCFeaturedScreenState();
 }
 
-class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
+class _ABCFeaturedScreenState extends State<ABCFeaturedScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -48,29 +47,18 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
               /// Search Bar
               SearchBarTextField(),
 
-              ///Text Categories and See All
-              CustomSellAllRow(
-                  mainHeadingText: aBC_StringCategories,
-                  screen: ABCFeaturedScreen()),
+              SizedBox(
+                height: 15.0,
+              ),
 
-              /// Categories List of Man, Women, Kids
-              CustomCategoriesListView(),
+              ///Featured Text
+              Text(screenTitlesFeatured, style: FeatureTextStyle),
+              SizedBox(
+                height: 15.0,
+              ),
 
-              ///Text Featured and See All
-              CustomSellAllRow(
-                  mainHeadingText: aBC_StringFeatured,
-                  screen: ABCFeaturedScreen()),
-
-              /// Featured Product
-              CustomFeaturedListView(),
-
-              ///Text Featured and See All
-              CustomSellAllRow(
-                  mainHeadingText: aBC_StringBestSell,
-                  screen: ABCFavoriteScreen()),
-
-              /// Best Sell Product
-              CustomBestSellListView(),
+              ///All Featured Product Generate
+              FeatureScreenScrollViewProducts(),
 
               SizedBox(
                 height: 20.0,

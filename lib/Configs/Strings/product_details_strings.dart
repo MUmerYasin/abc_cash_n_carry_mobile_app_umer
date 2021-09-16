@@ -24,7 +24,13 @@ const String aBC_StringAddToFavorite ='Add to Favorite';
 const String aBC_StringBlackTurtleneckTop ='Black turtleneck top';
 const String aBC_StringVeryGood ='Very Good';
 const String aBC_StringReviews ='49 Reviews';
-const String aBC_StringAWonderfulSerenityHasTaken ='A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.';
+const String aBC_StringTotalReviews ='4.5';
+const String aBC_StringAWonderfulSerenityHasTaken ="""A wonderful serenity has taken possession 
+of my entire soul, like these sweet mornings
+of spring which I enjoy with my whole heart.
+I am alone, and feel the charm of existence
+in this spot, which was created for the bliss
+of souls like mine.""";
 const String aBC_StringDescription ='Description';
 const String aBC_StringLottoLTD ='Lotto.LTD';
 const String aBC_StringBata ='Bata';
@@ -39,8 +45,12 @@ const String aBC_StringYouHaveSuccessfullyCompleted  ='You have successfully com
 const String aBC_StringBlezer ='Blezer';
 const String aBC_StringPage1 ='Page 1';
 const String aBC_StringSymbols ='Symbols';
+const String aBC_Cash_N_Carry_StringMore ='More';
 
-const String aBC_Cash_N_Carry_StringPrice ='\$ 55.00';
+
+const String aBC_StringPrice ='\$ 55.00';
+const String aBC_StringDiscountPrice ='\$42';
+const String aBC_StringOriginalPrice ='\$62';
 
 // const String aBC_Cash_N_Carry_StringOrderAgain ='Order Again';
 // const String aBC_Cash_N_Carry_StringPlusPoint ='plus point';
@@ -92,7 +102,6 @@ const String aBC_Cash_N_Carry_StringPrice ='\$ 55.00';
 // const String aBC_Cash_N_Carry_StringOne ='1';
 // const String aBC_Cash_N_Carry_StringMinus ='-';
 // const String aBC_Cash_N_Carry_StringPlus ='+';
-// const String aBC_Cash_N_Carry_StringMore ='More';
 // const String aBC_Cash_N_Carry_StringShopNow ='SHOP NOW';
 // const String aBC_Cash_N_Carry_StringFeatured ='Featured';
 // const String aBC_Cash_N_Carry_StringSearchYourProduct ='Search Your Product';

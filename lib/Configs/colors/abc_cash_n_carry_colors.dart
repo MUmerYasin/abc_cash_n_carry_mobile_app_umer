@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-const Color abc_Color1 = Color(0xff667eea);
+const Color abc_DiscountPriceColor = Color(0xff667eea);
 const Color abc_Color2 = Color(0xfffb5895);
 const Color abc_Color3 = Color(0xff7990DD);
 const Color abc_Color4 = Color(0xff374ABE);
@@ -24,6 +24,7 @@ const Color abc_CategoriesListViewDarkGreen = Color(0xbf43e97b);
 const Color abc_CategoriesListViewGreen = Color(0xbf38f9d7);
 
 const Color ButtonWhiteTextColor = Color(0xffFFFFFF);
+const Color ButtonAddToCardTextColor = Color(0xffe1e1e1);
 
 const Color HeadingTextColor = Color(0xff707070);
 const Color HeadingDarkTextColor = Color(0xff454242);
@@ -48,4 +49,7 @@ const Color SimpleTextColor = Color(0xff3C3C3C);
 
 //Drawer color
 const Color drawerTextColor = Color(0xff696969);
+
+
+const Color SelectSizeTextColor = Color(0xfff3f3f3);
 
