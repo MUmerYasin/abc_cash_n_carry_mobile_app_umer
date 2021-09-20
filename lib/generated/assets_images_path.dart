@@ -1,4 +1,3 @@
-
 // class Assets {
 //   Assets._();
 // static const String imagesAe = 'assets/images/ae.jpeg';
@@ -7,16 +6,19 @@
 /// All Images paths
 
 /// Main Folder path
-   const String imagesMainPath = 'assets/images/';
+const String imagesMainPath = 'assets/images/';
 
 /// Images paths
-const String imagePathBackScreenButton = imagesMainPath + 'back_screen_button.svg';
-const String imagePathBlackSearchBarIcon = imagesMainPath + 'black_search_bar_icon.svg';
+const String imagePathBackScreenButton =
+    imagesMainPath + 'back_screen_button.svg';
+const String imagePathBlackSearchBarIcon =
+    imagesMainPath + 'black_search_bar_icon.svg';
 const String imagePathCancelIcon = imagesMainPath + 'cancel_icon.svg';
 const String imagePathCirculerCancel = imagesMainPath + 'circular_cancel.svg';
 const String imagePathDivider = imagesMainPath + 'divider.svg';
 const String imagePathFilter = imagesMainPath + 'filter.svg';
-const String imagePathIcon_loading_screen = imagesMainPath + 'icon_loading_screen.svg';
+const String imagePathIcon_loading_screen =
+    imagesMainPath + 'icon_loading_screen.svg';
 const String imagePathImage1 = imagesMainPath + 'image1.svg';
 
 const String imagePathPngImage1 = imagesMainPath + 'image1.png';
@@ -36,8 +38,10 @@ const String imagePathImage11 = imagesMainPath + 'image11.svg';
 const String imagePathImage12 = imagesMainPath + 'image12.svg';
 const String imagePathImage13 = imagesMainPath + 'image13.svg';
 const String imagePathImage14 = imagesMainPath + 'image14.svg';
-const String imagePathLightBlackScreenButton = imagesMainPath + 'light_black_screen_button.svg';
-const String imagePathLightSearchBarIcon = imagesMainPath + 'light_search_bar_icon.svg';
+const String imagePathLightBlackScreenButton =
+    imagesMainPath + 'light_black_screen_button.svg';
+const String imagePathLightSearchBarIcon =
+    imagesMainPath + 'light_search_bar_icon.svg';
 const String imagePathLike = imagesMainPath + 'like.svg';
 const String imagePathLoadingScreen = imagesMainPath + 'loading_screen.svg';
 const String imagePathCartColorLogo = imagesMainPath + 'cart_color_logo.svg';
@@ -45,12 +49,12 @@ const String imagePathMenuBar = imagesMainPath + 'menu_bar.svg';
 const String imagePathNoNotification = imagesMainPath + 'no_notification.svg';
 const String imagePathNotification = imagesMainPath + 'notification.svg';
 const String imagePathOval = imagesMainPath + 'oval.svg';
-const String imagePathVectorVisaCreditCard = imagesMainPath + 'vector_visa_credit_card.svg';
+const String imagePathVectorVisaCreditCard =
+    imagesMainPath + 'vector_visa_credit_card.svg';
 const String imagePathView = imagesMainPath + 'view';
 const String imagePathWelcomeToBolt = imagesMainPath + 'welcome_to_bolt.svg';
 
 // const String imagePath = imagesMainPath + '';
-
 
 // Product Images
 const String imagePathProductImage1 = imagesMainPath + 'product_image01.png';
@@ -63,4 +67,3 @@ const String imagePathProductImage7 = imagesMainPath + 'product_images07.png';
 
 //Product Slider Image
 const String imagePathProductSlider1 = imagesMainPath + 'product_slider.png';
-

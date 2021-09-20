@@ -4,14 +4,11 @@ import 'package:abc_cash_n_carry/Screens/abc_login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
-gotoScreen({BuildContext? context,Widget? screen}){
-  Navigator.push(context!,
-      CupertinoPageRoute(builder: (context) {
-        return screen??ABCLoginScreen();
-      }));
+gotoScreen({BuildContext? context, Widget? screen}) {
+  Navigator.push(context!, CupertinoPageRoute(builder: (context) {
+    return screen ?? ABCLoginScreen();
+  }));
 }
-
 
 //RoundedCornerButton(
 //    onPressed: () {
@@ -20,13 +17,12 @@ gotoScreen({BuildContext? context,Widget? screen}){
 //    child: 'Save',
 //),
 
-
 class CustomSellAllRow extends StatefulWidget {
-
   String mainHeadingText;
   Widget? screen;
 
-   CustomSellAllRow({Key? key, required this.mainHeadingText, this.screen}) : super(key: key);
+  CustomSellAllRow({Key? key, required this.mainHeadingText, this.screen})
+      : super(key: key);
 
   @override
   _CustomSellAllRowState createState() => _CustomSellAllRowState();
@@ -40,15 +36,13 @@ class _CustomSellAllRowState extends State<CustomSellAllRow> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(widget.mainHeadingText,style: CategoriesTextStyle),
-
+          Text(widget.mainHeadingText, style: CategoriesTextStyle),
           GestureDetector(
-            child: Text(aBC_StringSeeAll,style: SeeAllTextStyle),
+            child: Text(aBC_StringSeeAll, style: SeeAllTextStyle),
             onTap: () {
-              Navigator.push(context,
-                  CupertinoPageRoute(builder: (context) {
-                    return widget.screen??ABCLoginScreen();
-                  }));
+              Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                return widget.screen ?? ABCLoginScreen();
+              }));
             },
           ),
         ],

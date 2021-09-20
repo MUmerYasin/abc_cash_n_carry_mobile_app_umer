@@ -6,6 +6,7 @@ import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'abc_home_version_1_screen.dart';
 
 class ABCConfirmationScreen extends StatefulWidget {
   const ABCConfirmationScreen({Key? key}) : super(key: key);
@@ -35,13 +36,13 @@ class _ABCConfirmationScreenState extends State<ABCConfirmationScreen> {
           physics: ClampingScrollPhysics(),
           child: Container(
             decoration: BoxDecoration(
-              // gradient: LinearGradient(
-              //   begin: Alignment(0.0, -1.0),
-              //   end: Alignment(0.0, 1.0),
-              //   colors: [SliderBlueTextColor, abc_Color8],
-              //   stops: [0.0, 1.0],
-              // ),
-            ),
+                // gradient: LinearGradient(
+                //   begin: Alignment(0.0, -1.0),
+                //   end: Alignment(0.0, 1.0),
+                //   colors: [SliderBlueTextColor, abc_Color8],
+                //   stops: [0.0, 1.0],
+                // ),
+                ),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: Column(
@@ -102,13 +103,13 @@ class _ABCConfirmationScreenState extends State<ABCConfirmationScreen> {
                       onPressed: () {
                         setState(() {
                           // if( loginKey.currentState!.validate()){
-                            Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                  builder: (context) => ABCConfirmationScreen()),
-                            );
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) =>
+                                    ABCHomeVersionOneScreen()),
+                          );
                           // }
-
                         });
                       },
                     ),

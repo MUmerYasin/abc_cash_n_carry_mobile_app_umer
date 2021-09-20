@@ -6,9 +6,11 @@ import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'abc_cart_screen.dart';
 
 class ABCItemDetailsScreen extends StatefulWidget {
   const ABCItemDetailsScreen({Key? key}) : super(key: key);
+
   @override
   _ABCItemDetailsScreenState createState() => _ABCItemDetailsScreenState();
 }
@@ -313,8 +315,13 @@ class _ABCItemDetailsScreenState extends State<ABCItemDetailsScreen> {
                   primary: abc_Color12,
                   minimumSize: Size(MediaQuery.of(context).size.width, 50.0),
                 ),
-                // backgroundColor: Color(0xFF7168C8),
-                onPressed: () {},
+                // backgroundColor: Color(0xFF7168C8), ABCCartScreen
+                onPressed: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) {
+                    return ABCCartScreen();
+                  }));
+                },
                 child: Text(aBC_StringBuyNow, style: buyNowTextStyle)),
           ],
         ),

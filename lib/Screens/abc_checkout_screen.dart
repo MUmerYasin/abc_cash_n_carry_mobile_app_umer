@@ -1,4 +1,3 @@
-import 'package:abc_cash_n_carry/Configs/Strings/listview_Data_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/screen_titles_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
@@ -7,18 +6,10 @@ import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart'
 import 'package:abc_cash_n_carry/Helpers/help_cart.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_drawer.dart';
-import 'package:abc_cash_n_carry/Helpers/help_list_views.dart';
-import 'package:abc_cash_n_carry/Helpers/help_text_field.dart';
-import 'package:abc_cash_n_carry/Helpers/navigator_help.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-
-import 'abc_address_screen.dart';
-import 'abc_favorite_screen.dart';
-import 'abc_featured_screen.dart';
-import 'abc_login_screen.dart';
+import 'abc_confirmation_screen.dart';
 
 class ABCCheckoutScreen extends StatefulWidget {
   const ABCCheckoutScreen({Key? key}) : super(key: key);
@@ -56,6 +47,7 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
 
               ///screen Title Check out
               Text(screenTitlesCheckout, style: loginStyle),
+
               /// Add To Cart Product
               Column(
                 children: [
@@ -79,7 +71,9 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
 
               ///List 1
               Padding(
-                padding: const EdgeInsets.only(top: 0.0,),
+                padding: const EdgeInsets.only(
+                  top: 0.0,
+                ),
                 child: Container(
                   // width: MediaQuery.of(context).size.width*9,
                   height: 120.0,
@@ -94,7 +88,6 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                               TextSpan(
                                 text: aBC_StringCityAddressValue + "\n",
                                 style: AddressScreenRadioButtonStyle,
-
                                 children: [
                                   TextSpan(
                                     text: aBC_StringHomeNoValue + "\n",
@@ -106,15 +99,14 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                                   ),
                                 ],
                               ),
-                              textHeightBehavior:
-                              TextHeightBehavior(applyHeightToFirstAscent: false),
+                              textHeightBehavior: TextHeightBehavior(
+                                  applyHeightToFirstAscent: false),
                               textAlign: TextAlign.left,
                               overflow: TextOverflow.ellipsis,
                             ),
                           ],
                         ),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.only(right: 0.0),
                         child: Radio<int>(
@@ -123,10 +115,11 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                           // hoverColor: Colors.red,
                           // activeColor: Colors.red,
                           onChanged: (val) {
-                            setState(() {
-                              id = 1;
-                              radioButton = '';
-                            },
+                            setState(
+                              () {
+                                id = 1;
+                                radioButton = '';
+                              },
                             );
                           },
                         ),
@@ -143,7 +136,9 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 12.0,),
+                    padding: const EdgeInsets.only(
+                      top: 12.0,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -160,9 +155,10 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                       ],
                     ),
                   ),
-
                   Padding(
-                    padding: const EdgeInsets.only(top: 12.0,),
+                    padding: const EdgeInsets.only(
+                      top: 12.0,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -179,9 +175,10 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                       ],
                     ),
                   ),
-
                   Padding(
-                    padding: const EdgeInsets.only(top: 12.0,),
+                    padding: const EdgeInsets.only(
+                      top: 12.0,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -200,7 +197,9 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                   ),
                   Divider(),
                   Padding(
-                    padding: const EdgeInsets.only(top: 12.0,),
+                    padding: const EdgeInsets.only(
+                      top: 12.0,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -217,13 +216,13 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                       ],
                     ),
                   ),
-
                 ],
               ),
 
               SizedBox(
                 height: 20.0,
               ),
+
               /// Continue Button
               Container(
                 margin: EdgeInsets.only(top: 10, bottom: 30),
@@ -236,10 +235,9 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                         Navigator.push(
                           context,
                           CupertinoPageRoute(
-                              builder: (context) => ABCAddressScreen()),
+                              builder: (context) => ABCConfirmationScreen()),
                         );
                         // }
-
                       });
                     },
                   ),

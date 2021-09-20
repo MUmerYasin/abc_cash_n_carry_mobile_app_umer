@@ -6,6 +6,7 @@ import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'abc_home_version_1_screen.dart';
 
 class ABCCreateAddressScreen extends StatefulWidget {
   const ABCCreateAddressScreen({Key? key}) : super(key: key);
@@ -16,7 +17,8 @@ class ABCCreateAddressScreen extends StatefulWidget {
 
 class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
   GlobalKey<FormState> signupKey = GlobalKey<FormState>();
-  bool _isVisible = false;
+
+  // bool _isVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +81,8 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringAddressLineRequired),
+                            content:
+                                Text(aBC_Validate_StringAddressLineRequired),
                           ),
                         );
                       }
@@ -125,7 +128,8 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringPostalCodeRequired),
+                            content:
+                                Text(aBC_Validate_StringPostalCodeRequired),
                           ),
                         );
                       }
@@ -148,7 +152,8 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringPhoneNumberRequired),
+                            content:
+                                Text(aBC_Validate_StringPhoneNumberRequired),
                           ),
                         );
                       }
@@ -173,7 +178,8 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(
-                                  builder: (context) => ABCCreateAddressScreen()),
+                                  builder: (context) =>
+                                      ABCHomeVersionOneScreen()),
                             );
                           }
                         });

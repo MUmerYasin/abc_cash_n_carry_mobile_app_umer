@@ -6,6 +6,7 @@ import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'abc_home_version_1_screen.dart';
 
 class ABCUserProfileScreen extends StatefulWidget {
   const ABCUserProfileScreen({Key? key}) : super(key: key);
@@ -16,7 +17,8 @@ class ABCUserProfileScreen extends StatefulWidget {
 
 class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
   GlobalKey<FormState> signupKey = GlobalKey<FormState>();
-  bool _isVisible = false;
+
+  // bool _isVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +81,8 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringAddressLineRequired),
+                            content:
+                                Text(aBC_Validate_StringAddressLineRequired),
                           ),
                         );
                       }
@@ -142,21 +145,26 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
                   child: CustomTextField(
                     text: aBC_StringEmail,
                     inputText: TextInputType.emailAddress,
-                    hintText:aBC_StringEmailValues,
+                    hintText: aBC_StringEmailValues,
                     validate: (value) {
                       if (value!.isEmpty) {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          backgroundColor: abc_Color9,
-                          content: Text(aBC_Validate_StringEmailRequired),),);
-
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: abc_Color9,
+                            content: Text(aBC_Validate_StringEmailRequired),
+                          ),
+                        );
                       }
                       if (RegExp(
-                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value)) {}
-                      else{
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          backgroundColor: abc_Color9,
-                          content: Text(aBC_Validate_StringCorrectEmail),),);
+                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          .hasMatch(value)) {
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: abc_Color9,
+                            content: Text(aBC_Validate_StringCorrectEmail),
+                          ),
+                        );
                       }
                     },
                     obsure: false,
@@ -177,7 +185,8 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringPhoneNumberRequired),
+                            content:
+                                Text(aBC_Validate_StringPhoneNumberRequired),
                           ),
                         );
                       }
@@ -202,7 +211,8 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(
-                                  builder: (context) => ABCUserProfileScreen()),
+                                  builder: (context) =>
+                                      ABCHomeVersionOneScreen()),
                             );
                           }
                         });

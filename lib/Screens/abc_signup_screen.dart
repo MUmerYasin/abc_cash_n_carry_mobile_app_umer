@@ -8,6 +8,7 @@ import 'package:abc_cash_n_carry/Screens/abc_login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'abc_home_version_1_screen.dart';
 
 class ABCSignupScreen extends StatefulWidget {
   const ABCSignupScreen({Key? key}) : super(key: key);
@@ -120,7 +121,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                       }
                     },
                     obsure: _isVisible,
-                    Iconss: IconButton(
+                    iconss: IconButton(
                       onPressed: () {
                         setState(() {
                           setState(() {
@@ -157,7 +158,8 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(
-                                  builder: (context) => ABCSignupScreen()),
+                                  builder: (context) =>
+                                      ABCHomeVersionOneScreen()),
                             );
                           }
                         });
@@ -178,12 +180,14 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                           children: [
                             /// Login
                             TextSpan(
-                              recognizer: TapGestureRecognizer()..onTap=(){
-                                Navigator.push(
-                                  context,
-                                   CupertinoPageRoute(builder: (context) => ABCLoginScreen()),
-                                );
-                              },
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) => ABCLoginScreen()),
+                                  );
+                                },
                               text: aBC_StringLogin,
                               style: notHaveAccountSignUpStyle,
                             )

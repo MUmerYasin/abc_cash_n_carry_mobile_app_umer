@@ -7,9 +7,12 @@ import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'abc_cart_screen.dart';
+import 'abc_checkout_screen.dart';
 
 class ABCPaymentScreen extends StatefulWidget {
   const ABCPaymentScreen({Key? key}) : super(key: key);
+
   @override
   _ABCPaymentScreenState createState() => _ABCPaymentScreenState();
 }
@@ -44,6 +47,7 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                 SizedBox(
                   height: 18.0,
                 ),
+
                 /// ATM Card
                 Center(
                   child: Stack(
@@ -73,12 +77,15 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                 SizedBox(
                   height: 20.0,
                 ),
+
                 ///Subtotal, Discount, Shipping, Total
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 12.0,),
+                      padding: const EdgeInsets.only(
+                        top: 12.0,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -95,9 +102,10 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                         ],
                       ),
                     ),
-
                     Padding(
-                      padding: const EdgeInsets.only(top: 12.0,),
+                      padding: const EdgeInsets.only(
+                        top: 12.0,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -114,9 +122,10 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                         ],
                       ),
                     ),
-
                     Padding(
-                      padding: const EdgeInsets.only(top: 12.0,),
+                      padding: const EdgeInsets.only(
+                        top: 12.0,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -135,7 +144,9 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                     ),
                     Divider(),
                     Padding(
-                      padding: const EdgeInsets.only(top: 12.0,),
+                      padding: const EdgeInsets.only(
+                        top: 12.0,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -152,7 +163,6 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                         ],
                       ),
                     ),
-
                   ],
                 ),
 
@@ -168,10 +178,9 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                           Navigator.push(
                             context,
                             CupertinoPageRoute(
-                                builder: (context) => ABCPaymentScreen()),
+                                builder: (context) => ABCCartScreen()),
                           );
                           // }
-
                         });
                       },
                     ),
@@ -187,19 +196,17 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
                       onPressed: () {
                         setState(() {
                           // if( loginKey.currentState!.validate()){
-                            Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                  builder: (context) => ABCPaymentScreen()),
-                            );
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) => ABCCheckoutScreen()),
+                          );
                           // }
-
                         });
                       },
                     ),
                   ),
                 ),
-
               ],
             ),
           ),

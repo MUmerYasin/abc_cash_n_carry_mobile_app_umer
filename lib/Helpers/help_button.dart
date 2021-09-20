@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:dotted_border/dotted_border.dart';
 
-
 //use in All Buttons
 class SmallBlueBackgroundButton extends StatelessWidget {
   Function()? onPressed;
@@ -259,8 +258,7 @@ class SelectSizeColorButton extends StatelessWidget {
             style: TextStyle(
               fontFamily: textFontFamilySegoeUI,
               fontSize: 18,
-              color:
-                  color! ? ButtonWhiteTextColor : Colors.black,
+              color: color! ? ButtonWhiteTextColor : Colors.black,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -299,8 +297,7 @@ class BuyNowColorButton extends StatelessWidget {
             style: TextStyle(
               fontFamily: textFontFamilySegoeUI,
               fontSize: 18,
-              color:
-              color! ? ButtonWhiteTextColor : Colors.black,
+              color: color! ? ButtonWhiteTextColor : Colors.black,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -309,4 +306,3 @@ class BuyNowColorButton extends StatelessWidget {
     );
   }
 }
-

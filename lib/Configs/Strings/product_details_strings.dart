@@ -1,56 +1,57 @@
 /// Product Details Strings
 
-const String aBC_StringTime ='Time';
-const String aBC_StringTimeValue ='9:41';
-const String aBC_StringWelcomeTo ='Welcome to ';
-const String aBC_StringABC ='ABC';
-const String aBC_StringExploreUs ='Explore Us';
-const String aBC_StringLogin ='Login';
-const String aBC_StringSignup ='Signup';
-const String aBC_StringCategories ='Categories';
-const String aBC_StringSeeAll ='See all';
-const String aBC_StringWoman ='Woman';
-const String aBC_StringMan ='Man';
-const String aBC_StringKids ='Kids';
-const String aBC_StringFeatured ='Featured';
-const String aBC_StringWomanTShirt ='Woman T-Shirt';
-const String aBC_StringManTShirt ='Man T-Shirt';
-const String aBC_StringBestSell ='Best Sell';
-const String aBC_StringOffInOurAllProducts ='20% off in our  All products';
-const String aBC_StringHalloweenOffer ='Halloween Offer';
-const String aBC_StringBlazer ='Blazer';
-const String aBC_StringShirt ='Shirt';
-const String aBC_StringAddToFavorite ='Add to Favorite';
-const String aBC_StringBlackTurtleneckTop ='Black turtleneck top';
-const String aBC_StringVeryGood ='Very Good';
-const String aBC_StringReviews ='49 Reviews';
-const String aBC_StringTotalReviews ='4.5';
-const String aBC_StringAWonderfulSerenityHasTaken ="""A wonderful serenity has taken possession 
+const String aBC_StringTime = 'Time';
+const String aBC_StringTimeValue = '9:41';
+const String aBC_StringWelcomeTo = 'Welcome to ';
+const String aBC_StringABC = 'ABC';
+const String aBC_StringExploreUs = 'Explore Us';
+const String aBC_StringLogin = 'Login';
+const String aBC_StringSignup = 'Signup';
+const String aBC_StringCategories = 'Categories';
+const String aBC_StringSeeAll = 'See all';
+const String aBC_StringWoman = 'Woman';
+const String aBC_StringMan = 'Man';
+const String aBC_StringKids = 'Kids';
+const String aBC_StringFeatured = 'Featured';
+const String aBC_StringWomanTShirt = 'Woman T-Shirt';
+const String aBC_StringManTShirt = 'Man T-Shirt';
+const String aBC_StringBestSell = 'Best Sell';
+const String aBC_StringOffInOurAllProducts = '20% off in our  All products';
+const String aBC_StringHalloweenOffer = 'Halloween Offer';
+const String aBC_StringBlazer = 'Blazer';
+const String aBC_StringShirt = 'Shirt';
+const String aBC_StringAddToFavorite = 'Add to Favorite';
+const String aBC_StringBlackTurtleneckTop = 'Black turtleneck top';
+const String aBC_StringVeryGood = 'Very Good';
+const String aBC_StringReviews = '49 Reviews';
+const String aBC_StringTotalReviews = '4.5';
+const String aBC_StringAWonderfulSerenityHasTaken =
+    """A wonderful serenity has taken possession 
 of my entire soul, like these sweet mornings
 of spring which I enjoy with my whole heart.
 I am alone, and feel the charm of existence
 in this spot, which was created for the bliss
 of souls like mine.""";
-const String aBC_StringDescription ='Description';
-const String aBC_StringLottoLTD ='Lotto.LTD';
-const String aBC_StringBata ='Bata';
-const String aBC_StringFemaleTShirt ='Female t- shirt';
-const String aBC_StringPlusPoint ='plus point';
-const String aBC_StringWomanShirt ='Woman Shirt';
-const String aBC_StringCatsEye ='Cat\'s Eye';
-const String aBC_StringCreateAddress ='Create Address';
-const String aBC_StringPayment ='Payment';
-const String aBC_StringConfirmation ='Confirmation';
-const String aBC_StringYouHaveSuccessfullyCompleted  ='You have successfully completed your payment procedure';
-const String aBC_StringBlezer ='Blezer';
-const String aBC_StringPage1 ='Page 1';
-const String aBC_StringSymbols ='Symbols';
-const String aBC_Cash_N_Carry_StringMore ='More';
+const String aBC_StringDescription = 'Description';
+const String aBC_StringLottoLTD = 'Lotto.LTD';
+const String aBC_StringBata = 'Bata';
+const String aBC_StringFemaleTShirt = 'Female t- shirt';
+const String aBC_StringPlusPoint = 'plus point';
+const String aBC_StringWomanShirt = 'Woman Shirt';
+const String aBC_StringCatsEye = 'Cat\'s Eye';
+const String aBC_StringCreateAddress = 'Create Address';
+const String aBC_StringPayment = 'Payment';
+const String aBC_StringConfirmation = 'Confirmation';
+const String aBC_StringYouHaveSuccessfullyCompleted =
+    'You have successfully completed your payment procedure';
+const String aBC_StringBlezer = 'Blezer';
+const String aBC_StringPage1 = 'Page 1';
+const String aBC_StringSymbols = 'Symbols';
+const String aBC_Cash_N_Carry_StringMore = 'More';
 
-
-const String aBC_StringPrice ='\$ 55.00';
-const String aBC_StringDiscountPrice ='\$42';
-const String aBC_StringOriginalPrice ='\$62';
+const String aBC_StringPrice = '\$ 55.00';
+const String aBC_StringDiscountPrice = '\$42';
+const String aBC_StringOriginalPrice = '\$62';
 
 // const String aBC_Cash_N_Carry_StringOrderAgain ='Order Again';
 // const String aBC_Cash_N_Carry_StringPlusPoint ='plus point';

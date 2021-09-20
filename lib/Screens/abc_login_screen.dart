@@ -8,6 +8,7 @@ import 'package:abc_cash_n_carry/Screens/abc_signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'abc_home_version_1_screen.dart';
 
 class ABCLoginScreen extends StatefulWidget {
   const ABCLoginScreen({Key? key}) : super(key: key);
@@ -19,8 +20,6 @@ class ABCLoginScreen extends StatefulWidget {
 class _ABCLoginScreenState extends State<ABCLoginScreen> {
   GlobalKey<FormState> loginKey = GlobalKey<FormState>();
   bool _isVisible = false;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +45,6 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                 ///screen Title Login
                 Text(screenTitlesLoginPage, style: loginStyle),
 
-
                 /// Email Custom Text Field
                 Padding(
                   padding: const EdgeInsets.only(
@@ -55,23 +53,28 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                   child: CustomTextField(
                     text: aBC_StringEmail,
                     inputText: TextInputType.emailAddress,
-                    hintText:aBC_StringEmailValues,
+                    hintText: aBC_StringEmailValues,
                     validate: (value) {
                       if (value!.isEmpty) {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
                             backgroundColor: abc_Color9,
-                            content: Text(aBC_Validate_StringEmailRequired),),);
-
+                            content: Text(aBC_Validate_StringEmailRequired),
+                          ),
+                        );
                       }
                       if (RegExp(
-                         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value)) {}
-                      else{
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        backgroundColor: abc_Color9,
-                        content: Text(aBC_Validate_StringCorrectEmail),),);
+                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          .hasMatch(value)) {
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: abc_Color9,
+                            content: Text(aBC_Validate_StringCorrectEmail),
+                          ),
+                        );
                       }
-                      },
+                    },
                     obsure: false,
                   ),
                 ),
@@ -82,31 +85,41 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                     top: 25,
                   ),
                   child: CustomTextField(
-                      text: aBC_StringPassword,
-                      inputText: TextInputType.visiblePassword,
-                    hintText:aBC_StringPasswordValues,
-                      validate: (value) {
-                        if (value!.isEmpty) {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              backgroundColor: abc_Color9,
-                              content: Text(aBC_Validate_StringEmailRequired)));
-                        }
+                    text: aBC_StringPassword,
+                    inputText: TextInputType.visiblePassword,
+                    hintText: aBC_StringPasswordValues,
+                    validate: (value) {
+                      if (value!.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            backgroundColor: abc_Color9,
+                            content: Text(aBC_Validate_StringEmailRequired)));
+                      }
+                    },
+                    obsure: _isVisible,
+                    iconss: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          setState(() {
+                            _isVisible = !_isVisible;
+                          });
+                        });
                       },
-                      obsure: _isVisible,
-                      Iconss: IconButton(
-                          onPressed: () {
-                            setState(() {
-                              setState(() {
-                                _isVisible = !_isVisible;
-                              });
-                            });
-                          },
-                          icon: _isVisible
-                              ? Icon(Icons.remove_red_eye, color: TextFieldTitleColor,)
-                              : Icon(Icons.visibility_off, color: TextFieldTitleColor,),),),
+                      icon: _isVisible
+                          ? Icon(
+                              Icons.remove_red_eye,
+                              color: TextFieldTitleColor,
+                            )
+                          : Icon(
+                              Icons.visibility_off,
+                              color: TextFieldTitleColor,
+                            ),
+                    ),
+                  ),
                 ),
 
-                SizedBox(height: 30.0,),
+                SizedBox(
+                  height: 30.0,
+                ),
 
                 /// Login Button
                 Container(
@@ -116,14 +129,14 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                       child: aBC_StringLogin,
                       onPressed: () {
                         setState(() {
-                          if( loginKey.currentState!.validate()){
-                          Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (context) => ABCLoginScreen()),
-                          );
+                          if (loginKey.currentState!.validate()) {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (context) =>
+                                      ABCHomeVersionOneScreen()),
+                            );
                           }
-
                         });
                       },
                     ),
@@ -142,12 +155,15 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
                           children: [
                             /// Signup
                             TextSpan(
-                              recognizer: TapGestureRecognizer()..onTap=(){
-                                Navigator.push(
-                                  context,
-                                   CupertinoPageRoute(builder: (context) => ABCSignupScreen()),
-                                );
-                              },
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) =>
+                                            ABCSignupScreen()),
+                                  );
+                                },
                               text: aBC_StringSignup,
                               style: notHaveAccountSignUpStyle,
                             )

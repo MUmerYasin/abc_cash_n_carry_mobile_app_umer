@@ -3,13 +3,14 @@ import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
-import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import 'abc_payment_screen.dart';
 
 class ABCAddressScreen extends StatefulWidget {
   const ABCAddressScreen({Key? key}) : super(key: key);
+
   @override
   _ABCAddressScreenState createState() => _ABCAddressScreenState();
 }
@@ -50,35 +51,16 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
 
                 ///List 1
                 Padding(
-                  padding: const EdgeInsets.only(top: 0.0,),
+                  padding: const EdgeInsets.only(
+                    top: 0.0,
+                  ),
                   child: Container(
                     // width: MediaQuery.of(context).size.width*9,
                     height: 120.0,
-                    // padding: EdgeInsets.all(10),
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(5.0),
-                    //   gradient: LinearGradient(
-                    //     begin: Alignment(-1.0, -1.0),
-                    //     end: Alignment(1.01, 1.0),
-                    //     colors: [
-                    //       const Color(0xffeef0f5),
-                    //       const Color(0xffe6e9ef)
-                    //     ],
-                    //     stops: [0.0, 1.0],
-                    //   ),
-                    //   boxShadow: [
-                    //     BoxShadow(
-                    //       color: const Color(0xb2a6b4c8),
-                    //       offset: Offset(10, 10),
-                    //       blurRadius: 48,
-                    //     ),
-                    //   ],
-                    // ),
 
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-
                         Expanded(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,7 +69,6 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                                 TextSpan(
                                   text: aBC_StringCityAddressValue + "\n",
                                   style: AddressScreenRadioButtonStyle,
-
                                   children: [
                                     TextSpan(
                                       text: aBC_StringHomeNoValue + "\n",
@@ -99,15 +80,14 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                                     ),
                                   ],
                                 ),
-                                textHeightBehavior:
-                                TextHeightBehavior(applyHeightToFirstAscent: false),
+                                textHeightBehavior: TextHeightBehavior(
+                                    applyHeightToFirstAscent: false),
                                 textAlign: TextAlign.left,
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ],
                           ),
                         ),
-
                         Padding(
                           padding: const EdgeInsets.only(right: 0.0),
                           child: Radio<int>(
@@ -116,10 +96,11 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                             // hoverColor: Colors.red,
                             // activeColor: Colors.red,
                             onChanged: (val) {
-                              setState(() {
-                                id = 1;
-                                radioButton = '';
-                              },
+                              setState(
+                                () {
+                                  id = 1;
+                                  radioButton = '';
+                                },
                               );
                             },
                           ),
@@ -131,35 +112,16 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
 
                 ///List 2
                 Padding(
-                  padding: const EdgeInsets.only(top: 0.0,),
+                  padding: const EdgeInsets.only(
+                    top: 0.0,
+                  ),
                   child: Container(
                     // width: MediaQuery.of(context).size.width*9,
                     height: 120.0,
-                    // padding: EdgeInsets.all(10),
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(5.0),
-                    //   gradient: LinearGradient(
-                    //     begin: Alignment(-1.0, -1.0),
-                    //     end: Alignment(1.01, 1.0),
-                    //     colors: [
-                    //       const Color(0xffeef0f5),
-                    //       const Color(0xffe6e9ef)
-                    //     ],
-                    //     stops: [0.0, 1.0],
-                    //   ),
-                    //   boxShadow: [
-                    //     BoxShadow(
-                    //       color: const Color(0xb2a6b4c8),
-                    //       offset: Offset(10, 10),
-                    //       blurRadius: 48,
-                    //     ),
-                    //   ],
-                    // ),
 
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-
                         Expanded(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -168,7 +130,6 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                                 TextSpan(
                                   text: aBC_StringCityAddress2Value + "\n",
                                   style: AddressScreenRadioButtonStyle,
-
                                   children: [
                                     TextSpan(
                                       text: aBC_StringHomeNo2Value + "\n",
@@ -180,27 +141,27 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                                     ),
                                   ],
                                 ),
-                                textHeightBehavior:
-                                TextHeightBehavior(applyHeightToFirstAscent: false),
+                                textHeightBehavior: TextHeightBehavior(
+                                    applyHeightToFirstAscent: false),
                                 textAlign: TextAlign.left,
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ],
                           ),
                         ),
-
                         Padding(
                           padding: const EdgeInsets.only(right: 0.0),
                           child: Radio<int>(
-                            value: 1,
+                            value: 2,
                             groupValue: id,
                             // hoverColor: Colors.red,
                             // activeColor: Colors.red,
                             onChanged: (val) {
-                              setState(() {
-                                id = 1;
-                                radioButton = '';
-                              },
+                              setState(
+                                () {
+                                  id = 2;
+                                  radioButton = '';
+                                },
                               );
                             },
                           ),
@@ -215,7 +176,7 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                   margin: EdgeInsets.only(top: 30, bottom: 20),
                   child: Center(
                     child: AddCardButton(
-                      child: aBC_StringAddCard,
+                      child: aBC_StringAddAddress,
                       onPressed: () {
                         setState(() {
                           // if( loginKey.currentState!.validate()){
@@ -225,7 +186,6 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                                 builder: (context) => ABCAddressScreen()),
                           );
                           // }
-
                         });
                       },
                     ),
@@ -241,13 +201,12 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
                       onPressed: () {
                         setState(() {
                           // if( loginKey.currentState!.validate()){
-                            Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                  builder: (context) => ABCAddressScreen()),
-                            );
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) => ABCPaymentScreen()),
+                          );
                           // }
-
                         });
                       },
                     ),
