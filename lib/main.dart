@@ -6,6 +6,7 @@ import 'Screens/abc_Item_details_addtocard_Screen.dart';
 import 'Screens/abc_address_screen.dart';
 import 'Screens/abc_Item_details_Screen.dart';
 import 'Screens/abc_cart_screen.dart';
+import 'Screens/abc_checkout_screen.dart';
 import 'Screens/abc_confirmation_screen.dart';
 import 'Screens/abc_create_address_screen.dart';
 import 'Screens/abc_favorite_screen.dart';
@@ -47,7 +48,8 @@ class MyApp extends StatelessWidget {
       // home: ABCFavoriteScreen(),// Front End Complete
       // home: ABCItemDetailsScreen(),// Front End Complete
       // home: ABCItemDetailsAddToCardScreen(),// Front End Complete
-      home: ABCCartScreen(),// Front End Complete
+      // home: ABCCartScreen(),// Front End Complete
+      home: ABCCheckoutScreen(),// Front End Complete
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:abc_cash_n_carry/Configs/Strings/listview_Data_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
+import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Helpers/cart.dart';
@@ -13,6 +14,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
+import 'abc_address_screen.dart';
 import 'abc_favorite_screen.dart';
 import 'abc_featured_screen.dart';
 import 'abc_login_screen.dart';
@@ -62,6 +64,28 @@ class _ABCCartScreenState extends State<ABCCartScreen> {
                     ),
                   ),
                 ],
+              ),
+
+              /// Continue Button
+              Container(
+                margin: EdgeInsets.only(top: 10, bottom: 30),
+                child: Center(
+                  child: SmallBlueBackgroundButton(
+                    child: aBC_StringContinue,
+                    onPressed: () {
+                      setState(() {
+                        // if( loginKey.currentState!.validate()){
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => ABCAddressScreen()),
+                        );
+                        // }
+
+                      });
+                    },
+                  ),
+                ),
               ),
 
               SizedBox(
