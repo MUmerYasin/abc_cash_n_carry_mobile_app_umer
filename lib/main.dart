@@ -12,6 +12,7 @@ import 'Screens/abc_create_address_screen.dart';
 import 'Screens/abc_favorite_screen.dart';
 import 'Screens/abc_featured_screen.dart';
 import 'Screens/abc_home_version_1_screen.dart';
+import 'Screens/abc_my_order_screen.dart';
 import 'Screens/abc_payment_screen.dart';
 import 'Screens/abc_splash_screen.dart';
 
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
       // home: ABCItemDetailsScreen(),// Front End Complete
       // home: ABCItemDetailsAddToCardScreen(),// Front End Complete
       // home: ABCCartScreen(),// Front End Complete
-      home: ABCCheckoutScreen(),// Front End Complete
+      // home: ABCCheckoutScreen(),// Front End Complete
+      home: ABCMyOrdersScreen(),// Front End Complete
     );
   }
 }
