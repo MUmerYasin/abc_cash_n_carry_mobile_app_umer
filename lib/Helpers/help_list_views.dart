@@ -7,7 +7,7 @@ import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+// import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 ///Single Categories Create,
 ///Background Image, Two LinearGradient Color, Text
@@ -30,46 +30,56 @@ class CustomCategoriesListViewSingleItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: SizedBox(
+      child: Container(/// Remove Nemorfic
         height: 70.0,
         width: 130.0,
-        child: Neumorphic(
-          child: Stack(
-            children: <Widget>[
-              Image.asset(
-                imagePaths,
-                fit: BoxFit.fitWidth,
-                width: double.infinity,
-              ),
-              Container(
-                width: double.infinity,
-                height: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  gradient: LinearGradient(
-                    begin: Alignment(-1.0, 0.06),
-                    end: Alignment(1.0, 0.12),
-                    colors: [linearGradientColorOne, linearGradientColorTwo],
-                    stops: [0.0, 1.0],
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: abc_CategoriesListViewBlack,
-                      offset: Offset(0, 15),
-                      blurRadius: 31,
-                    ),
-                  ],
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 10.0,
+              offset: Offset(0.0, 0.75),
+
+            )
+          ],
+          color: Colors.white,
+        ),
+        child: Stack(
+          children: <Widget>[
+            Image.asset(
+              imagePaths,
+              fit: BoxFit.fitWidth,
+              width: double.infinity,
+            ),
+            Container(
+              width: double.infinity,
+              height: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5.0),
+                gradient: LinearGradient(
+                  begin: Alignment(-1.0, 0.06),
+                  end: Alignment(1.0, 0.12),
+                  colors: [linearGradientColorOne, linearGradientColorTwo],
+                  stops: [0.0, 1.0],
                 ),
-                child: Center(
-                  child: Text(
-                    listViewText,
-                    style: categoriesListViewHeadingStyle,
-                    textAlign: TextAlign.center,
+                boxShadow: [
+                  BoxShadow(
+                    color: abc_CategoriesListViewBlack,
+                    offset: Offset(0, 15),
+                    blurRadius: 31,
                   ),
+                ],
+              ),
+              child: Center(
+                child: Text(
+                  listViewText,
+                  style: categoriesListViewHeadingStyle,
+                  textAlign: TextAlign.center,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       onTap: () {
@@ -89,9 +99,12 @@ class CustomCategoriesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 75.0,
       width: double.infinity,
+      color: Colors.white,
+
+
       child: ListView(
         scrollDirection : Axis.horizontal,
         shrinkWrap : true,

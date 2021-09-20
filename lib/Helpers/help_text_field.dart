@@ -4,7 +4,7 @@ import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart'
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+// import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 
 
@@ -83,10 +83,23 @@ class _SearchBarTextFieldState extends State<SearchBarTextField> {
       child: SizedBox(
         width: MediaQuery.of(context).size.width*0.9,
 
-        child: Neumorphic(
-          style: NeumorphicStyle(
-            color: Colors.white,
-          ),
+        child: Container(// Remove Stack
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 10.0,
+                      offset: Offset(0.0, 0.75),
+
+                  )
+                ],
+                color: Colors.white,
+            ),
+
+          // style: NeumorphicStyle(
+          //   color: Colors.white,
+          // ),
             // elevation: 7,
             // shape: RoundedRectangleBorder(
             //     borderRadius: BorderRadius.circular(8)

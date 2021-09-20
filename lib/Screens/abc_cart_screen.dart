@@ -2,6 +2,7 @@ import 'package:abc_cash_n_carry/Configs/Strings/listview_Data_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
+import 'package:abc_cash_n_carry/Helpers/cart.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_drawer.dart';
 import 'package:abc_cash_n_carry/Helpers/help_list_views.dart';
@@ -16,16 +17,14 @@ import 'abc_favorite_screen.dart';
 import 'abc_featured_screen.dart';
 import 'abc_login_screen.dart';
 
-class ABCHomeVersionOneScreen extends StatefulWidget {
-  const ABCHomeVersionOneScreen({Key? key}) : super(key: key);
+class ABCCartScreen extends StatefulWidget {
+  const ABCCartScreen({Key? key}) : super(key: key);
 
   @override
-  _ABCHomeVersionOneScreenState createState() =>
-      _ABCHomeVersionOneScreenState();
+  _ABCCartScreenState createState() => _ABCCartScreenState();
 }
 
-class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
-
+class _ABCCartScreenState extends State<ABCCartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,32 +44,25 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
               /// Custom Back Screen Button
               CustomNotificationScreenButton(),
 
-              /// Search Bar
-              SearchBarTextField(),
-
-              ///Text Categories and See All
-              CustomSellAllRow(
-                  mainHeadingText: aBC_StringCategories,
-                  screen: ABCFeaturedScreen()),
-
-              /// Categories List of Man, Women, Kids
-              CustomCategoriesListView(),
-
-              ///Text Featured and See All
-              CustomSellAllRow(
-                  mainHeadingText: aBC_StringFeatured,
-                  screen: ABCFeaturedScreen()),
-
-              /// Featured Product
-              CustomFeaturedListView(),
-
-              ///Text Featured and See All
-              CustomSellAllRow(
-                  mainHeadingText: aBC_StringBestSell,
-                  screen: ABCFavoriteScreen()),
-
-              /// Best Sell Product
-              CustomBestSellListView(),
+              Column(
+                children: [
+                  Container(
+                    child: ListView.builder(
+                      itemBuilder: (context, i) {
+                        return CustomCartOfSingleItems(
+                          imagePaths: imagePathProductImage1,
+                          priceText: aBC_StringPrice,
+                          nameText: aBC_StringWomanTShirt,
+                          subTitleText: aBC_StringLottoLTD,
+                        );
+                      },
+                      itemCount: 5,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                    ),
+                  ),
+                ],
+              ),
 
               SizedBox(
                 height: 20.0,

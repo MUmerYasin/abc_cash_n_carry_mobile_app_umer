@@ -44,12 +44,12 @@ const Color TextFieldBorderColor = Color(0xffdadada);
 
 const Color notHaveAccountTextColor = Color(0xffa3a3a3);
 
-
 const Color SimpleTextColor = Color(0xff3C3C3C);
 
 //Drawer color
 const Color drawerTextColor = Color(0xff696969);
 
-
 const Color SelectSizeTextColor = Color(0xfff3f3f3);
 
+const Color incrementCartTextColor = Color(0xfff6f6f6);
+const Color counterCartTextColor = Color(0xff565656);
