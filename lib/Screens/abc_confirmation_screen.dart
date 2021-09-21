@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
@@ -18,14 +20,14 @@ class ABCConfirmationScreen extends StatefulWidget {
 class _ABCConfirmationScreenState extends State<ABCConfirmationScreen> {
   void initState() {
     super.initState();
-    // Timer(
-    //   Duration(seconds: 6),
-    //   () => Navigator.of(context).pushReplacement(
-    //     CupertinoPageRoute(
-    //       builder: (BuildContext context) => WelcomeToABCScreen(),
-    //     ),
-    //   ),
-    // );
+    Timer(
+      Duration(seconds: 12),
+      () => Navigator.of(context).pushReplacement(
+        CupertinoPageRoute(
+          builder: (BuildContext context) => ABCHomeVersionOneScreen(),
+        ),
+      ),
+    );
   }
 
   @override

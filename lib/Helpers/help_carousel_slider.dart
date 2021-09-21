@@ -5,18 +5,19 @@ import 'package:flutter/material.dart';
 
 //--------------------------------
 
-final List<String> imgList = [
-  imagePathProductSlider1,
-  imagePathProductSlider1,
-  imagePathProductSlider1,
-  imagePathProductSlider1,
-];
+// final List<String> imgList = [
+//   imagePathProductSlider1,
+//   imagePathProductSlider1,
+//   imagePathProductSlider1,
+//   imagePathProductSlider1,
+// ];
 
 //--------------------------------
 
 /// Main Class for Making Carousel Slider
 class HomePageCarouselWithIndicator extends StatefulWidget {
-  const HomePageCarouselWithIndicator({Key? key}) : super(key: key);
+  List<String> imgList;
+   HomePageCarouselWithIndicator({Key? key, required this.imgList,}) : super(key: key);
 
   @override
   _HomePageCarouselWithIndicatorState createState() =>
@@ -25,6 +26,8 @@ class HomePageCarouselWithIndicator extends StatefulWidget {
 
 class _HomePageCarouselWithIndicatorState
     extends State<HomePageCarouselWithIndicator> {
+
+
   int _current = 0;
   final CarouselController _controller = CarouselController();
 
@@ -51,7 +54,7 @@ class _HomePageCarouselWithIndicatorState
                       _current = index;
                     });
                   }),
-              items: imgList.map((i) {
+              items: widget.imgList.map((i) {
                 return Builder(
                   builder: (BuildContext context) {
                     return Container(
@@ -82,7 +85,7 @@ class _HomePageCarouselWithIndicatorState
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.end,
-                              children: imgList.asMap().entries.map((entry) {
+                              children: widget.imgList.asMap().entries.map((entry) {
                                 return GestureDetector(
                                   onTap: () =>
                                       _controller.animateToPage(entry.key),

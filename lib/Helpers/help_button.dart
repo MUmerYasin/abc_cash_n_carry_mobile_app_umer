@@ -56,125 +56,137 @@ class SmallBlueBackgroundButton extends StatelessWidget {
   }
 }
 
-//use in Back Button in top of all screen
-class CustomBackScreenButton extends StatelessWidget {
+
+/// AppBar
+//AppBar, use in Back Button in top of screen
+class CustomBackScreenButton extends StatelessWidget implements PreferredSizeWidget  {
+  // TODO: implement preferredSize
+  @override
+  Size get preferredSize => Size.fromHeight(200);
+
   const CustomBackScreenButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: SvgPicture.asset(
-            imagePathBackScreenButton,
+    return Padding(
+      padding: const EdgeInsets.only(top: 40.0, left: 25.0,),
+      child: Row(
+        children: [
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: SvgPicture.asset(
+              imagePathBackScreenButton,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
 
-//use in Notification button in top of all screen
-class CustomNotificationScreenButton extends StatelessWidget {
-  // String _selection = "Value1";
+//AppBar, use in Drawer, Notification button, Flitter in top of all screen
+class CustomAppBarBackAndNotificationButtons extends StatelessWidget implements PreferredSizeWidget {
+  // TODO: implement preferredSize
+  @override
+  Size get preferredSize => Size.fromHeight(200);
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-  CustomNotificationScreenButton({Key? key}) : super(key: key);
+  CustomAppBarBackAndNotificationButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        InkWell(
-          onTap: () {
-            Scaffold.of(context).openDrawer();
-            // _scaffoldKey.currentState!.openDrawer();
-            // NavDrawer();
-
-            // ListenToDrawerEvent();
-            // Scaffold(
-            //   drawer: NavigationDrawer(),
-            // );
-            // CustomDrawer();
-            // Navigator.pop(context);
-
-            // PopupMenuButton<String>(
-            //   onSelected: (String value) {
-            //     // setState(() {
-            //     //   _selection = value;
-            //     // });
-            //     // setState(() { _selection = value; });
-            //   },
-            //
-            //
-            //   // child: ListTile(
-            //   //   leading: IconButton(
-            //   //     icon: Icon(Icons.add_alarm),
-            //   //     onPressed: () {
-            //   //       print('Hello world');
-            //   //     },
-            //   //   ),
-            //   //   title: Text('Title'),
-            //   //   // subtitle: Column(
-            //   //   //   children: <Widget>[
-            //   //   //     Text('Sub title'),
-            //   //   //     Text(_selection == null ? 'Nothing selected yet' : _selection.toString()),
-            //   //   //   ],
-            //   //   // ),
-            //   //   trailing: Icon(Icons.account_circle),
-            //   // ),
-            //   itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-            //     const PopupMenuItem<String>(
-            //       value: 'Value1',
-            //       child: Text('Choose value 1'),
-            //     ),
-            //     const PopupMenuItem<String>(
-            //       value: 'Value2',
-            //       child: Text('Choose value 2'),
-            //     ),
-            //     const PopupMenuItem<String>(
-            //       value: 'Value3',
-            //       child: Text('Choose value 3'),
-            //     ),
-            //   ],
-            // );
-          },
-          child: SvgPicture.asset(
-            imagePathMenuBar,
+    return Padding(
+      padding: const EdgeInsets.only(top: 40,left: 18, right: 18, bottom: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: SvgPicture.asset(
+              imagePathBackScreenButton,
+            ),
           ),
-        ),
-        SizedBox(
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Icon(CupertinoIcons.bell_fill),
+          SizedBox(
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(CupertinoIcons.bell_fill),
+                  ),
                 ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: SvgPicture.asset(
-                  imagePathFilter,
-                ),
-              ),
-            ],
+
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
+
+//AppBar,use in Back Button, Notification button,  in top of all screen
+class CustomAppBarDrawerAndNotificationButtons extends StatelessWidget implements PreferredSizeWidget  {
+  // TODO: implement preferredSize
+  @override
+  Size get preferredSize => Size.fromHeight(200);
+  // String _selection = "Value1";
+
+  // final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  CustomAppBarDrawerAndNotificationButtons({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 40,left: 18, right: 18, bottom: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          InkWell(
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
+            child: SvgPicture.asset(
+              imagePathMenuBar,
+            ),
+          ),
+          SizedBox(
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(CupertinoIcons.bell_fill),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: SvgPicture.asset(
+                    imagePathFilter,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
 
 //use in Add Card Buttons
 class AddCardButton extends StatelessWidget {

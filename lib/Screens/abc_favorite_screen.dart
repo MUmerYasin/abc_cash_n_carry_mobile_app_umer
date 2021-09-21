@@ -21,12 +21,13 @@ class _ABCFavoriteScreenState extends State<ABCFavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBarBackAndNotificationButtons(),
       backgroundColor: ButtonWhiteTextColor,
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 40.0,
+          top: 0.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -34,16 +35,6 @@ class _ABCFavoriteScreenState extends State<ABCFavoriteScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Custom Back Screen Button
-              CustomNotificationScreenButton(),
-
-              /// Search Bar
-              SearchBarTextField(),
-
-              SizedBox(
-                height: 15.0,
-              ),
-
               ///Favorite Text
               Text(screenTitlesFavorite, style: FeatureTextStyle),
               SizedBox(
@@ -60,7 +51,6 @@ class _ABCFavoriteScreenState extends State<ABCFavoriteScreen> {
           ),
         ),
       ),
-      drawer: CustomDrawer(),
     );
   }
 }

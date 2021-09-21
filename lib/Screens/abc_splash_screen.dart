@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFF659cf8),
+        backgroundColor: abc_FlashScreenColor,
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -58,15 +58,20 @@ class _SplashScreenState extends State<SplashScreen> {
                       alignment: Alignment.center,
                       allowDrawingOutsideViewBox: false,
                     ),
-                    SvgPicture.asset(
-                      imagePathCartColorLogo,
+                    Image.asset(
+                      imagePathLogoPngPath,
                       height: 82.0,
                       width: 82.0,
-                      // fit : BoxFit.contain,
-                      // bundle:
-                      // alignment : Alignment.center,
-                      allowDrawingOutsideViewBox: true,
-                    ),
+                    )
+                    // SvgPicture.asset(
+                    //   imagePathCartColorLogo,
+                    //   height: 82.0,
+                    //   width: 82.0,
+                    //   // fit : BoxFit.contain,
+                    //   // bundle:
+                    //   // alignment : Alignment.center,
+                    //   allowDrawingOutsideViewBox: true,
+                    // ),
                   ],
                 ),
               ),

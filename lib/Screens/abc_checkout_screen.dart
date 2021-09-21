@@ -30,11 +30,12 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ButtonWhiteTextColor,
+      appBar: CustomAppBarBackAndNotificationButtons(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 40.0,
+          top: 0.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -42,9 +43,6 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Custom Back Screen Button
-              CustomNotificationScreenButton(),
-
               ///screen Title Check out
               Text(screenTitlesCheckout, style: loginStyle),
 
@@ -251,7 +249,6 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
           ),
         ),
       ),
-      drawer: CustomDrawer(),
     );
   }
 }

@@ -35,6 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return SizedBox(
       width: MediaQuery.of(context).size.width * .85,
       child: TextFormField(
+        textInputAction: TextInputAction.next,
         cursorColor: HeadingTextColor,
 
         // cursorHeight: 30.0,
@@ -104,6 +105,7 @@ class _SearchBarTextFieldState extends State<SearchBarTextField> {
             //     borderRadius: BorderRadius.circular(8)
             // ),
             child: TextFormField(
+              textInputAction: TextInputAction.done,
               minLines: 1,
               decoration: InputDecoration(
                   hintText: aBC_Search,

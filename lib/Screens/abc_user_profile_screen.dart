@@ -24,11 +24,12 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ButtonWhiteTextColor,
+      appBar: CustomAppBarBackAndNotificationButtons(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 65.0,
+          top: 0.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -38,16 +39,13 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /// Custom Back Screen Button
-                CustomBackScreenButton(),
-
                 ///screen Title Login
                 Text(screenTitlesProfile, style: loginStyle),
 
                 /// NAME Custom Text Field
                 Padding(
                   padding: const EdgeInsets.only(
-                    top: 16,
+                    top: 8,
                   ),
                   child: CustomTextField(
                     text: aBC_StringName,

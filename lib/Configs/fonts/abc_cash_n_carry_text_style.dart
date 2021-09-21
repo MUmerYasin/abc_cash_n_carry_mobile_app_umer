@@ -50,7 +50,7 @@ const TextStyle addCardButtonStyle = TextStyle(
 const TextStyle loginStyle = TextStyle(
   color: ScreenMainHeadingDarkTextColor,
   fontSize: 30.0,
-  height: 2.5,
+  height: 2.0,
   letterSpacing: -0.7235293006896972,
   fontFamily: textFontFamilySegoeUI,
 );

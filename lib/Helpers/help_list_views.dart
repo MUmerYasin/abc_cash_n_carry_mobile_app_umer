@@ -1,5 +1,7 @@
 import 'package:abc_cash_n_carry/Configs/Strings/listview_Data_strings.dart';
+import 'package:abc_cash_n_carry/Configs/Strings/listview_builder_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
+import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Screens/abc_Item_details_Screen.dart';
@@ -11,6 +13,9 @@ import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
+import 'help_cart.dart';
+import 'help_my_orders.dart';
 
 ///Single Categories Create,
 ///Background Image, Two LinearGradient Color, Text
@@ -162,7 +167,7 @@ class CustomProductListViewSingleItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: SizedBox(
-        height: 190.0,
+        height: 210.0,
         width: 130.0,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -170,9 +175,19 @@ class CustomProductListViewSingleItems extends StatelessWidget {
           children: <Widget>[
             ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
-              child: SizedBox(
-                height: 130.0,
-                // width: 140.0,
+              child: Container(
+                // decoration: BoxDecoration(
+                //     boxShadow: <BoxShadow>[
+                //       BoxShadow(
+                //           color: Colors.black54,
+                //           blurRadius: 15.0,
+                //           offset: Offset(3, 3),
+                //         spreadRadius: 40.0,
+                //       )
+                //     ],
+                // ),
+                height: 150.0,
+                width: 130.0,
                 child: Image.asset(
                   imagePaths,
                   fit: BoxFit.fitWidth,
@@ -205,147 +220,153 @@ class CustomProductListViewSingleItems extends StatelessWidget {
   }
 }
 
-/// Featured Product
-/// Cell CustomProductListViewSingleItems() in List View
-class CustomFeaturedListView extends StatelessWidget {
-  const CustomFeaturedListView({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 190.0,
-      width: double.infinity,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        shrinkWrap: true,
-        children: [
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage2,
-            screen: ABCItemDetailsScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringManTShirt,
-            imagePaths: imagePathProductImage3,
-            screen: ABCItemDetailsScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage1,
-            screen: ABCItemDetailsScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage2,
-            screen: ABCItemDetailsScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringManTShirt,
-            imagePaths: imagePathProductImage3,
-            screen: ABCItemDetailsScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage1,
-            screen: ABCItemDetailsScreen(),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// /// Featured Product
+// /// Cell CustomProductListViewSingleItems() in List View
+// class CustomFeaturedListView extends StatelessWidget {
+//   const CustomFeaturedListView({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: 190.0,
+//       width: double.infinity,
+//       child: ListView(
+//         scrollDirection: Axis.horizontal,
+//         shrinkWrap: true,
+//         children: [
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage2,
+//             screen: ABCItemDetailsScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringManTShirt,
+//             imagePaths: imagePathProductImage3,
+//             screen: ABCItemDetailsScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage1,
+//             screen: ABCItemDetailsScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage2,
+//             screen: ABCItemDetailsScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringManTShirt,
+//             imagePaths: imagePathProductImage3,
+//             screen: ABCItemDetailsScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage1,
+//             screen: ABCItemDetailsScreen(),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
-/// Best Sell Product
-/// Cell CustomProductListViewSingleItems() in List View
-class CustomBestSellListView extends StatelessWidget {
-  const CustomBestSellListView({Key? key}) : super(key: key);
+///// Best Sell Product
+/////  Cell CustomProductListViewSingleItems() in List View
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 190.0,
-      width: double.infinity,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        shrinkWrap: true,
-        children: [
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage1,
-            screen: ABCItemDetailsAddToCardScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringManTShirt,
-            imagePaths: imagePathProductImage5,
-            screen: ABCItemDetailsAddToCardScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage6,
-            screen: ABCItemDetailsAddToCardScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage1,
-            screen: ABCItemDetailsAddToCardScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringManTShirt,
-            imagePaths: imagePathProductImage5,
-            screen: ABCItemDetailsAddToCardScreen(),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          CustomProductListViewSingleItems(
-            priceText: aBC_StringPrice,
-            nameText: aBC_StringWomanTShirt,
-            imagePaths: imagePathProductImage6,
-            screen: ABCItemDetailsAddToCardScreen(),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class CustomBestSellListView extends StatelessWidget {
+//   const CustomBestSellListView({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: 190.0,
+//       width: double.infinity,
+//       child: ListView(
+//         scrollDirection: Axis.horizontal,
+//         shrinkWrap: true,
+//         children: [
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage1,
+//             screen: ABCItemDetailsAddToCardScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringManTShirt,
+//             imagePaths: imagePathProductImage5,
+//             screen: ABCItemDetailsAddToCardScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage6,
+//             screen: ABCItemDetailsAddToCardScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage1,
+//             screen: ABCItemDetailsAddToCardScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringManTShirt,
+//             imagePaths: imagePathProductImage5,
+//             screen: ABCItemDetailsAddToCardScreen(),
+//           ),
+//           SizedBox(
+//             width: 12,
+//           ),
+//           CustomProductListViewSingleItems(
+//             priceText: aBC_StringPrice,
+//             nameText: aBC_StringWomanTShirt,
+//             imagePaths: imagePathProductImage6,
+//             screen: ABCItemDetailsAddToCardScreen(),
+//           ),
+//
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
 
 /// Feature Screen
 /// All Featured Product Generate
@@ -363,7 +384,7 @@ class FeatureScreenScrollViewProducts extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 16.0,
               crossAxisSpacing: 16.0,
-              childAspectRatio: MediaQuery.of(context).size.width / 460,
+              childAspectRatio: MediaQuery.of(context).size.width / 500,
               // (MediaQuery.of(context).size.height / 0.5),
             ),
             delegate: SliverChildListDelegate(
@@ -525,7 +546,7 @@ class FavoriteScreenScrollViewProducts extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 16.0,
               crossAxisSpacing: 16.0,
-              childAspectRatio: MediaQuery.of(context).size.width / 460,
+              childAspectRatio: MediaQuery.of(context).size.width / 500,
               // (MediaQuery.of(context).size.height / 0.5),
             ),
             delegate: SliverChildListDelegate(
@@ -670,3 +691,102 @@ class FavoriteScreenScrollViewProducts extends StatelessWidget {
     );
   }
 }
+
+
+
+/// All Add to Cart Products Show
+/// Cart Screen
+class AddToCartProductsShow extends StatelessWidget {
+  const AddToCartProductsShow({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: ListView.builder(
+            itemBuilder: (context, i) {
+              return CustomCartOfSingleItems(
+                imagePaths: imgListProductsImage[i],
+                priceText: imgListProductsPrice[i],
+                nameText: imgListProductName[i],
+                subTitleText: imgListProductSubTitle[i],
+              );
+            },
+            itemCount: 5,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+
+/// All Add to Cart Products Show
+/// Cart Screen
+class FeatureProductsShowInHomePage extends StatelessWidget {
+  const FeatureProductsShowInHomePage({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          // padding: EdgeInsets.symmetric(horizontal: 4.0),
+          height: 210.0,
+          width: double.infinity,
+          child: ListView.builder(
+            itemBuilder: (context, i) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                child: CustomProductListViewSingleItems(
+                  imagePaths: imgListProductsImage[i],
+                  priceText: imgListProductsPrice[i],
+                  nameText: imgListProductName[i],
+                  screen: ABCItemDetailsAddToCardScreen(),
+                ),
+              );
+            },
+            itemCount: 7,
+            scrollDirection : Axis.horizontal,
+            shrinkWrap: true,
+            physics: ClampingScrollPhysics(),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// My Order Screen
+/// Order that i previously, buy from Site
+class MyOrderAgainListView extends StatelessWidget {
+  const MyOrderAgainListView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: ListView.builder(
+            itemBuilder: (context, i) {
+              return CustomMyOrdersOfSingleItems(
+                imagePaths: imgListProductsImage[i],
+                priceText: imgListProductsPrice[i],
+                nameText: imgListProductName[i],
+                subTitleText: imgListProductSubTitle[i],
+                child: aBC_StringOrderAgain,
+              );
+            },
+            itemCount: 5,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+

@@ -27,21 +27,19 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: ButtonWhiteTextColor,
+        appBar: CustomAppBarBackAndNotificationButtons(),
         body: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20.0,
               right: 20.0,
-              top: 65.0,
+              top: 0.0,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /// Custom Back Screen Button
-                CustomBackScreenButton(),
-
                 ///screen Title Login
                 Text(screenTitlesAddress, style: loginStyle),
 

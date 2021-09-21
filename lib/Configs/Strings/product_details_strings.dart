@@ -33,10 +33,13 @@ I am alone, and feel the charm of existence
 in this spot, which was created for the bliss
 of souls like mine.""";
 const String aBC_StringDescription = 'Description';
+
 const String aBC_StringLottoLTD = 'Lotto.LTD';
 const String aBC_StringBata = 'Bata';
-const String aBC_StringFemaleTShirt = 'Female t- shirt';
+const String aBC_StringNext ='Next';
 const String aBC_StringPlusPoint = 'plus point';
+
+const String aBC_StringFemaleTShirt = 'Female t- shirt';
 const String aBC_StringWomanShirt = 'Woman Shirt';
 const String aBC_StringCatsEye = 'Cat\'s Eye';
 const String aBC_StringCreateAddress = 'Create Address';
@@ -90,7 +93,7 @@ const String aBC_StringOriginalPrice = '\$62';
 // const String aBC_Cash_N_Carry_StringSecondAddressValue ='Chatkhil, Noakhali, House no: 22, Road no: 7';
 // const String aBC_Cash_N_Carry_StringAddAddress ='Add Address';
 // const String aBC_Cash_N_Carry_StringContinueToPayment ='Continue To Payment';
-// const String aBC_Cash_N_Carry_StringNext ='Next';
+
 // const String aBC_Cash_N_Carry_StringSelectSize ='Select Size';
 // const String aBC_Cash_N_Carry_StringSelectColor ='Select Color';
 // const String aBC_Cash_N_Carry_StringClothSizeXXL ='XXL';

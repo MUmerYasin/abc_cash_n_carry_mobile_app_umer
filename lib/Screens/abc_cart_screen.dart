@@ -6,6 +6,7 @@ import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart'
 import 'package:abc_cash_n_carry/Helpers/help_cart.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_drawer.dart';
+import 'package:abc_cash_n_carry/Helpers/help_list_views.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,11 +26,12 @@ class _ABCCartScreenState extends State<ABCCartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ButtonWhiteTextColor,
+      appBar: CustomAppBarBackAndNotificationButtons(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 40.0,
+          top: 0.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -37,31 +39,12 @@ class _ABCCartScreenState extends State<ABCCartScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Custom Back Screen Button
-              CustomNotificationScreenButton(),
-
               ///screen Title Cart
               Text(screenTitlesCart, style: loginStyle),
 
-              Column(
-                children: [
-                  Container(
-                    child: ListView.builder(
-                      itemBuilder: (context, i) {
-                        return CustomCartOfSingleItems(
-                          imagePaths: imagePathProductImage1,
-                          priceText: aBC_StringPrice,
-                          nameText: aBC_StringWomanTShirt,
-                          subTitleText: aBC_StringLottoLTD,
-                        );
-                      },
-                      itemCount: 5,
-                      shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                    ),
-                  ),
-                ],
-              ),
+              /// All Add to Cart Products Show
+              AddToCartProductsShow(),
+
               SizedBox(
                 height: 20.0,
               ),
@@ -94,7 +77,6 @@ class _ABCCartScreenState extends State<ABCCartScreen> {
           ),
         ),
       ),
-      drawer: CustomDrawer(),
     );
   }
 }

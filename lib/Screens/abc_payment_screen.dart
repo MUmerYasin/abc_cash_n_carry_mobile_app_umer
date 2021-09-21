@@ -25,6 +25,7 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: CustomAppBarBackAndNotificationButtons(),
         backgroundColor: ButtonWhiteTextColor,
         body: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -32,15 +33,12 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
             padding: const EdgeInsets.only(
               left: 20.0,
               right: 20.0,
-              top: 65.0,
+              top: 0.0,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /// Custom Back Screen Button
-                CustomBackScreenButton(),
-
                 ///screen Title Login
                 Text(screenTitlesPayment, style: loginStyle),
 

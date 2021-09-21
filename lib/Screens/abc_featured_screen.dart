@@ -21,12 +21,13 @@ class _ABCFeaturedScreenState extends State<ABCFeaturedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBarBackAndNotificationButtons(),
       backgroundColor: ButtonWhiteTextColor,
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 40.0,
+          top: 0.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -35,14 +36,7 @@ class _ABCFeaturedScreenState extends State<ABCFeaturedScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               /// Custom Back Screen Button
-              CustomNotificationScreenButton(),
-
-              /// Search Bar
-              SearchBarTextField(),
-
-              SizedBox(
-                height: 15.0,
-              ),
+              // CustomAppbarDrawerAndNotificationButton(),
 
               ///Featured Text
               Text(screenTitlesFeatured, style: FeatureTextStyle),
@@ -60,7 +54,6 @@ class _ABCFeaturedScreenState extends State<ABCFeaturedScreen> {
           ),
         ),
       ),
-      drawer: CustomDrawer(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
+import 'package:abc_cash_n_carry/Configs/Strings/slider_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
@@ -27,6 +28,7 @@ class _ABCItemDetailsAddToCardScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: CustomAppBarBackAndNotificationButtons(),
       body: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
         child: Column(
@@ -35,22 +37,13 @@ class _ABCItemDetailsAddToCardScreenState
               height: 20.0,
             ),
 
-            /// Custom Back Screen Button
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20.0,
-                right: 20.0,
-                top: 40.0,
-                bottom: 20.0,
-              ),
-              child: CustomNotificationScreenButton(),
-            ),
-
             /// Carousel With Indicator
             Container(
               width: MediaQuery.of(context).size.width * 0.85,
               // padding: EdgeInsets.symmetric(vertical: 65.0),
-              child: HomePageCarouselWithIndicator(),
+              child: HomePageCarouselWithIndicator(
+                imgList: imgListProductDetails,
+              ),
             ),
 
             /// Product Name

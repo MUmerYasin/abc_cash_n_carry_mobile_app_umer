@@ -25,11 +25,12 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ButtonWhiteTextColor,
+      appBar: CustomBackScreenButton(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
-          top: 70.0,
+          top: 10.0,
         ),
         child: SingleChildScrollView(
           physics: ClampingScrollPhysics(),
@@ -39,9 +40,6 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /// Custom Back Screen Button
-                CustomBackScreenButton(),
-
                 ///screen Title Login
                 Text(screenTitlesSignUp, style: loginStyle),
 

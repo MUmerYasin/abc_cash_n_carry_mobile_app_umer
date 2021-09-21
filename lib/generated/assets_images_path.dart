@@ -3,10 +3,14 @@
 // static const String imagesAe = 'assets/images/ae.jpeg';
 // }
 
+
 /// All Images paths
 
 /// Main Folder path
 const String imagesMainPath = 'assets/images/';
+
+
+const String imagePathLogoPngPath = imagesMainPath + 'logo_abc.png';
 
 /// Images paths
 const String imagePathBackScreenButton =
@@ -67,3 +71,7 @@ const String imagePathProductImage7 = imagesMainPath + 'product_images07.png';
 
 //Product Slider Image
 const String imagePathProductSlider1 = imagesMainPath + 'product_slider.png';
+
+const String imagePathHomePageSlider1 = imagesMainPath + 'home_page_slider1.png';
+const String imagePathHomePageSlider2 = imagesMainPath + 'home_page_slider2.png';
+const String imagePathHomePageSlider3 = imagesMainPath + 'home_page_slider3.png';
