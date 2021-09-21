@@ -56,136 +56,136 @@ class SmallBlueBackgroundButton extends StatelessWidget {
   }
 }
 
-
-/// AppBar
-//AppBar, use in Back Button in top of screen
-class CustomBackScreenButton extends StatelessWidget implements PreferredSizeWidget  {
-  // TODO: implement preferredSize
-  @override
-  Size get preferredSize => Size.fromHeight(200);
-
-  const CustomBackScreenButton({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40.0, left: 25.0,),
-      child: Row(
-        children: [
-          InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: SvgPicture.asset(
-              imagePathBackScreenButton,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-//AppBar, use in Drawer, Notification button, Flitter in top of all screen
-class CustomAppBarBackAndNotificationButtons extends StatelessWidget implements PreferredSizeWidget {
-  // TODO: implement preferredSize
-  @override
-  Size get preferredSize => Size.fromHeight(200);
-
-  CustomAppBarBackAndNotificationButtons({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40,left: 18, right: 18, bottom: 12),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: SvgPicture.asset(
-              imagePathBackScreenButton,
-            ),
-          ),
-          SizedBox(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(CupertinoIcons.bell_fill),
-                  ),
-                ),
-
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-//AppBar,use in Back Button, Notification button,  in top of all screen
-class CustomAppBarDrawerAndNotificationButtons extends StatelessWidget implements PreferredSizeWidget  {
-  // TODO: implement preferredSize
-  @override
-  Size get preferredSize => Size.fromHeight(200);
-  // String _selection = "Value1";
-
-  // final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-  CustomAppBarDrawerAndNotificationButtons({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40,left: 18, right: 18, bottom: 12),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          InkWell(
-            onTap: () {
-              Scaffold.of(context).openDrawer();
-            },
-            child: SvgPicture.asset(
-              imagePathMenuBar,
-            ),
-          ),
-          SizedBox(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(CupertinoIcons.bell_fill),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: SvgPicture.asset(
-                    imagePathFilter,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
+//
+// /// AppBar
+// //AppBar, use in Back Button in top of screen
+// class CustomBackScreenButton extends StatelessWidget implements PreferredSizeWidget  {
+//   // implement preferredSize
+//   @override
+//   Size get preferredSize => Size.fromHeight(200);
+//
+//   const CustomBackScreenButton({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.only(top: 40.0, left: 25.0,),
+//       child: Row(
+//         children: [
+//           InkWell(
+//             onTap: () {
+//               Navigator.pop(context);
+//             },
+//             child: SvgPicture.asset(
+//               imagePathBackScreenButton,
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+//
+// //AppBar, use in Drawer, Notification button, Flitter in top of all screen
+// class CustomAppBarBackAndNotificationButtons extends StatelessWidget implements PreferredSizeWidget {
+//   //  implement preferredSize
+//   @override
+//   Size get preferredSize => Size.fromHeight(200);
+//
+//   CustomAppBarBackAndNotificationButtons({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.only(top: 40,left: 18, right: 18, bottom: 12),
+//       child: Row(
+//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//         children: [
+//           InkWell(
+//             onTap: () {
+//               Navigator.pop(context);
+//             },
+//             child: SvgPicture.asset(
+//               imagePathBackScreenButton,
+//             ),
+//           ),
+//           SizedBox(
+//             child: Row(
+//               children: [
+//                 Padding(
+//                   padding: const EdgeInsets.only(right: 8.0),
+//                   child: InkWell(
+//                     onTap: () {
+//                       Navigator.pop(context);
+//                     },
+//                     child: Icon(CupertinoIcons.bell_fill),
+//                   ),
+//                 ),
+//
+//               ],
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+//
+// //AppBar,use in Back Button, Notification button,  in top of all screen
+// class CustomAppBarDrawerAndNotificationButtons extends StatelessWidget implements PreferredSizeWidget  {
+//   // implement preferredSize
+//   @override
+//   Size get preferredSize => Size.fromHeight(200);
+//   // String _selection = "Value1";
+//
+//   // final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+//
+//   CustomAppBarDrawerAndNotificationButtons({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.only(top: 40,left: 18, right: 18, bottom: 12),
+//       child: Row(
+//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//         children: [
+//           InkWell(
+//             onTap: () {
+//               Scaffold.of(context).openDrawer();
+//             },
+//             child: SvgPicture.asset(
+//               imagePathMenuBar,
+//             ),
+//           ),
+//           SizedBox(
+//             child: Row(
+//               children: [
+//                 Padding(
+//                   padding: const EdgeInsets.only(right: 8.0),
+//                   child: InkWell(
+//                     onTap: () {
+//                       Navigator.pop(context);
+//                     },
+//                     child: Icon(CupertinoIcons.bell_fill),
+//                   ),
+//                 ),
+//                 InkWell(
+//                   onTap: () {
+//                     Navigator.pop(context);
+//                   },
+//                   child: SvgPicture.asset(
+//                     imagePathFilter,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+//
 
 
 //use in Add Card Buttons
@@ -241,13 +241,13 @@ class AddCardButton extends StatelessWidget {
   }
 }
 
-// Button Custom Design Select Color, Select Size
-class SelectSizeColorButton extends StatelessWidget {
+// Button Custom Design Select Size
+class SelectSizeButton extends StatelessWidget {
   Function()? onPressed;
   String? child;
   bool? color;
 
-  SelectSizeColorButton({this.onPressed, this.child, this.color});
+  SelectSizeButton({this.onPressed, this.child, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -279,6 +279,46 @@ class SelectSizeColorButton extends StatelessWidget {
     );
   }
 }
+
+// Button Custom Design Select Color
+class SelectColorButton extends StatelessWidget {
+  Function()? onPressed;
+  String? child;
+  bool? color;
+  Color? buttonColor;
+  SelectColorButton({this.onPressed, this.child, this.color, this.buttonColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 40,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: color! ? buttonColor : SelectSizeTextColor,
+          // textStyle: TextStyle(
+          //   fontFamily: textFontFamilySegoeUI,
+          //   fontSize: 18,
+          //   color: color! ? ButtonWhiteTextColor : abc_CategoriesListViewBlack,
+          //   fontWeight: FontWeight.w500,
+          // ),
+        ),
+        onPressed: onPressed,
+        child: Center(
+          child: Text(
+            child ?? '',
+            style: TextStyle(
+              fontFamily: textFontFamilySegoeUI,
+              fontSize: 18,
+              color: color! ? ButtonWhiteTextColor : Colors.black,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 
 // Button Buy NowCustom Design
 class BuyNowColorButton extends StatelessWidget {

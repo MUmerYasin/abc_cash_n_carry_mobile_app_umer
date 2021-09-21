@@ -1,6 +1,7 @@
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/slider_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
+import 'package:abc_cash_n_carry/Helpers/help_appbar.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_carousel_slider.dart';
 import 'package:abc_cash_n_carry/Helpers/help_drawer.dart';

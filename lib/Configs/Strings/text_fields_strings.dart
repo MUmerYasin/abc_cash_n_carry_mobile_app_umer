@@ -62,7 +62,7 @@ const String aBC_StringClothSizeL = 'L';
 const String aBC_StringClothSizeM = 'M';
 const String aBC_StringClothSizeS = 'S';
 const String aBC_StringClothSizeBlack = 'Black';
-const String aBC_StringClothSizeWhite = 'White';
+const String aBC_StringClothSizeGreen = 'Green';
 const String aBC_StringClothSizeRed = 'Red';
 
 const String aBC_StringBuyNow = 'BUY NOW';

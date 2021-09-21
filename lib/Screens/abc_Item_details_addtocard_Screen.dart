@@ -3,6 +3,7 @@ import 'package:abc_cash_n_carry/Configs/Strings/slider_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
+import 'package:abc_cash_n_carry/Helpers/help_appbar.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -202,7 +203,7 @@ class _ABCItemDetailsAddToCardScreenState
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ///
-                    SelectSizeColorButton(
+                    SelectSizeButton(
                       onPressed: () {
                         setState(
                           () {
@@ -215,7 +216,7 @@ class _ABCItemDetailsAddToCardScreenState
                     ),
 
                     ///
-                    SelectSizeColorButton(
+                    SelectSizeButton(
                         onPressed: () {
                           setState(
                             () {
@@ -227,7 +228,7 @@ class _ABCItemDetailsAddToCardScreenState
                         color: selected == 2 ? true : false),
 
                     ///
-                    SelectSizeColorButton(
+                    SelectSizeButton(
                         onPressed: () {
                           setState(
                             () {
@@ -239,7 +240,7 @@ class _ABCItemDetailsAddToCardScreenState
                         color: selected == 3 ? true : false),
 
                     ///
-                    SelectSizeColorButton(
+                    SelectSizeButton(
                         onPressed: () {
                           setState(
                             () {
@@ -263,7 +264,7 @@ class _ABCItemDetailsAddToCardScreenState
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ///
-                    SelectSizeColorButton(
+                    SelectColorButton(
                       onPressed: () {
                         setState(
                           () {
@@ -273,10 +274,11 @@ class _ABCItemDetailsAddToCardScreenState
                       },
                       child: aBC_StringClothSizeBlack,
                       color: selected == 1 ? true : false,
+                      buttonColor: Colors.black,
                     ),
 
                     ///
-                    SelectSizeColorButton(
+                    SelectColorButton(
                         onPressed: () {
                           setState(
                             () {
@@ -284,11 +286,13 @@ class _ABCItemDetailsAddToCardScreenState
                             },
                           );
                         },
-                        child: aBC_StringClothSizeWhite,
-                        color: selected == 2 ? true : false),
+                        child: aBC_StringClothSizeGreen,
+                        color: selected == 2 ? true : false,
+                      buttonColor: Colors.green,
+                    ),
 
                     ///
-                    SelectSizeColorButton(
+                    SelectColorButton(
                         onPressed: () {
                           setState(
                             () {
@@ -297,7 +301,9 @@ class _ABCItemDetailsAddToCardScreenState
                           );
                         },
                         child: aBC_StringClothSizeRed,
-                        color: selected == 3 ? true : false),
+                        color: selected == 3 ? true : false,
+                      buttonColor: Colors.red,
+                    ),
                   ],
                 ),
               ),

@@ -41,9 +41,9 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       // Add the builder here
 
-      home: SplashScreen(), // Front End Complete
+      // home: SplashScreen(), // Front End Complete
       // home: WelcomeToABCScreen(),// Front End Complete
-      // home: ABCLoginScreen(),// Front End Complete
+      home: ABCLoginScreen(),// Front End Complete
       // home: ABCSignupScreen(), // Front End Complete
       // home: ABCHomeVersionOneScreen(),// Front End Complete
       // home: ABCItemDetailsScreen(),// Front End Complete
