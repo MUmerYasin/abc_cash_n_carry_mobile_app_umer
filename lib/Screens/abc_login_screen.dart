@@ -5,6 +5,7 @@ import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart'
 import 'package:abc_cash_n_carry/Helpers/help_appbar.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_text_field.dart';
+import 'package:abc_cash_n_carry/Helpers/navigator_help.dart';
 import 'package:abc_cash_n_carry/Screens/abc_signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -43,6 +44,19 @@ class _ABCLoginScreenState extends State<ABCLoginScreen> {
               children: [
                 // /// Custom Back Screen Button
                 // CustomBackScreenButton(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      child: Text(aBC_StringSkip, style: skipButtonTextStyle),
+                      onTap: () {
+                        gotoScreen(
+                            context: context,
+                            screen: ABCHomeVersionOneScreen());
+                      },
+                    ),
+                  ],
+                ),
 
                 ///screen Title Login
                 Text(screenTitlesLoginPage, style: loginStyle),

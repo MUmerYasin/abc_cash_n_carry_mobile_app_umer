@@ -13,7 +13,6 @@ import 'abc_cart_screen.dart';
 
 class ABCItemDetailsAddToCardScreen extends StatefulWidget {
   const ABCItemDetailsAddToCardScreen({Key? key}) : super(key: key);
-
   @override
   _ABCItemDetailsAddToCardScreenState createState() =>
       _ABCItemDetailsAddToCardScreenState();
@@ -129,7 +128,7 @@ class _ABCItemDetailsAddToCardScreenState
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(aBC_StringDescription, style: productItemNameTextStyle),
+                  Expanded(child: Text(aBC_StringDescription, style: productItemNameTextStyle)),
                 ],
               ),
             ),
@@ -332,7 +331,7 @@ class _ABCItemDetailsAddToCardScreenState
                   },
                   child: Text(aBC_StringAddToCart, style: addToCartTextStyle),
                 ),
-                SizedBox(width: 20.0,),
+                SizedBox(width: 16.0,),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: abc_Color12,

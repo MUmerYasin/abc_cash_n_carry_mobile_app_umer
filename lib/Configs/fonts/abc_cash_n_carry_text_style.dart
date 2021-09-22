@@ -273,3 +273,12 @@ const TextStyle counterTextStyleCartScreen = TextStyle(
   color: counterCartTextColor,
   height: 1.2000000476837158,
 );
+
+// Skip Button
+const TextStyle skipButtonTextStyle = TextStyle(
+  color: abc_Color9,
+  fontSize: 16.0,
+  fontWeight: FontWeight.w600,
+  height: 1,
+  fontFamily: textFontFamilySegoeUI,
+);

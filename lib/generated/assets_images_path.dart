@@ -25,9 +25,15 @@ const String imagePathIcon_loading_screen =
     imagesMainPath + 'icon_loading_screen.svg';
 const String imagePathImage1 = imagesMainPath + 'image1.svg';
 
+/// Categories List View  images Path
 const String imagePathPngImage1 = imagesMainPath + 'image1.png';
 const String imagePathPngImage2 = imagesMainPath + 'image2.png';
 const String imagePathPngImage3 = imagesMainPath + 'image3.png';
+const String imagePathBeautyProducts = imagesMainPath + 'beauty_products.png';
+const String imagePathElectronicProductFirst = imagesMainPath + 'electronic_products.png';
+const String imagePathElectronicProductTwo = imagesMainPath + 'Electronics_Products.png';
+const String imagePathGroceries = imagesMainPath + 'groceries.png';
+const String imagePathJewelery = imagesMainPath + 'Jewelery.png';
 
 const String imagePathImage2 = imagesMainPath + 'image2.svg';
 const String imagePathImage3 = imagesMainPath + 'image3.svg';

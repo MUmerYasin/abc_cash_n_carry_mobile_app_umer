@@ -9,12 +9,12 @@ import 'package:abc_cash_n_carry/Helpers/help_text_field.dart';
 import 'package:abc_cash_n_carry/Helpers/navigator_help.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'abc_categories_screen.dart';
 import 'abc_favorite_screen.dart';
 import 'abc_featured_screen.dart';
 
 class ABCHomeVersionOneScreen extends StatefulWidget {
   const ABCHomeVersionOneScreen({Key? key}) : super(key: key);
-
   @override
   _ABCHomeVersionOneScreenState createState() =>
       _ABCHomeVersionOneScreenState();
@@ -57,7 +57,7 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
               ///Text Categories and See All
               CustomSellAllRow(
                   mainHeadingText: aBC_StringCategories,
-                  screen: ABCFeaturedScreen()),
+                  screen: ABCCategoriesScreen(),),
 
               /// Categories List of Man, Women, Kids
               CustomCategoriesListView(),

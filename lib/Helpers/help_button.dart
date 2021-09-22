@@ -255,7 +255,7 @@ class SelectSizeButton extends StatelessWidget {
       height: 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: color! ? SliderBlueTextColor : SelectSizeTextColor,
+          primary: color! ? SliderBlueTextColor : selectSizeTextColor,
           // textStyle: TextStyle(
           //   fontFamily: textFontFamilySegoeUI,
           //   fontSize: 18,
@@ -294,7 +294,7 @@ class SelectColorButton extends StatelessWidget {
       height: 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: color! ? buttonColor : SelectSizeTextColor,
+          primary: color! ? buttonColor : selectSizeTextColor,
           // textStyle: TextStyle(
           //   fontFamily: textFontFamilySegoeUI,
           //   fontSize: 18,
@@ -334,7 +334,7 @@ class BuyNowColorButton extends StatelessWidget {
       height: 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: color! ? SliderBlueTextColor : SelectSizeTextColor,
+          primary: color! ? SliderBlueTextColor : selectSizeTextColor,
           // textStyle: TextStyle(
           //   fontFamily: textFontFamilySegoeUI,
           //   fontSize: 18,

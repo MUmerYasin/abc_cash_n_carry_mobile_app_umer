@@ -37,56 +37,62 @@ class CustomCategoriesListViewSingleItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Container(
-        /// Remove Nemorfic
-        height: 70.0,
-        width: 130.0,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              color: Colors.black26,
-              blurRadius: 10.0,
-              offset: Offset(0.0, 0.75),
-            )
-          ],
-          color: Colors.white,
-        ),
-        child: Stack(
-          children: <Widget>[
-            Image.asset(
-              imagePaths,
-              fit: BoxFit.fitWidth,
-              width: double.infinity,
-            ),
-            Container(
-              width: double.infinity,
-              height: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                gradient: LinearGradient(
-                  begin: Alignment(-1.0, 0.06),
-                  end: Alignment(1.0, 0.12),
-                  colors: [linearGradientColorOne, linearGradientColorTwo],
-                  stops: [0.0, 1.0],
+      child: Padding(
+        padding: const EdgeInsets.only(right: 8.0),
+        child: Container(
+          height: 70.0,
+          width: 150.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                color: Colors.black38,
+                blurRadius: 5.0,
+                offset: Offset(3, 3),
+              )
+            ],
+            color: Colors.white,
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Stack(
+              children: <Widget>[
+                Image.asset(
+                  imagePaths,
+                  fit: BoxFit.fitWidth,
+                  width: double.infinity,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: abc_CategoriesListViewBlack,
-                    offset: Offset(0, 15),
-                    blurRadius: 31,
+                Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0),
+                    gradient: LinearGradient(
+                      begin: Alignment(-1.0, 0.06),
+                      end: Alignment(1.0, 0.12),
+                      colors: [linearGradientColorOne, linearGradientColorTwo],
+                      stops: [0.0, 1.0],
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: abc_CategoriesListViewBlack,
+                        offset: Offset(0, 15),
+                        blurRadius: 31,
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              child: Center(
-                child: Text(
-                  listViewText,
-                  style: categoriesListViewHeadingStyle,
-                  textAlign: TextAlign.center,
+                  child: Center(
+                    child: Text(
+                      listViewText,
+                      style: categoriesListViewHeadingStyle,
+                      textAlign: TextAlign.center,
+                      softWrap:true,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
       onTap: () {
@@ -109,38 +115,54 @@ class CustomCategoriesListView extends StatelessWidget {
       height: 75.0,
       width: double.infinity,
       color: Colors.white,
-      child: ListView(
+      // child: ListView(
+      //   scrollDirection: Axis.horizontal,
+      //   shrinkWrap: true,
+      //   children: [
+      //     CustomCategoriesListViewSingleItems(
+      //       listViewText: aBC_ListViewHeadingStringFemale,
+      //       imagePaths: imagePathPngImage1,
+      //       linearGradientColorOne: pinkLinearGradientColors,
+      //       linearGradientColorTwo: pinkLightLinearGradientColors,
+      //       screen: ABCFeaturedScreen(),
+      //     ),
+      //     SizedBox(
+      //       width: 10,
+      //     ),
+      //     CustomCategoriesListViewSingleItems(
+      //       listViewText: aBC_ListViewHeadingStringMale,
+      //       imagePaths: imagePathPngImage2,
+      //       linearGradientColorOne: abc_CategoriesListViewRed,
+      //       linearGradientColorTwo: abc_CategoriesListViewDarkRed,
+      //       screen: ABCFavoriteScreen(),
+      //     ),
+      //     SizedBox(
+      //       width: 10,
+      //     ),
+      //     CustomCategoriesListViewSingleItems(
+      //       listViewText: aBC_ListViewHeadingStringKids,
+      //       imagePaths: imagePathPngImage3,
+      //       linearGradientColorOne: abc_CategoriesListViewDarkGreen,
+      //       linearGradientColorTwo: abc_CategoriesListViewGreen,
+      //       screen: ABCFeaturedScreen(),
+      //     ),
+      //   ],
+      // ),
+
+      child: ListView.builder(
         scrollDirection: Axis.horizontal,
+        itemBuilder: (context, i) {
+          return CustomCategoriesListViewSingleItems(
+            listViewText: categoriesNames[i],
+            imagePaths: imgListCategories[i],
+            linearGradientColorOne: customCategoriesFirstColors[i],
+            linearGradientColorTwo: customCategoriesSecondColors[i],
+            screen: ABCFeaturedScreen(),
+          );
+        },
+        itemCount: categoriesNames.length,
         shrinkWrap: true,
-        children: [
-          CustomCategoriesListViewSingleItems(
-            listViewText: aBC_ListViewHeadingStringFemale,
-            imagePaths: imagePathPngImage1,
-            linearGradientColorOne: abc_CategoriesListViewLightBlue,
-            linearGradientColorTwo: abc_CategoriesListViewBlue,
-            screen: ABCFeaturedScreen(),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          CustomCategoriesListViewSingleItems(
-            listViewText: aBC_ListViewHeadingStringMale,
-            imagePaths: imagePathPngImage2,
-            linearGradientColorOne: abc_CategoriesListViewRed,
-            linearGradientColorTwo: abc_CategoriesListViewDarkRed,
-            screen: ABCFavoriteScreen(),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          CustomCategoriesListViewSingleItems(
-            listViewText: aBC_ListViewHeadingStringKids,
-            imagePaths: imagePathPngImage3,
-            linearGradientColorOne: abc_CategoriesListViewDarkGreen,
-            linearGradientColorTwo: abc_CategoriesListViewGreen,
-            screen: ABCFeaturedScreen(),
-          ),
-        ],
+        physics: ClampingScrollPhysics(),
       ),
     );
   }
@@ -211,10 +233,52 @@ class CustomProductListViewSingleItems extends StatelessWidget {
         ),
       ),
       onTap: () {
-        Navigator.push(context, CupertinoPageRoute(builder: (context) {
-          return screen ?? ABCLoginScreen();
-        }));
+        _modalBottomSheetMenu(context);
+        // Navigator.push(context, CupertinoPageRoute(builder: (context) {
+        //   return screen ?? ABCLoginScreen();
+        // },
+        // ),
+        // );
       },
+    );
+
+
+
+  }
+
+  void _modalBottomSheetMenu(BuildContext context){
+    showModalBottomSheet<void>(
+        context: context,
+        enableDrag : true,
+        elevation:0.0,
+        backgroundColor: Colors.transparent,
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
+        // ),
+        builder: (context){
+          return Container(
+            height: MediaQuery.of(context).size.height*0.7,
+            color: Colors.transparent,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius:
+                // BorderRadius.only(
+                //   topLeft: const Radius.circular(10.0),
+                //   topRight: const Radius.circular(10.0),
+                // ),
+
+                BorderRadius.circular(12.0),
+                child: Container(
+                    // decoration: BoxDecoration(
+                    //
+                    // ),
+                    child: ABCItemDetailsAddToCardScreen(),
+                ),
+              ),
+            ),
+          );
+        }
     );
   }
 }
@@ -545,39 +609,6 @@ class CustomProductListViewSingleItems extends StatelessWidget {
 // }
 
 
-/// Favorite Screen
-/// All Favorite Product Generate
-class AllFavoriteScreenScrollViewProducts extends StatelessWidget {
-  const AllFavoriteScreenScrollViewProducts({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      // height: 400,
-      height: MediaQuery.of(context).size.height * 0.7,
-      child: GridView.count(
-        crossAxisCount: 2,
-        scrollDirection : Axis.vertical,
-        mainAxisSpacing: 16.0,
-        crossAxisSpacing: 16.0,
-        childAspectRatio: MediaQuery.of(context).size.width / 500,
-        physics:  ClampingScrollPhysics(),
-        shrinkWrap: true,
-        children: List.generate(
-            imgListProductName.length,
-          (index) {
-            return CustomProductListViewSingleItems(
-              priceText: aBC_StringPrice,
-              nameText: aBC_StringWomanTShirt,
-              imagePaths: imagePathProductImage1,
-              screen: ABCItemDetailsAddToCardScreen(),
-            ); // api provide you different images for any number you are giving
-          },
-        ),
-      ),
-    );
-  }
-}
 
 /// All Add to Cart Products Show
 /// Cart Screen
@@ -593,12 +624,12 @@ class AddToCartProductsShow extends StatelessWidget {
             itemBuilder: (context, i) {
               return CustomCartOfSingleItems(
                 imagePaths: imgListProductsImage[i],
-                priceText: imgListProductsPrice[i],
-                nameText: imgListProductName[i],
-                subTitleText: imgListProductSubTitle[i],
+                priceText: listProductsPrice[i],
+                nameText: listProductName[i],
+                subTitleText: listProductSubTitle[i],
               );
             },
-            itemCount: imgListProductName.length,
+            itemCount: listProductName.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
           ),
@@ -608,8 +639,8 @@ class AddToCartProductsShow extends StatelessWidget {
   }
 }
 
-/// All Add to Cart Products Show
-/// Cart Screen
+///
+/// Feature Products Show In Home Page
 class FeatureProductsShowInHomePage extends StatelessWidget {
   const FeatureProductsShowInHomePage({Key? key}) : super(key: key);
   @override
@@ -626,13 +657,13 @@ class FeatureProductsShowInHomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 child: CustomProductListViewSingleItems(
                   imagePaths: imgListProductsImage[i],
-                  priceText: imgListProductsPrice[i],
-                  nameText: imgListProductName[i],
+                  priceText: listProductsPrice[i],
+                  nameText: listProductName[i],
                   screen: ABCItemDetailsAddToCardScreen(),
                 ),
               );
             },
-            itemCount: imgListProductName.length,
+            itemCount: listProductName.length,
             scrollDirection : Axis.horizontal,
             shrinkWrap: true,
             physics: ClampingScrollPhysics(),
@@ -657,13 +688,13 @@ class MyOrderAgainListView extends StatelessWidget {
             itemBuilder: (context, i) {
               return CustomMyOrdersOfSingleItems(
                 imagePaths: imgListProductsImage[i],
-                priceText: imgListProductsPrice[i],
-                nameText: imgListProductName[i],
-                subTitleText: imgListProductSubTitle[i],
+                priceText: listProductsPrice[i],
+                nameText: listProductName[i],
+                subTitleText: listProductSubTitle[i],
                 child: aBC_StringOrderAgain,
               );
             },
-            itemCount: imgListProductName.length,
+            itemCount: listProductName.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
           ),
@@ -673,4 +704,73 @@ class MyOrderAgainListView extends StatelessWidget {
   }
 }
 
+
+/// Categories Screen
+/// All Categories List view
+class AllCategoriesScrollViewProducts extends StatelessWidget {
+  const AllCategoriesScrollViewProducts({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      // height: 400,
+      height: MediaQuery.of(context).size.height * 0.7,
+      child: GridView.count(
+        crossAxisCount: 2,
+        scrollDirection : Axis.vertical,
+        mainAxisSpacing: 16.0,
+        crossAxisSpacing: 16.0,
+        childAspectRatio: MediaQuery.of(context).size.width / 180,
+        physics:  ClampingScrollPhysics(),
+        shrinkWrap: true,
+        children: List.generate(
+          categoriesNames.length,
+              (index) {
+            return CustomCategoriesListViewSingleItems(
+              listViewText: categoriesNames[index],
+              imagePaths: imgListCategories[index],
+              linearGradientColorOne: customCategoriesFirstColors[index],
+              linearGradientColorTwo: customCategoriesSecondColors[index],
+              screen: ABCFeaturedScreen(),
+            ); // api provide you different images for any number you are giving
+          },
+        ),
+      ),
+    );
+  }
+}
+
+/// Favorite Screen
+/// All Favorite Product Generate
+class AllFavoriteScreenScrollViewProducts extends StatelessWidget {
+  const AllFavoriteScreenScrollViewProducts({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      // height: 400,
+      height: MediaQuery.of(context).size.height * 0.7,
+      child: GridView.count(
+        crossAxisCount: 2,
+        scrollDirection : Axis.vertical,
+        mainAxisSpacing: 16.0,
+        crossAxisSpacing: 16.0,
+        childAspectRatio: MediaQuery.of(context).size.width / 500,
+        physics:  ClampingScrollPhysics(),
+        shrinkWrap: true,
+        children: List.generate(
+          listProductName.length,
+              (index) {
+            return CustomProductListViewSingleItems(
+              priceText: listProductsPrice[index],
+              nameText: listProductName[index],
+              imagePaths: imgListProductsImage[index],
+              screen: ABCItemDetailsAddToCardScreen(),
+            ); // api provide you different images for any number you are giving
+          },
+        ),
+      ),
+    );
+  }
+}
 

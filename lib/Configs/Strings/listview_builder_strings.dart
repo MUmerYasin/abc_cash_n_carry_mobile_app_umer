@@ -1,5 +1,10 @@
+import 'dart:ui';
+
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
+import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
+
+import 'listview_Data_strings.dart';
 
 // final List<String> imgListHomePage = [
 //   imagePathProductImage1,
@@ -19,7 +24,7 @@ final List<String> imgListProductsImage = [
 ];
 
 /// Price
-final List<String> imgListProductsPrice = [
+final List<String> listProductsPrice = [
   aBC_StringPrice,
   aBC_StringPrice,
   aBC_StringPrice,
@@ -30,7 +35,7 @@ final List<String> imgListProductsPrice = [
 ];
 
 /// Product name
-final List<String> imgListProductName = [
+final List<String> listProductName = [
   aBC_StringWomanTShirt,
   aBC_StringWomanTShirt,
   aBC_StringManTShirt,
@@ -41,7 +46,7 @@ final List<String> imgListProductName = [
 ];
 
 /// Sub title
-final List<String> imgListProductSubTitle = [
+final List<String> listProductSubTitle = [
   aBC_StringLottoLTD,
   aBC_StringBata,
   aBC_StringNext,
@@ -49,4 +54,57 @@ final List<String> imgListProductSubTitle = [
   aBC_StringLottoLTD,
   aBC_StringBata,
   aBC_StringNext
+];
+
+/// Home Page Categories List View Builder
+
+///First Color of linear Gradient on Container
+final List<Color> customCategoriesFirstColors = [
+  abc_CategoriesListViewLightBlue,
+  abc_CategoriesListViewRed,
+  abc_CategoriesListViewDarkGreen,
+  pinkLinearGradientColors,
+  blueLinearGradientColors,
+  yellowLinearGradientColors,
+  purpleLinearGradientColors,
+  orangeLinearGradientColors
+];
+
+///Second Color of linear Gradient on Container
+final List<Color> customCategoriesSecondColors = [
+  abc_CategoriesListViewBlue,
+  abc_CategoriesListViewDarkRed,
+  abc_CategoriesListViewGreen,
+  pinkLightLinearGradientColors,
+  blueLightLinearGradientColors,
+  yellowLightLinearGradientColors,
+  purpleLightLinearGradientColors,
+  orangeLightLinearGradientColors
+];
+
+/// Images Path
+final List<String> imgListCategories = [
+  imagePathPngImage1,
+  imagePathPngImage2,
+  imagePathPngImage3,
+  imagePathJewelery,
+  imagePathBeautyProducts,
+  imagePathGroceries,
+  imagePathElectronicProductFirst,
+  imagePathElectronicProductTwo,
+
+
+];
+
+/// Names
+
+final List<String> categoriesNames = [
+  aBC_ListViewHeadingStringMale,
+  aBC_ListViewHeadingStringFemale,
+  aBC_ListViewHeadingStringKids,
+  aBC_ListViewHeadingStringJewelery,
+  aBC_ListViewHeadingStringBeauty,
+  aBC_ListViewHeadingStringGroceries,
+  aBC_ListViewHeadingStringElectronics,
+  aBC_ListViewHeadingStringHomeAppliances,
 ];

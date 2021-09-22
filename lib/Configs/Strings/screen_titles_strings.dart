@@ -9,6 +9,7 @@ const String screenTitlesSignUp = 'Sign Up';
 const String screenTitlesHomeVersion1 = 'Home Version 1';
 const String screenTitlesHomeVersion2 = 'Home Version 2';
 const String screenTitlesFeatured = 'Featured';
+const String screenTitlesCategories = 'Categories';
 const String screenTitlesItemDetails1 = 'Item Details – 1';
 const String screenTitlesItemDetails = 'Item Details – 2';
 const String screenTitlesCart = 'Cart';

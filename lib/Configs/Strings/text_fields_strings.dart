@@ -80,6 +80,7 @@ const String aBC_StringCheckout = 'Checkout';
 const String aBC_StringBuy = 'Buy';
 const String aBC_StringBackToHome = 'Back to Home';
 const String aBC_StringOrderAgain = 'Order Again';
+const String aBC_StringSkip = 'Skip';
 const String screenTitlesAddProfile = 'Add Profile';
 
 /// Main Menu
@@ -90,6 +91,7 @@ const String aBC_MainMenuString_Favorite = 'Favorite';
 const String aBC_MainMenuString_MyOrders = 'My Orders';
 const String aBC_MainMenuString_Language = 'Language';
 const String aBC_MainMenuString_Settings = 'Settings';
+const String aBC_MainMenuString_Logout = 'Logout';
 
 ///
 /// validate
