@@ -46,10 +46,14 @@ class _ABCFeaturedScreenState extends State<ABCFeaturedScreen> {
               ),
 
               ///All Featured Product Generate
-              FeatureScreenScrollViewProducts(),
+              // FeatureScreenScrollViewProducts(),
+
+
+              /// Test AllFavoriteScreenScrollViewProducts
+              AllFavoriteScreenScrollViewProducts(),
 
               SizedBox(
-                height: 20.0,
+                height: 50.0,
               ),
             ],
           ),

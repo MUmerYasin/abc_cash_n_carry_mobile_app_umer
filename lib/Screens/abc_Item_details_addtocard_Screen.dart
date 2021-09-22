@@ -41,9 +41,11 @@ class _ABCItemDetailsAddToCardScreenState
             /// Carousel With Indicator
             Container(
               width: MediaQuery.of(context).size.width * 0.85,
+
               // padding: EdgeInsets.symmetric(vertical: 65.0),
               child: HomePageCarouselWithIndicator(
                 imgList: imgListProductDetails,
+                heightOfSlider: 150,
               ),
             ),
 
@@ -319,7 +321,7 @@ class _ABCItemDetailsAddToCardScreenState
                   style: ElevatedButton.styleFrom(
                     primary: ButtonAddToCardTextColor,
                     minimumSize:
-                        Size(MediaQuery.of(context).size.width * 0.50, 50.0),
+                        Size(MediaQuery.of(context).size.width * 0.40, 50.0),
                   ),
                   // backgroundColor: Color(0xFF7168C8),
                   onPressed: () {
@@ -330,11 +332,12 @@ class _ABCItemDetailsAddToCardScreenState
                   },
                   child: Text(aBC_StringAddToCart, style: addToCartTextStyle),
                 ),
+                SizedBox(width: 20.0,),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: abc_Color12,
                     minimumSize:
-                        Size(MediaQuery.of(context).size.width * 0.50, 50.0),
+                        Size(MediaQuery.of(context).size.width * 0.40, 50.0),
                   ),
                   // backgroundColor: Color(0xFF7168C8),
                   onPressed: () {
@@ -346,6 +349,9 @@ class _ABCItemDetailsAddToCardScreenState
                   child: Text(aBC_StringBuyNow, style: buyNowTextStyle),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 30.0,
             ),
           ],
         ),

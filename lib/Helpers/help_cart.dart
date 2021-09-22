@@ -50,9 +50,10 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
         Visibility(
       visible: widget.visibleCart,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
         child: Container(
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
             color: Colors.white,
             boxShadow: [
               BoxShadow(
@@ -163,8 +164,11 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     GestureDetector(
-                      child: Container(
-                        child: Icon(CupertinoIcons.clear_thick),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8.0,),
+                        child: Container(
+                          child: Icon(CupertinoIcons.clear_thick),
+                        ),
                       ),
                       onTap: () {
                         setState(() {

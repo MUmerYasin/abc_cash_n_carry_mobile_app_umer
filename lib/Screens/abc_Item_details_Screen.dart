@@ -41,6 +41,7 @@ class _ABCItemDetailsScreenState extends State<ABCItemDetailsScreen> {
               // padding: EdgeInsets.symmetric(vertical: 65.0),
               child: HomePageCarouselWithIndicator(
                 imgList: imgListProductDetails,
+                heightOfSlider: 200,
               ),
             ),
 
@@ -312,7 +313,7 @@ class _ABCItemDetailsScreenState extends State<ABCItemDetailsScreen> {
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: abc_Color12,
-                  minimumSize: Size(MediaQuery.of(context).size.width, 50.0),
+                  minimumSize: Size(MediaQuery.of(context).size.width* 0.7, 50.0),
                 ),
                 // backgroundColor: Color(0xFF7168C8), ABCCartScreen
                 onPressed: () {
@@ -321,7 +322,12 @@ class _ABCItemDetailsScreenState extends State<ABCItemDetailsScreen> {
                     return ABCCartScreen();
                   }));
                 },
-                child: Text(aBC_StringBuyNow, style: buyNowTextStyle)),
+                child: Text(aBC_StringBuyNow, style: buyNowTextStyle),
+            ),
+
+            SizedBox(
+              height: 30.0,
+            ),
           ],
         ),
       ),

@@ -4,6 +4,7 @@ const String aBC_StringTime = 'Time';
 const String aBC_StringTimeValue = '9:41';
 const String aBC_StringWelcomeTo = 'Welcome to ';
 const String aBC_StringABC = 'ABC';
+const String aBC_StringCashAndCarry = 'Cash & Carry';
 const String aBC_StringExploreUs = 'Explore Us';
 const String aBC_StringLogin = 'Login';
 const String aBC_StringSignup = 'Signup';

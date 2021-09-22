@@ -2,7 +2,6 @@ import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/slider_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Helpers/help_appbar.dart';
-import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_carousel_slider.dart';
 import 'package:abc_cash_n_carry/Helpers/help_drawer.dart';
 import 'package:abc_cash_n_carry/Helpers/help_list_views.dart';
@@ -51,6 +50,7 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
                 // padding: EdgeInsets.symmetric(vertical: 65.0),
                 child: HomePageCarouselWithIndicator(
                   imgList: imgListHomePage,
+                  heightOfSlider: 150,
                 ),
               ),
 
@@ -81,7 +81,7 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
               FeatureProductsShowInHomePage(),
 
               SizedBox(
-                height: 20.0,
+                height: 30.0,
               ),
             ],
           ),

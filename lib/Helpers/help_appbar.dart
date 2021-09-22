@@ -36,7 +36,7 @@ class CustomBackScreenButton extends StatelessWidget
   }
 }
 
-//AppBar, use in Drawer, Notification button, Flitter in top of all screen
+//AppBar,use in Back Button, Notification button,  in top of all screen
 class CustomAppBarBackAndNotificationButtons extends StatelessWidget
     implements PreferredSizeWidget {
   //  implement preferredSize
@@ -52,6 +52,7 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          /// Back Button
           InkWell(
             onTap: () {
               Navigator.pop(context);
@@ -60,6 +61,8 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
               imagePathBackScreenButton,
             ),
           ),
+
+          /// Cart icon
           SizedBox(
             child: Row(
               children: [
@@ -69,7 +72,7 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Icon(CupertinoIcons.bell_fill),
+                    child: Icon(CupertinoIcons.cart),
                   ),
                 ),
               ],
@@ -81,16 +84,12 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
   }
 }
 
-//AppBar,use in Back Button, Notification button,  in top of all screen
+//AppBar, use in Drawer, Notification button, Flitter in top of all screen
 class CustomAppBarDrawerAndNotificationButtons extends StatelessWidget
     implements PreferredSizeWidget {
   // implement preferredSize
   @override
   Size get preferredSize => Size.fromHeight(200);
-
-  // String _selection = "Value1";
-
-  // final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   CustomAppBarDrawerAndNotificationButtons({Key? key}) : super(key: key);
 
@@ -101,6 +100,7 @@ class CustomAppBarDrawerAndNotificationButtons extends StatelessWidget
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          /// Drawer
           InkWell(
             onTap: () {
               Scaffold.of(context).openDrawer();
@@ -109,25 +109,25 @@ class CustomAppBarDrawerAndNotificationButtons extends StatelessWidget
               imagePathMenuBar,
             ),
           ),
+
+          /// Barcode /// Cart
           SizedBox(
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
+                  padding: const EdgeInsets.only(right: 16.0),
                   child: InkWell(
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Icon(CupertinoIcons.bell_fill),
+                    child: Icon(CupertinoIcons.barcode_viewfinder),
                   ),
                 ),
                 InkWell(
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: SvgPicture.asset(
-                    imagePathFilter,
-                  ),
+                  child: Icon(CupertinoIcons.cart),
                 ),
               ],
             ),

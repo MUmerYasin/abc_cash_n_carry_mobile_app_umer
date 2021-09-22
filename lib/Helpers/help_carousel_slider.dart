@@ -17,7 +17,8 @@ import 'package:flutter/material.dart';
 /// Main Class for Making Carousel Slider
 class HomePageCarouselWithIndicator extends StatefulWidget {
   List<String> imgList;
-   HomePageCarouselWithIndicator({Key? key, required this.imgList,}) : super(key: key);
+  double heightOfSlider;
+   HomePageCarouselWithIndicator({Key? key, required this.imgList, required this.heightOfSlider}) : super(key: key);
 
   @override
   _HomePageCarouselWithIndicatorState createState() =>
@@ -35,7 +36,7 @@ class _HomePageCarouselWithIndicatorState
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      height: 200,
+      height: widget.heightOfSlider,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +45,7 @@ class _HomePageCarouselWithIndicatorState
             CarouselSlider(
               carouselController: _controller,
               options: CarouselOptions(
-                  height: 200.0,
+                  height: widget.heightOfSlider,
                   autoPlay: true,
                   enlargeCenterPage: true,
                   aspectRatio: 2.0,

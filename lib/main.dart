@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
 
       // home: SplashScreen(), // Front End Complete
       // home: WelcomeToABCScreen(),// Front End Complete
-      home: ABCLoginScreen(),// Front End Complete
+      // home: ABCLoginScreen(),// Front End Complete
       // home: ABCSignupScreen(), // Front End Complete
       // home: ABCHomeVersionOneScreen(),// Front End Complete
       // home: ABCItemDetailsScreen(),// Front End Complete
@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
       // home: ABCConfirmationScreen(),// Front End Complete
       // home: ABCCreateAddressScreen(),// Front End Complete
       // home: ABCUserProfileScreen(),// Front End Complete
-      // home: ABCFeaturedScreen(),// Front End Complete
+      home: ABCFeaturedScreen(),// Front End Complete
       // home: ABCFavoriteScreen(),// Front End Complete
       // home: ABCMyOrdersScreen(),// Front End Complete
     );

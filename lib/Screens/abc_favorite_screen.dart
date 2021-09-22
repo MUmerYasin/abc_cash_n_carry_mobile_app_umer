@@ -42,8 +42,11 @@ class _ABCFavoriteScreenState extends State<ABCFavoriteScreen> {
                 height: 15.0,
               ),
 
-              ///All Favorite Product Generate
-              FavoriteScreenScrollViewProducts(),
+              // ///All Favorite Product Generate
+              // FavoriteScreenScrollViewProducts(),
+
+              /// Test AllFavoriteScreenScrollViewProducts
+              AllFavoriteScreenScrollViewProducts(),
 
               SizedBox(
                 height: 20.0,

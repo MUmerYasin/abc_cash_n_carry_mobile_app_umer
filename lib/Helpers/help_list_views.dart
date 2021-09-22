@@ -13,7 +13,6 @@ import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
 import 'help_cart.dart';
 import 'help_my_orders.dart';
 
@@ -221,70 +220,323 @@ class CustomProductListViewSingleItems extends StatelessWidget {
 }
 
 
-// /// Featured Product
-// /// Cell CustomProductListViewSingleItems() in List View
-// class CustomFeaturedListView extends StatelessWidget {
-//   const CustomFeaturedListView({Key? key}) : super(key: key);
+// /// Feature Screen
+// /// All Featured Product Generate
+// class FeatureScreenScrollViewProducts extends StatelessWidget {
+//   const FeatureScreenScrollViewProducts({Key? key}) : super(key: key);
 //
 //   @override
 //   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: 190.0,
-//       width: double.infinity,
-//       child: ListView(
-//         scrollDirection: Axis.horizontal,
-//         shrinkWrap: true,
-//         children: [
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage2,
-//             screen: ABCItemDetailsScreen(),
+//     return Container(
+//       height: MediaQuery.of(context).size.height * 0.7,
+//       child: CustomScrollView(
+//         slivers: <Widget>[
+//           SliverGrid(
+//             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//               crossAxisCount: 2,
+//               mainAxisSpacing: 16.0,
+//               crossAxisSpacing: 16.0,
+//               childAspectRatio: MediaQuery.of(context).size.width / 500,
+//               // (MediaQuery.of(context).size.height / 0.5),
+//             ),
+//             delegate: SliverChildListDelegate(
+//               [
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage1,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage2,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage3,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage4,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage6,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage7,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage1,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage2,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage3,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage4,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage6,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage7,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage1,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage2,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage3,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage4,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage6,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage7,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsScreen(),
+//                 ),
+//               ],
+//             ),
 //           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringManTShirt,
-//             imagePaths: imagePathProductImage3,
-//             screen: ABCItemDetailsScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage1,
-//             screen: ABCItemDetailsScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage2,
-//             screen: ABCItemDetailsScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringManTShirt,
-//             imagePaths: imagePathProductImage3,
-//             screen: ABCItemDetailsScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage1,
-//             screen: ABCItemDetailsScreen(),
+//         ],
+//       ),
+//     );
+//   }
+// }
+//
+// /// Favorite Screen
+// /// All Favorite Product Generate
+// class FavoriteScreenScrollViewProducts extends StatelessWidget {
+//   const FavoriteScreenScrollViewProducts({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: MediaQuery.of(context).size.height * 0.9,
+//       child: CustomScrollView(
+//         slivers: <Widget>[
+//           SliverGrid(
+//             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//               crossAxisCount: 2,
+//               mainAxisSpacing: 16.0,
+//               crossAxisSpacing: 16.0,
+//               childAspectRatio: MediaQuery.of(context).size.width / 500,
+//               // (MediaQuery.of(context).size.height / 0.5),
+//             ),
+//             delegate: SliverChildListDelegate(
+//               [
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage1,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage2,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage3,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage4,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage6,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage7,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage1,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage2,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage3,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage4,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage6,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage7,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage1,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage2,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage3,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage4,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage6,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage7,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//                 CustomProductListViewSingleItems(
+//                   priceText: aBC_StringPrice,
+//                   nameText: aBC_StringWomanTShirt,
+//                   imagePaths: imagePathProductImage5,
+//                   screen: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//               ],
+//             ),
 //           ),
 //         ],
 //       ),
@@ -292,407 +544,40 @@ class CustomProductListViewSingleItems extends StatelessWidget {
 //   }
 // }
 
-///// Best Sell Product
-/////  Cell CustomProductListViewSingleItems() in List View
-
-// class CustomBestSellListView extends StatelessWidget {
-//   const CustomBestSellListView({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: 190.0,
-//       width: double.infinity,
-//       child: ListView(
-//         scrollDirection: Axis.horizontal,
-//         shrinkWrap: true,
-//         children: [
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage1,
-//             screen: ABCItemDetailsAddToCardScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringManTShirt,
-//             imagePaths: imagePathProductImage5,
-//             screen: ABCItemDetailsAddToCardScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage6,
-//             screen: ABCItemDetailsAddToCardScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage1,
-//             screen: ABCItemDetailsAddToCardScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringManTShirt,
-//             imagePaths: imagePathProductImage5,
-//             screen: ABCItemDetailsAddToCardScreen(),
-//           ),
-//           SizedBox(
-//             width: 12,
-//           ),
-//           CustomProductListViewSingleItems(
-//             priceText: aBC_StringPrice,
-//             nameText: aBC_StringWomanTShirt,
-//             imagePaths: imagePathProductImage6,
-//             screen: ABCItemDetailsAddToCardScreen(),
-//           ),
-//
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-
-
-/// Feature Screen
-/// All Featured Product Generate
-class FeatureScreenScrollViewProducts extends StatelessWidget {
-  const FeatureScreenScrollViewProducts({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.9,
-      child: CustomScrollView(
-        slivers: <Widget>[
-          SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 16.0,
-              crossAxisSpacing: 16.0,
-              childAspectRatio: MediaQuery.of(context).size.width / 500,
-              // (MediaQuery.of(context).size.height / 0.5),
-            ),
-            delegate: SliverChildListDelegate(
-              [
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage1,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage2,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage3,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage4,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage6,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage7,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage1,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage2,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage3,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage4,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage6,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage7,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage1,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage2,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage3,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage4,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage6,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage7,
-                  screen: ABCItemDetailsScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsScreen(),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 /// Favorite Screen
 /// All Favorite Product Generate
-class FavoriteScreenScrollViewProducts extends StatelessWidget {
-  const FavoriteScreenScrollViewProducts({Key? key}) : super(key: key);
+class AllFavoriteScreenScrollViewProducts extends StatelessWidget {
+  const AllFavoriteScreenScrollViewProducts({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.9,
-      child: CustomScrollView(
-        slivers: <Widget>[
-          SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 16.0,
-              crossAxisSpacing: 16.0,
-              childAspectRatio: MediaQuery.of(context).size.width / 500,
-              // (MediaQuery.of(context).size.height / 0.5),
-            ),
-            delegate: SliverChildListDelegate(
-              [
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage1,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage2,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage3,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage4,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage6,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage7,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage1,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage2,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage3,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage4,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage6,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage7,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage1,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage2,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage3,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage4,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage6,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage7,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-                CustomProductListViewSingleItems(
-                  priceText: aBC_StringPrice,
-                  nameText: aBC_StringWomanTShirt,
-                  imagePaths: imagePathProductImage5,
-                  screen: ABCItemDetailsAddToCardScreen(),
-                ),
-              ],
-            ),
-          ),
-        ],
+    return SizedBox(
+      // height: 400,
+      height: MediaQuery.of(context).size.height * 0.7,
+      child: GridView.count(
+        crossAxisCount: 2,
+        scrollDirection : Axis.vertical,
+        mainAxisSpacing: 16.0,
+        crossAxisSpacing: 16.0,
+        childAspectRatio: MediaQuery.of(context).size.width / 500,
+        physics:  ClampingScrollPhysics(),
+        shrinkWrap: true,
+        children: List.generate(
+            imgListProductName.length,
+          (index) {
+            return CustomProductListViewSingleItems(
+              priceText: aBC_StringPrice,
+              nameText: aBC_StringWomanTShirt,
+              imagePaths: imagePathProductImage1,
+              screen: ABCItemDetailsAddToCardScreen(),
+            ); // api provide you different images for any number you are giving
+          },
+        ),
       ),
     );
   }
 }
-
-
 
 /// All Add to Cart Products Show
 /// Cart Screen
@@ -713,7 +598,7 @@ class AddToCartProductsShow extends StatelessWidget {
                 subTitleText: imgListProductSubTitle[i],
               );
             },
-            itemCount: 5,
+            itemCount: imgListProductName.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
           ),
@@ -722,7 +607,6 @@ class AddToCartProductsShow extends StatelessWidget {
     );
   }
 }
-
 
 /// All Add to Cart Products Show
 /// Cart Screen
@@ -748,7 +632,7 @@ class FeatureProductsShowInHomePage extends StatelessWidget {
                 ),
               );
             },
-            itemCount: 7,
+            itemCount: imgListProductName.length,
             scrollDirection : Axis.horizontal,
             shrinkWrap: true,
             physics: ClampingScrollPhysics(),
@@ -779,7 +663,7 @@ class MyOrderAgainListView extends StatelessWidget {
                 child: aBC_StringOrderAgain,
               );
             },
-            itemCount: 5,
+            itemCount: imgListProductName.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
           ),

@@ -9,7 +9,6 @@ import 'package:flutter/cupertino.dart';
 
 class WelcomeToABCScreen extends StatefulWidget {
   const WelcomeToABCScreen({Key? key}) : super(key: key);
-
   @override
   _WelcomeToABCScreenState createState() => _WelcomeToABCScreenState();
 }
@@ -37,6 +36,7 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
                             text: aBC_StringABC,
                             style: aBCStyle,
                           ),
+
                         ]),
                     textAlign: TextAlign.center,
                     textHeightBehavior:
@@ -45,6 +45,15 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
                 ],
               ),
             ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(aBC_StringCashAndCarry, style: aBCStyle),
+              ],
+            ),
+
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -53,7 +62,7 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
             ),
             Container(
               width: MediaQuery.of(context).size.width * 0.85,
-              padding: EdgeInsets.symmetric(vertical: 65.0),
+              padding: EdgeInsets.symmetric(vertical: 50.0),
               child: SvgPicture.asset(
                 imagePathWelcomeToBolt,
                 width: MediaQuery.of(context).size.width * 0.85,
