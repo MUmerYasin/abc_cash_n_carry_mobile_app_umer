@@ -1,3 +1,4 @@
+import 'package:abc_cash_n_carry/Screens/abc_cart_screen.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:flutter_svg/svg.dart';
 import 'dart:async';
+
+import 'navigator_help.dart';
 
 
 /// AppBar
@@ -74,7 +77,9 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
                   padding: const EdgeInsets.only(right: 8.0),
                   child: InkWell(
                     onTap: () {
-                      Navigator.pop(context);
+                      gotoScreen(
+                        context: context,
+                        screen: ABCCartScreen(),);
                     },
                     child: Icon(CupertinoIcons.cart),
                   ),
@@ -143,7 +148,9 @@ class _CustomAppBarDrawerAndNotificationButtonsState extends State<CustomAppBarD
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pop(context);
+                    gotoScreen(
+                        context: context,
+                        screen: ABCCartScreen(),);
                   },
                   child: Icon(CupertinoIcons.cart),
                 ),

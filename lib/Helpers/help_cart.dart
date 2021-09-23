@@ -29,7 +29,7 @@ class CustomCartOfSingleItems extends StatefulWidget {
 }
 
 class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
-  int counter = 0;
+  int counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +132,10 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
                             ),
                             onTap: () {
                               setState(() {
-                                counter--;
+                                if(counter>=2){
+                                  counter--;
+                                }
+
                               });
                             },
                           ),
@@ -148,7 +151,10 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
                             ),
                             onTap: () {
                               setState(() {
-                                counter++;
+                                if(counter>=1){
+                                  counter++;
+                                }
+
                               });
                             },
                           ),

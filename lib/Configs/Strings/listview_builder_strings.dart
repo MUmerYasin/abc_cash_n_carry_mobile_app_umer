@@ -5,6 +5,7 @@ import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 
 import 'listview_Data_strings.dart';
+import 'text_fields_strings.dart';
 
 // final List<String> imgListHomePage = [
 //   imagePathProductImage1,
@@ -49,11 +50,11 @@ final List<String> listProductName = [
 final List<String> listProductSubTitle = [
   aBC_StringLottoLTD,
   aBC_StringBata,
-  aBC_StringNext,
+  aBC_StringLottoLTD,
   aBC_StringPlusPoint,
   aBC_StringLottoLTD,
   aBC_StringBata,
-  aBC_StringNext
+  aBC_StringPlusPoint
 ];
 
 /// Home Page Categories List View Builder
@@ -107,4 +108,15 @@ final List<String> categoriesNames = [
   aBC_ListViewHeadingStringGroceries,
   aBC_ListViewHeadingStringElectronics,
   aBC_ListViewHeadingStringHomeAppliances,
+];
+
+
+/// Profile Screen
+/// Gender
+
+
+final List<String> genderType =[
+  aBC_StringMale,
+  aBC_StringFemale,
+  aBC_StringOthers
 ];

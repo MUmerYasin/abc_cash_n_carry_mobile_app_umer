@@ -27,25 +27,26 @@ const String aBC_StringPasswordValues = '*********';
 const String aBC_StringNameValue = 'Muhammad Umer Yasin';
 const String aBC_StringMale = 'Male';
 const String aBC_StringFemale = 'Female';
+const String aBC_StringOthers = 'Others';
 const String aBC_StringAddressValue =
-    'Shewrapara, Mirpur, Dhaka-1216, House no: 938, Road no: 9';
+    'Near Bus Station, House no: 938, Road no: 9';
 const String aBC_StringSecondAddressValue =
-    'Chatkhil, Noakhali, House no: 22, Road no: 7';
-const String aBC_StringPhoneNumberValue = '+880123456789';
-const String aBC_StringPostalCodeValue = '1216';
-const String aBC_StringAddressLineValue = 'Shewrapara 958';
-const String aBC_StringCityValue = 'Dhaka';
+    'Near Railway Station, House no:22, Road no:7';
+const String aBC_StringPhoneNumberValue = '+923060084827';
+const String aBC_StringPostalCodeValue = '55140';
+const String aBC_StringAddressLineValue = 'Street No: 111';
+const String aBC_StringCityValue = 'Lahore';
 const String aBC_StringShippingValue = '\$10.00';
 const String aBC_StringPercentageValue = '5%';
 const String aBC_StringSubtotalValue = '\$160.00';
 const String aBC_StringTotalValue = '\$162.00';
 
 //Address
-const String aBC_StringCityAddressValue = 'Shewrapara, Mirpur, Dhaka-1216';
+const String aBC_StringCityAddressValue = 'Near Bus Station,';
 const String aBC_StringHomeNoValue = 'House no: 938';
 const String aBC_StringRoadNoValue = 'Road no: 9';
 
-const String aBC_StringCityAddress2Value = 'Chatkhil, Noakhali';
+const String aBC_StringCityAddress2Value = 'Near Railway Station';
 const String aBC_StringHomeNo2Value = ' House no: 22';
 const String aBC_StringRoadNo2Value = 'Road no: 7';
 
