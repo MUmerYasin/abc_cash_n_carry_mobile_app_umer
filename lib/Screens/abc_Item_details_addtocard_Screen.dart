@@ -140,23 +140,35 @@ class _ABCItemDetailsAddToCardScreenState
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  RichText(
-                    text: TextSpan(
-                      text: aBC_StringAWonderfulSerenityHasTaken,
-                      style: productDescriptionDetailsTextStyle,
-                      children: <TextSpan>[
-                        TextSpan(
-                            text: aBC_Cash_N_Carry_StringMore,
-                            style: moreTextStyle),
-                      ],
-                    ),
-                    // maxLines: 4,
-                    // overflow: TextOverflow.ellipsis,
-                    // textDirection: TextDirection.rtl,
-                    textAlign: TextAlign.left,
-                    textHeightBehavior:
+                  Expanded(
+                    child: Text(aBC_StringAWonderfulSerenityHasTaken,
+                        style: productDescriptionDetailsTextStyle,
+                        maxLines: 5,
+                        overflow: TextOverflow.ellipsis,
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.justify,
+                        textHeightBehavior:
                         TextHeightBehavior(applyHeightToFirstAscent: false),
+                    ),
                   ),
+
+                  // RichText(
+                  //   text: TextSpan(
+                  //     text: aBC_StringAWonderfulSerenityHasTaken,
+                  //     style: productDescriptionDetailsTextStyle,
+                  //     children: <TextSpan>[
+                  //       TextSpan(
+                  //           text: aBC_Cash_N_Carry_StringMore,
+                  //           style: moreTextStyle),
+                  //     ],
+                  //   ),
+                  //   maxLines: 4,
+                  //   overflow: TextOverflow.ellipsis,
+                  //   textDirection: TextDirection.rtl,
+                  //   textAlign: TextAlign.left,
+                  //   textHeightBehavior:
+                  //       TextHeightBehavior(applyHeightToFirstAscent: false),
+                  // ),
                 ],
               ),
             ),

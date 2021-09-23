@@ -44,13 +44,14 @@ class _CustomMyOrdersOfSingleItemsState
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
       child: Container(
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black12,
               spreadRadius: 2,
               blurRadius: 5,
-              offset: Offset(0, 2), // changes position of shadow
+              offset: Offset(2, 2), // changes position of shadow
             ),
           ],
         ),

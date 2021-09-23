@@ -27,12 +27,7 @@ const String aBC_StringVeryGood = 'Very Good';
 const String aBC_StringReviews = '49 Reviews';
 const String aBC_StringTotalReviews = '4.5';
 const String aBC_StringAWonderfulSerenityHasTaken =
-    """A wonderful serenity has taken possession 
-of my entire soul, like these sweet mornings
-of spring which I enjoy with my whole heart.
-I am alone, and feel the charm of existence
-in this spot, which was created for the bliss
-of souls like mine.""";
+    """A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.""";
 const String aBC_StringDescription = 'Description';
 
 const String aBC_StringLottoLTD = 'Lotto.LTD';

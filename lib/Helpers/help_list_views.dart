@@ -86,7 +86,7 @@ class CustomCategoriesListViewSingleItems extends StatelessWidget {
                       listViewText,
                       style: categoriesListViewHeadingStyle,
                       textAlign: TextAlign.center,
-                      softWrap:true,
+                      softWrap: true,
                     ),
                   ),
                 ),
@@ -241,48 +241,41 @@ class CustomProductListViewSingleItems extends StatelessWidget {
         // );
       },
     );
-
-
-
   }
-
-  void _modalBottomSheetMenu(BuildContext context){
+/// Modal Bottom Sheet Menu Called
+  void _modalBottomSheetMenu(BuildContext context) {
     showModalBottomSheet<void>(
         context: context,
-        enableDrag : true,
-        elevation:0.0,
+        enableDrag: true,
+        elevation: 0.0,
         backgroundColor: Colors.transparent,
         // shape: RoundedRectangleBorder(
         //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
         // ),
-        builder: (context){
+        builder: (context) {
           return Container(
-            height: MediaQuery.of(context).size.height*0.7,
+            height: MediaQuery.of(context).size.height * 0.8,
             color: Colors.transparent,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                 borderRadius:
-                // BorderRadius.only(
-                //   topLeft: const Radius.circular(10.0),
-                //   topRight: const Radius.circular(10.0),
-                // ),
-
-                BorderRadius.circular(12.0),
-                child: Container(
-                    // decoration: BoxDecoration(
-                    //
+                    // BorderRadius.only(
+                    //   topLeft: const Radius.circular(10.0),
+                    //   topRight: const Radius.circular(10.0),
                     // ),
-                    child: ABCItemDetailsAddToCardScreen(),
+                    BorderRadius.circular(12.0),
+                child: Container(
+                  // decoration: BoxDecoration(
+                  // ),
+                  child: ABCItemDetailsAddToCardScreen(),
                 ),
               ),
             ),
           );
-        }
-    );
+        });
   }
 }
-
 
 // /// Feature Screen
 // /// All Featured Product Generate
@@ -608,8 +601,6 @@ class CustomProductListViewSingleItems extends StatelessWidget {
 //   }
 // }
 
-
-
 /// All Add to Cart Products Show
 /// Cart Screen
 class AddToCartProductsShow extends StatelessWidget {
@@ -643,6 +634,7 @@ class AddToCartProductsShow extends StatelessWidget {
 /// Feature Products Show In Home Page
 class FeatureProductsShowInHomePage extends StatelessWidget {
   const FeatureProductsShowInHomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -664,7 +656,7 @@ class FeatureProductsShowInHomePage extends StatelessWidget {
               );
             },
             itemCount: listProductName.length,
-            scrollDirection : Axis.horizontal,
+            scrollDirection: Axis.horizontal,
             shrinkWrap: true,
             physics: ClampingScrollPhysics(),
           ),
@@ -704,7 +696,6 @@ class MyOrderAgainListView extends StatelessWidget {
   }
 }
 
-
 /// Categories Screen
 /// All Categories List view
 class AllCategoriesScrollViewProducts extends StatelessWidget {
@@ -717,15 +708,15 @@ class AllCategoriesScrollViewProducts extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.7,
       child: GridView.count(
         crossAxisCount: 2,
-        scrollDirection : Axis.vertical,
+        scrollDirection: Axis.vertical,
         mainAxisSpacing: 16.0,
         crossAxisSpacing: 16.0,
         childAspectRatio: MediaQuery.of(context).size.width / 180,
-        physics:  ClampingScrollPhysics(),
+        physics: ClampingScrollPhysics(),
         shrinkWrap: true,
         children: List.generate(
           categoriesNames.length,
-              (index) {
+          (index) {
             return CustomCategoriesListViewSingleItems(
               listViewText: categoriesNames[index],
               imagePaths: imgListCategories[index],
@@ -752,15 +743,15 @@ class AllFavoriteScreenScrollViewProducts extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.7,
       child: GridView.count(
         crossAxisCount: 2,
-        scrollDirection : Axis.vertical,
+        scrollDirection: Axis.vertical,
         mainAxisSpacing: 16.0,
         crossAxisSpacing: 16.0,
         childAspectRatio: MediaQuery.of(context).size.width / 500,
-        physics:  ClampingScrollPhysics(),
+        physics: ClampingScrollPhysics(),
         shrinkWrap: true,
         children: List.generate(
           listProductName.length,
-              (index) {
+          (index) {
             return CustomProductListViewSingleItems(
               priceText: listProductsPrice[index],
               nameText: listProductName[index],
@@ -773,4 +764,3 @@ class AllFavoriteScreenScrollViewProducts extends StatelessWidget {
     );
   }
 }
-
