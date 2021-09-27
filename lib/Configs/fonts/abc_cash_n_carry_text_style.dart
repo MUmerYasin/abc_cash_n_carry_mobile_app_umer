@@ -282,3 +282,5 @@ const TextStyle skipButtonTextStyle = TextStyle(
   height: 1,
   fontFamily: textFontFamilySegoeUI,
 );
+
+const TextStyle veryGoodStyle = TextStyle(color: Colors.black, fontSize: 18.0);

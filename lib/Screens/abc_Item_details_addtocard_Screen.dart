@@ -6,6 +6,7 @@ import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart'
 import 'package:abc_cash_n_carry/Helpers/help_appbar.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
 import 'package:abc_cash_n_carry/Helpers/help_carousel_slider.dart';
+import 'package:abc_cash_n_carry/Helpers/help_item_details_sizes_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -23,6 +24,15 @@ class _ABCItemDetailsAddToCardScreenState
   int selected = 1;
   bool sizeVisible = true;
   bool colorVisible = false;
+
+  int? _selectedColorIndex;
+  List<Color> _customColors = [
+    Colors.red,
+    Colors.green,
+    Colors.yellow,
+    Colors.black,
+    Colors.amber
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -174,153 +184,201 @@ class _ABCItemDetailsAddToCardScreenState
             ),
 
             /// Select Size, Color
-            Divider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    setState(() {
-                      sizeVisible = true;
-                      colorVisible = false;
-                    });
-                  },
-                  child: Text(aBC_StringSelectSize, style: SelectSizeTextStyle),
-                ),
-                SizedBox(
-                  width: 16.0,
-                ),
-                TextButton(
-                  onPressed: () {
-                    setState(() {
-                      sizeVisible = false;
-                      colorVisible = true;
-                    });
-                  },
-                  child:
-                      Text(aBC_StringSelectColor, style: SelectSizeTextStyle),
-                ),
-              ],
-            ),
-            Divider(),
+            // Divider(),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     TextButton(
+            //       onPressed: () {
+            //         setState(() {
+            //           sizeVisible = true;
+            //           colorVisible = false;
+            //         });
+            //       },
+            //       child: Text(aBC_StringSelectSize, style: SelectSizeTextStyle),
+            //     ),
+            //     SizedBox(
+            //       width: 16.0,
+            //     ),
+            //     TextButton(
+            //       onPressed: () {
+            //         setState(() {
+            //           sizeVisible = false;
+            //           colorVisible = true;
+            //         });
+            //       },
+            //       child:
+            //           Text(aBC_StringSelectColor, style: SelectSizeTextStyle),
+            //     ),
+            //   ],
+            // ),
+            // Divider(),
             SizedBox(
               height: 10.0,
             ),
 
-            /// Select Size Button S,M,L,XXl
-            Visibility(
-              visible: sizeVisible,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ///
-                    SelectSizeButton(
-                      onPressed: () {
-                        setState(
-                          () {
-                            selected = 1;
-                          },
-                        );
-                      },
-                      child: aBC_StringClothSizeS,
-                      color: selected == 1 ? true : false,
-                    ),
-
-                    ///
-                    SelectSizeButton(
-                        onPressed: () {
-                          setState(
-                            () {
-                              selected = 2;
-                            },
-                          );
-                        },
-                        child: aBC_StringClothSizeM,
-                        color: selected == 2 ? true : false),
-
-                    ///
-                    SelectSizeButton(
-                        onPressed: () {
-                          setState(
-                            () {
-                              selected = 3;
-                            },
-                          );
-                        },
-                        child: aBC_StringClothSizeL,
-                        color: selected == 3 ? true : false),
-
-                    ///
-                    SelectSizeButton(
-                        onPressed: () {
-                          setState(
-                            () {
-                              selected = 4;
-                            },
-                          );
-                        },
-                        child: aBC_StringClothSizeXXL,
-                        color: selected == 4 ? true : false),
-                  ],
-                ),
-              ),
-            ),
+            // /// Select Size Button S,M,L,XXl
+            // Visibility(
+            //   visible: sizeVisible,
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(8.0),
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //       children: [
+            //         ///
+            //         SelectSizeButton(
+            //           onPressed: () {
+            //             setState(
+            //               () {
+            //                 selected = 1;
+            //               },
+            //             );
+            //           },
+            //           child: aBC_StringClothSizeS,
+            //           color: selected == 1 ? true : false,
+            //         ),
+            //
+            //         ///
+            //         SelectSizeButton(
+            //             onPressed: () {
+            //               setState(
+            //                 () {
+            //                   selected = 2;
+            //                 },
+            //               );
+            //             },
+            //             child: aBC_StringClothSizeM,
+            //             color: selected == 2 ? true : false),
+            //
+            //         ///
+            //         SelectSizeButton(
+            //             onPressed: () {
+            //               setState(
+            //                 () {
+            //                   selected = 3;
+            //                 },
+            //               );
+            //             },
+            //             child: aBC_StringClothSizeL,
+            //             color: selected == 3 ? true : false),
+            //
+            //         ///
+            //         SelectSizeButton(
+            //             onPressed: () {
+            //               setState(
+            //                 () {
+            //                   selected = 4;
+            //                 },
+            //               );
+            //             },
+            //             child: aBC_StringClothSizeXXL,
+            //             color: selected == 4 ? true : false),
+            //       ],
+            //     ),
+            //   ),
+            // ),
 
             /// Select Color Button S,M,L,XXl
-            Visibility(
-              visible: colorVisible,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ///
-                    SelectColorButton(
-                      onPressed: () {
-                        setState(
-                          () {
-                            selected = 1;
-                          },
-                        );
-                      },
-                      child: aBC_StringClothSizeBlack,
-                      color: selected == 1 ? true : false,
-                      buttonColor: Colors.black,
-                    ),
+            // Visibility(
+            //   visible: colorVisible,
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(8.0),
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //       children: [
+            //         ///
+            //         SelectColorButton(
+            //           onPressed: () {
+            //             setState(
+            //               () {
+            //                 selected = 1;
+            //               },
+            //             );
+            //           },
+            //           child: aBC_StringClothSizeBlack,
+            //           color: selected == 1 ? true : false,
+            //           buttonColor: Colors.black,
+            //         ),
+            //
+            //         ///
+            //         SelectColorButton(
+            //             onPressed: () {
+            //               setState(
+            //                 () {
+            //                   selected = 2;
+            //                 },
+            //               );
+            //             },
+            //             child: aBC_StringClothSizeGreen,
+            //             color: selected == 2 ? true : false,
+            //           buttonColor: Colors.green,
+            //         ),
+            //
+            //         ///
+            //         SelectColorButton(
+            //             onPressed: () {
+            //               setState(
+            //                 () {
+            //                   selected = 3;
+            //                 },
+            //               );
+            //             },
+            //             child: aBC_StringClothSizeRed,
+            //             color: selected == 3 ? true : false,
+            //           buttonColor: Colors.red,
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
 
-                    ///
-                    SelectColorButton(
-                        onPressed: () {
-                          setState(
-                            () {
-                              selected = 2;
-                            },
-                          );
-                        },
-                        child: aBC_StringClothSizeGreen,
-                        color: selected == 2 ? true : false,
-                      buttonColor: Colors.green,
-                    ),
-
-                    ///
-                    SelectColorButton(
-                        onPressed: () {
-                          setState(
-                            () {
-                              selected = 3;
-                            },
-                          );
-                        },
-                        child: aBC_StringClothSizeRed,
-                        color: selected == 3 ? true : false,
-                      buttonColor: Colors.red,
-                    ),
-                  ],
-                ),
-              ),
+            Divider(
+              color: Colors.black12,
+              height: 30.0,
+              thickness: 1.0,
             ),
+            Text(aBC_StringSelectSize, style: veryGoodStyle),
+            SizedBox(
+              height: 10.0,
+            ),
+            SelectSize(),
+            Divider(
+              color: Colors.black12,
+              height: 30.0,
+              thickness: 1.0,
+            ),
+            Text(aBC_StringSelectColor, style: veryGoodStyle),
+            SizedBox(
+              height: 10.0,
+            ),
+            SizedBox(
+              height: 50.0,
+              width: double.infinity,
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: ClampingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _customColors.length,
+                  itemBuilder: (BuildContext context, int index) => Padding(
+                      padding: const EdgeInsets.only(right: 15.0),
+                      child: ColorWidget(
+                        colorr: _customColors[index],
+                        index: index,
+                        selectedColor: (selectedColorIndex) {
+                          setState(() {
+                            _selectedColorIndex = selectedColorIndex;
+                          });
+                        },
+                        selectedIndex: _selectedColorIndex,
+                      ))),
+            ),
+
+            Divider(
+              color: Colors.black12,
+              height: 30.0,
+              thickness: 1.0,
+            ),
+
             SizedBox(
               height: 20.0,
             ),

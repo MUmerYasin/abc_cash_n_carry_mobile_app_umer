@@ -100,7 +100,7 @@ class _ABCConfirmationScreenState extends State<ABCConfirmationScreen> {
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 30.0),
                   child: Center(
-                    child: SmallBlueBackgroundButton(
+                    child: MainCustomButton(
                       child: aBC_StringBackToHome,
                       onPressed: () {
                         setState(() {

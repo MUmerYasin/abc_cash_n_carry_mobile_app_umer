@@ -7,11 +7,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:dotted_border/dotted_border.dart';
 
 //use in All Buttons
-class SmallBlueBackgroundButton extends StatelessWidget {
+class MainCustomButton extends StatelessWidget {
   Function()? onPressed;
   String? child;
 
-  SmallBlueBackgroundButton({
+  MainCustomButton({
     this.onPressed,
     this.child,
   });

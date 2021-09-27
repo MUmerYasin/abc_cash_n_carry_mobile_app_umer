@@ -48,7 +48,7 @@ class _ABCMyOrdersScreenState extends State<ABCMyOrdersScreen> {
               Container(
                 margin: EdgeInsets.only(top: 20, bottom: 30),
                 child: Center(
-                  child: SmallBlueBackgroundButton(
+                  child: MainCustomButton(
                     child: aBC_StringContinue,
                     onPressed: () {
                       setState(() {

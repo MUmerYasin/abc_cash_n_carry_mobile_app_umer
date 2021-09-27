@@ -70,7 +70,7 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            SmallBlueBackgroundButton(
+            MainCustomButton(
               child: aBC_StringLogin,
               onPressed: () {
                 setState(() {

@@ -50,7 +50,7 @@ class _ABCCartScreenState extends State<ABCCartScreen> {
               Container(
                 margin: EdgeInsets.only(top: 10, bottom: 30),
                 child: Center(
-                  child: SmallBlueBackgroundButton(
+                  child: MainCustomButton(
                     child: aBC_StringContinue,
                     onPressed: () {
                       setState(() {
