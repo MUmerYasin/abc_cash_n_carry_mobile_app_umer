@@ -85,7 +85,6 @@ import 'package:flutter/services.dart';
 // TextButton(
 // child: Text("SignUp"),
 // onPressed: () async {
-//
 // // checkEmailAlreadyExists(_emailCont.text);
 // bool validateResult = await _validateCompleteForm();
 //

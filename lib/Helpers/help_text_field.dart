@@ -37,12 +37,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
       child: TextFormField(
         textInputAction: TextInputAction.next,
         cursorColor: HeadingTextColor,
-
         // cursorHeight: 30.0,
         validator: (widget.validate),
         keyboardType: (widget.inputText),
         inputFormatters: [LengthLimitingTextInputFormatter(widget.format)],
-
         obscureText: (widget.obsure),
         minLines: 1,
         decoration: InputDecoration(
@@ -133,6 +131,7 @@ class CustomFields extends StatefulWidget {
   final String? hintText;
   final double width;
   final Function(String)? onchange;
+  final Function()? onPressed;
   final bool obscure;
   final TextInputType? type;
   final TextEditingController? controller;
@@ -153,6 +152,7 @@ class CustomFields extends StatefulWidget {
     this.obscure = false,
     this.length,
     this.textInputAction = TextInputAction.done,
+    this.onPressed,
   });
 
   @override
@@ -207,35 +207,46 @@ class _CustomFieldsState extends State<CustomFields> {
                       left: 10.0, right: 10.0, top: 12.0, bottom: 12.0),
                   // errorText: _validate ? 'Value Can\'t Be Empty' : null,
 
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
+                  // border: OutlineInputBorder(
+                  //   borderSide: BorderSide(
+                  //     width: 1.0,
+                  //   ),
+                  //   borderRadius: BorderRadius.circular(6.0),
+                  // ),
 
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: TextFieldBorderColor, width: 1.5),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: TextFieldBorderColor, width: 1.5),
+                  ),
 
                   fillColor: Colors.white,
                   filled: true,
                   hintText: widget.hintText,
                   hintStyle: TextStyle(color: Color(0xFF7f7f7f)),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFdedede),
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFdedede),
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  prefixIcon: null,
-                  //Icon(widget.prefixIcon,),
-                  suffixIcon: null, // Icon(widget.postfixIcon)
+
+                  // enabledBorder: OutlineInputBorder(
+                  //   borderSide: BorderSide(
+                  //     color: Color(0xFFdedede),
+                  //     width: 1.0,
+                  //   ),
+                  //   borderRadius: BorderRadius.circular(6.0),
+                  // ),
+                  // focusedBorder: OutlineInputBorder(
+                  //   borderSide: BorderSide(
+                  //     color: Color(0xFFdedede),
+                  //     width: 1.0,
+                  //   ),
+                  //   borderRadius: BorderRadius.circular(6.0),
+                  // ),
+                  // prefixIcon: null,
+                  // //Icon(widget.prefixIcon,),
+                  // suffixIcon: null, // Icon(widget.postfixIcon)
+
+                  prefixIcon:widget.prefixIcon == null ? null :  Icon(widget.prefixIcon,color: Color(0xFF818181),),
+                  suffixIcon:widget.postfixIcon == null ? null : IconButton(icon: Icon(widget.postfixIcon),onPressed: widget.onPressed,color:Color(0xFF818181),),
+
                 ),
               ),
             ),
