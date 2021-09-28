@@ -71,7 +71,7 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
               // CustomFeaturedListView(),
               FeatureProductsShowInHomePage(),
 
-              ///Text Featured and See All
+              ///Text BestSell and See All
               CustomSellAllRow(
                   mainHeadingText: aBC_StringBestSell,
                   screen: ABCFavoriteScreen()),
@@ -80,6 +80,54 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
               // CustomBestSellListView(),
               FeatureProductsShowInHomePage(),
 
+              ///////////////////////////////////////////////
+
+              ///Text Flash Sale and See All
+              CustomSellAllRow(
+                  mainHeadingText: aBC_StringFlashSale,
+                  screen: ABCFavoriteScreen()),
+
+              /// Flash Sale Product
+              // CustomBestSellListView(),
+              FeatureProductsShowInHomePage(),
+
+              ///Text Just For You and See All
+              CustomSellAllRow(
+                  mainHeadingText: aBC_StringJustForYou,
+                  screen: ABCFavoriteScreen()),
+
+              /// Just For You Product
+              // CustomBestSellListView(),
+              FeatureProductsShowInHomePage(),
+
+              ///Text Top Rankings and See All
+              CustomSellAllRow(
+                  mainHeadingText: aBC_StringTopRankings,
+                  screen: ABCFavoriteScreen()),
+
+              /// Top Reviewed Product
+              // CustomBestSellListView(),
+              FeatureProductsShowInHomePage(),
+
+              ///Text Top Reviewed and See All
+              CustomSellAllRow(
+                  mainHeadingText: aBC_StringTopReviewed,
+                  screen: ABCFavoriteScreen()),
+
+              ///Top ReviewedProducts Product
+              // CustomBestSellListView(),
+              FeatureProductsShowInHomePage(),
+
+              ///Text Our collections and See All
+              CustomSellAllRow(
+                  mainHeadingText: aBC_StringOurCollections,
+                  screen: ABCFavoriteScreen()),
+
+              /// Our collections Product
+              // CustomBestSellListView(),
+              FeatureProductsShowInHomePage(),
+
+              ///aBC_StringFlashSale
               SizedBox(
                 height: 30.0,
               ),

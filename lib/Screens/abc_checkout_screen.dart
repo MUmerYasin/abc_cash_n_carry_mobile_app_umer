@@ -1,3 +1,4 @@
+import 'package:abc_cash_n_carry/Configs/Strings/listview_builder_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/screen_titles_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
@@ -44,6 +45,7 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
               ///screen Title Check out
               Text(screenTitlesCheckout, style: loginStyle),
 
@@ -53,14 +55,29 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                   Container(
                     child: ListView.builder(
                       itemBuilder: (context, i) {
-                        return CustomCartOfSingleItems(
-                          imagePaths: imagePathProductImage1,
-                          priceText: aBC_StringPrice,
-                          nameText: aBC_StringWomanTShirt,
-                          subTitleText: aBC_StringLottoLTD,
+                        final String item = listProductName[i];
+                        return Dismissible(
+                          direction: DismissDirection.startToEnd,
+                          key: Key(item),
+                          child: CustomCartOfSingleItems(
+                              imagePaths: imgListProductsImage[i],
+                              priceText: listProductsPrice[i],
+                              nameText: listProductName[i],
+                              subTitleText: listProductSubTitle[i],
+                              onDelete: () {
+                                setState(() {
+                                  listProductName.removeAt(i);
+                                  // listProductName.remove(i);
+                                  // print("object");
+                                });
+                              }),
+                          onDismissed: (direction) {
+                            listProductName.removeAt(i);
+                          },
                         );
                       },
-                      itemCount: 2,
+                      itemCount: listProductName.length,
+                      // itemCount: 2,
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                     ),
@@ -115,7 +132,7 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                           // activeColor: Colors.red,
                           onChanged: (val) {
                             setState(
-                              () {
+                                  () {
                                 id = 1;
                                 radioButton = '';
                               },

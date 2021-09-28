@@ -42,13 +42,13 @@ class MyApp extends StatelessWidget {
       // Add the builder here
 
       // home: SplashScreen(), // Front End Complete
-      home: WelcomeToABCScreen(),// Front End Complete
+      // home: WelcomeToABCScreen(),// Front End Complete
       // home: ABCLoginScreen(),// Front End Complete
       // home: ABCSignupScreen(), // Front End Complete
       // home: ABCHomeVersionOneScreen(),// Front End Complete
       // home: ABCItemDetailsScreen(),// Front End Complete
       // home: ABCItemDetailsAddToCardScreen(),// Front End Complete
-      // home: ABCCartScreen(),// Front End Complete
+      home: ABCCartScreen(), // Front End Complete
       // home: ABCAddressScreen(),// Front End Complete
       // home: ABCPaymentScreen(),// Front End Complete
       // home: ABCCheckoutScreen(),// Front End Complete

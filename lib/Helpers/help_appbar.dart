@@ -33,9 +33,7 @@ class CustomBackScreenButton extends StatelessWidget
             onTap: () {
               Navigator.pop(context);
             },
-            child: SvgPicture.asset(
-              imagePathBackScreenButton,
-            ),
+            child: Icon(CupertinoIcons.arrow_left),
           ),
         ],
       ),
@@ -64,9 +62,7 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
             onTap: () {
               Navigator.pop(context);
             },
-            child: SvgPicture.asset(
-              imagePathBackScreenButton,
-            ),
+            child: Icon(CupertinoIcons.arrow_left),
           ),
 
           /// Cart icon

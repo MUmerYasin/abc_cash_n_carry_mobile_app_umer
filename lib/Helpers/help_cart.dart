@@ -14,14 +14,18 @@ class CustomCartOfSingleItems extends StatefulWidget {
   Widget? screen;
   bool visibleCart = true;
 
-  CustomCartOfSingleItems(
-      {Key? key,
-      required this.imagePaths,
-      this.screen,
-      required this.priceText,
-      required this.nameText,
-      required this.subTitleText})
-      : super(key: key);
+  // Function() callback;
+  final VoidCallback onDelete;
+
+  CustomCartOfSingleItems({
+    Key? key,
+    required this.imagePaths,
+    this.screen,
+    required this.priceText,
+    required this.nameText,
+    required this.subTitleText,
+    required this.onDelete,
+  }) : super(key: key);
 
   @override
   State<CustomCartOfSingleItems> createState() =>
@@ -30,6 +34,12 @@ class CustomCartOfSingleItems extends StatefulWidget {
 
 class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
   int counter = 1;
+
+  @override
+  void initState() {
+    super.initState();
+    // you can use this.widget.foo here
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,20 +57,21 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
     return
         // GestureDetector(
         // child:
-        Visibility(
-      visible: widget.visibleCart,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black12,
-                spreadRadius: 2,
-                blurRadius: 5,
-                offset: Offset(0, 2), // changes position of shadow
+        // Visibility(
+        // visible: widget.visibleCart,
+        // child:
+        Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: Offset(0, 2), // changes position of shadow
               ),
             ],
           ),
@@ -169,27 +180,32 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    GestureDetector(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0,),
-                        child: Container(
-                          child: Icon(CupertinoIcons.clear_thick),
-                        ),
+                    InkWell(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 8.0,
                       ),
-                      onTap: () {
-                        setState(() {
-                          widget.visibleCart = false;
-                        });
-                      },
+                      child: Container(
+                        child: Icon(CupertinoIcons.clear_thick),
+                      ),
                     ),
-                  ],
-                ),
-              ],
-            ),
+                    onTap: widget.onDelete,
+                    //     () {
+                    //   // widget.callback;
+                    //   setState((){
+                    //     widget.onDelete;
+                    //     // widget.visibleCart = false;
+                    //   });
+                    // },
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),
     );
+    // );
     // onTap: () {
     //   Navigator.push(context, CupertinoPageRoute(builder: (context) {
     //     return widget.screen ?? ABCLoginScreen();

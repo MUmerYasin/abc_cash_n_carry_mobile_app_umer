@@ -598,26 +598,47 @@ class CustomProductListViewSingleItems extends StatelessWidget {
 
 /// All Add to Cart Products Show
 /// Cart Screen
-class AddToCartProductsShow extends StatelessWidget {
+class AddToCartProductsShow extends StatefulWidget {
   const AddToCartProductsShow({Key? key}) : super(key: key);
 
+  @override
+  State<AddToCartProductsShow> createState() => _AddToCartProductsShowState();
+}
+
+class _AddToCartProductsShowState extends State<AddToCartProductsShow> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
           child: ListView.builder(
+            addAutomaticKeepAlives: true,
             itemBuilder: (context, i) {
-              return CustomCartOfSingleItems(
-                imagePaths: imgListProductsImage[i],
-                priceText: listProductsPrice[i],
-                nameText: listProductName[i],
-                subTitleText: listProductSubTitle[i],
+              final String item = listProductName[i];
+
+              return Dismissible(
+                direction: DismissDirection.startToEnd,
+                key: Key(item),
+                child: CustomCartOfSingleItems(
+                    imagePaths: imgListProductsImage[i],
+                    priceText: listProductsPrice[i],
+                    nameText: listProductName[i],
+                    subTitleText: listProductSubTitle[i],
+                    onDelete: () {
+                      setState(() {
+                        listProductName.removeAt(i);
+                        // listProductName.remove(i);
+                        // print("object");
+                      });
+                    }),
+                onDismissed: (direction) {
+                  listProductName.removeAt(i);
+                },
               );
             },
             itemCount: listProductName.length,
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: ClampingScrollPhysics(),
           ),
         ),
       ],
