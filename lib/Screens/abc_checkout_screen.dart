@@ -1,16 +1,14 @@
 import 'package:abc_cash_n_carry/Configs/Strings/listview_builder_strings.dart';
-import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/screen_titles_strings.dart';
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Helpers/help_appbar.dart';
-import 'package:abc_cash_n_carry/Helpers/help_cart.dart';
 import 'package:abc_cash_n_carry/Helpers/help_button.dart';
-import 'package:abc_cash_n_carry/Helpers/help_drawer.dart';
-import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
+import 'package:abc_cash_n_carry/Helpers/help_cart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'abc_confirmation_screen.dart';
 
 class ABCCheckoutScreen extends StatefulWidget {
@@ -45,7 +43,6 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               ///screen Title Check out
               Text(screenTitlesCheckout, style: loginStyle),
 
@@ -61,7 +58,7 @@ class _ABCCheckoutScreenState extends State<ABCCheckoutScreen> {
                           key: Key(item),
                           child: CustomCartOfSingleItems(
                               imagePaths: imgListProductsImage[i],
-                              priceText: listProductsPrice[i],
+                              priceText: listOfDiscountProductsPrice[i],
                               nameText: listProductName[i],
                               subTitleText: listProductSubTitle[i],
                               onDelete: () {

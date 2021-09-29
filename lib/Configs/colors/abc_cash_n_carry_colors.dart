@@ -17,7 +17,6 @@ const Color abc_Color12 = Color(0xff667EEA);
 
 const Color abc_FlashScreenColor = Color(0xFF659cf8);
 
-
 const Color ButtonWhiteTextColor = Color(0xffFFFFFF);
 const Color ButtonAddToCardTextColor = Color(0xffe1e1e1);
 
@@ -63,15 +62,13 @@ const Color abc_CategoriesListViewDarkRed = Color(0xbffb5895);
 const Color abc_CategoriesListViewDarkGreen = Color(0xbf43e97b);
 const Color abc_CategoriesListViewGreen = Color(0xbf38f9d7);
 
-const Color pinkLinearGradientColors  = Color(0xbfff0066);
-const Color pinkLightLinearGradientColors  = Color(0xbfff66cc);
-const Color blueLinearGradientColors  = Color(0xbf0000ff);
-const Color blueLightLinearGradientColors  = Color(0xbf3399ff);
-const Color yellowLinearGradientColors  = Color(0xbfffff00);
-const Color yellowLightLinearGradientColors  = Color(0xbfffffcc);
-const Color purpleLinearGradientColors  = Color(0xbf9900cc);
-const Color purpleLightLinearGradientColors  = Color(0xbfcc66ff);
-const Color orangeLinearGradientColors  = Color(0xbfffcc00);
-const Color orangeLightLinearGradientColors  = Color(0xbfff9966);
-
-
+const Color pinkLinearGradientColors = Color(0xbfff0066);
+const Color pinkLightLinearGradientColors = Color(0xbfff66cc);
+const Color blueLinearGradientColors = Color(0xbf0000ff);
+const Color blueLightLinearGradientColors = Color(0xbf3399ff);
+const Color yellowLinearGradientColors = Color(0xbfffff00);
+const Color yellowLightLinearGradientColors = Color(0xbfffffcc);
+const Color purpleLinearGradientColors = Color(0xbf9900cc);
+const Color purpleLightLinearGradientColors = Color(0xbfcc66ff);
+const Color orangeLinearGradientColors = Color(0xbfffcc00);
+const Color orangeLightLinearGradientColors = Color(0xbfff9966);

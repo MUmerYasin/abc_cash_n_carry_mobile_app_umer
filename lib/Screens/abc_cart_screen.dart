@@ -8,7 +8,6 @@ import 'package:abc_cash_n_carry/Helpers/help_list_views.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 import 'abc_address_screen.dart';
 
 class ABCCartScreen extends StatefulWidget {
@@ -23,7 +22,7 @@ class _ABCCartScreenState extends State<ABCCartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ButtonWhiteTextColor,
-      appBar: CustomAppBarBackAndNotificationButtons(),
+      appBar: CustomBackScreenButton(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 20.0,

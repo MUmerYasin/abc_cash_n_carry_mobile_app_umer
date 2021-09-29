@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 /// Cart Screen
 class CustomCartOfSingleItems extends StatefulWidget {
   String imagePaths;
-  String priceText;
+  double priceText;
   String nameText;
   String subTitleText;
   Widget? screen;
@@ -34,11 +34,12 @@ class CustomCartOfSingleItems extends StatefulWidget {
 
 class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
   int counter = 1;
+  late double temp;
 
   @override
   void initState() {
     super.initState();
-    // you can use this.widget.foo here
+    temp = widget.priceText;
   }
 
   @override
@@ -72,115 +73,128 @@ class _CustomCartOfSingleItemsState extends State<CustomCartOfSingleItems> {
               spreadRadius: 2,
               blurRadius: 5,
               offset: Offset(0, 2), // changes position of shadow
-              ),
-            ],
-          ),
-          height: 130.0,
-          width: MediaQuery.of(context).size.width * 0.9,
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 8.0,
-              right: 5.0,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
-                  child: SizedBox(
-                    height: 110.0,
-                    width: 110.0,
-                    child: Image.asset(
-                      widget.imagePaths,
-                      fit: BoxFit.fill,
-                      width: double.infinity,
-                    ),
+          ],
+        ),
+        height: 130.0,
+        width: MediaQuery.of(context).size.width * 0.9,
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 8.0,
+            right: 5.0,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: SizedBox(
+                  height: 110.0,
+                  width: 110.0,
+                  child: Image.asset(
+                    widget.imagePaths,
+                    fit: BoxFit.fill,
+                    width: double.infinity,
                   ),
                 ),
-                // SizedBox(width: MediaQuery.of(context).size.width*0.03,),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    /// Product Name
-                    Text(
-                      widget.nameText,
-                      style: TitleTextStyleCartScreen,
-                      textAlign: TextAlign.left,
+              ),
+              // SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /// Product Name
+
+                  Text(
+                    widget.nameText,
+                    style: TitleTextStyleCartScreen,
+                    textAlign: TextAlign.left,
+                  ),
+
+                  /// SubTitle
+                  Text(
+                    // ,
+                    widget.subTitleText,
+                    style: SubTitleTextStyleCartScreen,
+                    textAlign: TextAlign.left,
+                  ),
+
+                  /// Price
+                  RichText(
+                    text: TextSpan(
+                      style: DefaultTextStyle.of(context).style,
+                      children: <TextSpan>[
+                        TextSpan(text: '\$ ', style: priceTextStyleCartScreen),
+                        TextSpan(
+                            text: widget.priceText.toString(),
+                            style: priceTextStyleCartScreen),
+                      ],
                     ),
+                  ),
 
-                    /// SubTitle
-                    Text(
-                      // ,
-                      widget.subTitleText,
-                      style: SubTitleTextStyleCartScreen,
-                      textAlign: TextAlign.left,
+                  // Text(
+                  //   widget.priceText.toString(),
+                  //   style: priceTextStyleCartScreen,
+                  //   textAlign: TextAlign.left,
+                  // ),
+
+                  /// Counter /// Plus and Minus Button
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4.0),
+                      color: incrementCartTextColor,
                     ),
-
-                    /// Price
-                    Text(
-                      widget.priceText,
-                      style: priceTextStyleCartScreen,
-                      textAlign: TextAlign.left,
-                    ),
-
-                    /// Counter /// Plus and Minus Button
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        color: incrementCartTextColor,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          GestureDetector(
-                            child: Container(
-                              child: Icon(CupertinoIcons.minus),
-                            ),
-                            onTap: () {
-                              setState(() {
-                                if(counter>=2){
-                                  counter--;
-                                }
-
-                              });
-                            },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          child: Container(
+                            child: Icon(CupertinoIcons.minus),
                           ),
-                          Container(
-                            child: Text(
-                              "$counter",
-                              style: counterTextStyleCartScreen,
-                            ),
+                          onTap: () {
+                            setState(() {
+                              if (counter >= 2) {
+                                counter--;
+                                widget.priceText = widget.priceText - temp;
+                              }
+                            });
+                          },
+                        ),
+                        Container(
+                          child: Text(
+                            "$counter",
+                            style: counterTextStyleCartScreen,
                           ),
-                          GestureDetector(
-                            child: Container(
-                              child: Icon(CupertinoIcons.add),
-                            ),
-                            onTap: () {
-                              setState(() {
-                                if(counter>=1){
-                                  counter++;
-                                }
-
-                              });
-                            },
+                        ),
+                        GestureDetector(
+                          child: Container(
+                            child: Icon(CupertinoIcons.add),
                           ),
-                        ],
-                      ),
+                          onTap: () {
+                            setState(() {
+                              if (counter >= 1) {
+                                counter++;
+                                widget.priceText = widget.priceText + temp;
+                              }
+                            });
+                          },
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
+              ),
 
-                /// Cross icon
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    InkWell(
+              /// Cross icon
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  InkWell(
                     child: Padding(
                       padding: const EdgeInsets.only(
                         top: 8.0,

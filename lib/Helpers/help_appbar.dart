@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:abc_cash_n_carry/Screens/abc_cart_screen.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:flutter/cupertino.dart';
@@ -5,10 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:flutter_svg/svg.dart';
-import 'dart:async';
 
 import 'navigator_help.dart';
-
 
 /// AppBar
 //AppBar, use in Back Button in top of screen
@@ -57,6 +57,7 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+
           /// Back Button
           InkWell(
             onTap: () {
@@ -75,7 +76,8 @@ class CustomAppBarBackAndNotificationButtons extends StatelessWidget
                     onTap: () {
                       gotoScreen(
                         context: context,
-                        screen: ABCCartScreen(),);
+                        screen: ABCCartScreen(),
+                      );
                     },
                     child: Icon(CupertinoIcons.cart),
                   ),
@@ -95,13 +97,15 @@ class CustomAppBarDrawerAndNotificationButtons extends StatefulWidget
   CustomAppBarDrawerAndNotificationButtons({Key? key}) : super(key: key);
 
   @override
-  State<CustomAppBarDrawerAndNotificationButtons> createState() => _CustomAppBarDrawerAndNotificationButtonsState();
+  State<CustomAppBarDrawerAndNotificationButtons> createState() =>
+      _CustomAppBarDrawerAndNotificationButtonsState();
 
   @override
   Size get preferredSize => Size.fromHeight(200);
 }
 
-class _CustomAppBarDrawerAndNotificationButtonsState extends State<CustomAppBarDrawerAndNotificationButtons> {
+class _CustomAppBarDrawerAndNotificationButtonsState
+    extends State<CustomAppBarDrawerAndNotificationButtons> {
   String _scanBarcode = 'Unknown';
 
   void initState() {
@@ -115,6 +119,7 @@ class _CustomAppBarDrawerAndNotificationButtonsState extends State<CustomAppBarD
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+
           /// Drawer
           InkWell(
             onTap: () {
@@ -137,7 +142,6 @@ class _CustomAppBarDrawerAndNotificationButtonsState extends State<CustomAppBarD
 
                       await scanBarcodeNormal();
                       print(getScanBarCode());
-
                     },
                     child: Icon(CupertinoIcons.barcode_viewfinder),
                   ),
@@ -145,8 +149,9 @@ class _CustomAppBarDrawerAndNotificationButtonsState extends State<CustomAppBarD
                 InkWell(
                   onTap: () {
                     gotoScreen(
-                        context: context,
-                        screen: ABCCartScreen(),);
+                      context: context,
+                      screen: ABCCartScreen(),
+                    );
                   },
                   child: Icon(CupertinoIcons.cart),
                 ),
@@ -159,7 +164,7 @@ class _CustomAppBarDrawerAndNotificationButtonsState extends State<CustomAppBarD
   }
 
   /// get value from bar code
-  String getScanBarCode(){
+  String getScanBarCode() {
     return _scanBarcode;
   }
 

@@ -1,4 +1,3 @@
-
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 
 final List<String> imgListProductDetails = [

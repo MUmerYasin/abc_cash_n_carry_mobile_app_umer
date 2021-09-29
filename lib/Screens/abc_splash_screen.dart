@@ -1,9 +1,10 @@
 import 'dart:async';
+
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Screens/abc_welcome_to_bolt.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -76,12 +77,15 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
               Container(
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.white)),
-                child: Icon(
-                  CupertinoIcons.question,
-                  color: ButtonWhiteTextColor,
+                child: CircularProgressIndicator(
+                  color: Colors.white,
                 ),
+                // decoration:
+                //     BoxDecoration(border: Border.all(color: Colors.white)),
+                // child: Icon(
+                //   CupertinoIcons.question,
+                //   color: ButtonWhiteTextColor,
+                // ),
               )
             ],
           ),

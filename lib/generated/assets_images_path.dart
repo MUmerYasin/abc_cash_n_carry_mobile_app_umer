@@ -3,12 +3,10 @@
 // static const String imagesAe = 'assets/images/ae.jpeg';
 // }
 
-
 /// All Images paths
 
 /// Main Folder path
 const String imagesMainPath = 'assets/images/';
-
 
 const String imagePathLogoPngPath = imagesMainPath + 'logo_abc.png';
 
@@ -30,8 +28,10 @@ const String imagePathPngImage1 = imagesMainPath + 'image1.png';
 const String imagePathPngImage2 = imagesMainPath + 'image2.png';
 const String imagePathPngImage3 = imagesMainPath + 'image3.png';
 const String imagePathBeautyProducts = imagesMainPath + 'beauty_products.png';
-const String imagePathElectronicProductFirst = imagesMainPath + 'electronic_products.png';
-const String imagePathElectronicProductTwo = imagesMainPath + 'Electronics_Products.png';
+const String imagePathElectronicProductFirst =
+    imagesMainPath + 'electronic_products.png';
+const String imagePathElectronicProductTwo =
+    imagesMainPath + 'Electronics_Products.png';
 const String imagePathGroceries = imagesMainPath + 'groceries.png';
 const String imagePathJewelery = imagesMainPath + 'Jewelery.png';
 
@@ -78,6 +78,9 @@ const String imagePathProductImage7 = imagesMainPath + 'product_images07.png';
 //Product Slider Image
 const String imagePathProductSlider1 = imagesMainPath + 'product_slider.png';
 
-const String imagePathHomePageSlider1 = imagesMainPath + 'home_page_slider1.png';
-const String imagePathHomePageSlider2 = imagesMainPath + 'home_page_slider2.png';
-const String imagePathHomePageSlider3 = imagesMainPath + 'home_page_slider3.png';
+const String imagePathHomePageSlider1 =
+    imagesMainPath + 'home_page_slider1.png';
+const String imagePathHomePageSlider2 =
+    imagesMainPath + 'home_page_slider2.png';
+const String imagePathHomePageSlider3 =
+    imagesMainPath + 'home_page_slider3.png';

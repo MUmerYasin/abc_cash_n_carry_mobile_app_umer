@@ -1,4 +1,3 @@
-import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,10 @@ import 'package:flutter/material.dart';
 class HomePageCarouselWithIndicator extends StatefulWidget {
   List<String> imgList;
   double heightOfSlider;
-   HomePageCarouselWithIndicator({Key? key, required this.imgList, required this.heightOfSlider}) : super(key: key);
+
+  HomePageCarouselWithIndicator(
+      {Key? key, required this.imgList, required this.heightOfSlider})
+      : super(key: key);
 
   @override
   _HomePageCarouselWithIndicatorState createState() =>
@@ -27,8 +29,6 @@ class HomePageCarouselWithIndicator extends StatefulWidget {
 
 class _HomePageCarouselWithIndicatorState
     extends State<HomePageCarouselWithIndicator> {
-
-
   int _current = 0;
   final CarouselController _controller = CarouselController();
 
@@ -86,7 +86,8 @@ class _HomePageCarouselWithIndicatorState
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.end,
-                              children: widget.imgList.asMap().entries.map((entry) {
+                              children:
+                                  widget.imgList.asMap().entries.map((entry) {
                                 return GestureDetector(
                                   onTap: () =>
                                       _controller.animateToPage(entry.key),

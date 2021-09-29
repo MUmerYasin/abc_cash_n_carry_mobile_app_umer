@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 /// Cart Screen
 class CustomMyOrdersOfSingleItems extends StatefulWidget {
   String imagePaths;
-  String priceText;
+  double priceText;
   String nameText;
   String subTitleText;
   Widget? screen;
@@ -102,11 +102,22 @@ class _CustomMyOrdersOfSingleItemsState
                   ),
 
                   /// Price
-                  Text(
-                    widget.priceText,
-                    style: priceTextStyleCartScreen,
-                    textAlign: TextAlign.left,
+                  RichText(
+                    text: TextSpan(
+                      style: DefaultTextStyle.of(context).style,
+                      children: <TextSpan>[
+                        TextSpan(text: '\$ ', style: priceTextStyleCartScreen),
+                        TextSpan(
+                            text: widget.priceText.toString(),
+                            style: priceTextStyleCartScreen),
+                      ],
+                    ),
                   ),
+                  // Text(
+                  //   widget.priceText.toString(),
+                  //   style: priceTextStyleCartScreen,
+                  //   textAlign: TextAlign.left,
+                  // ),
 
                   /// Order Again
                   Container(

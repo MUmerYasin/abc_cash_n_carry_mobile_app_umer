@@ -1,15 +1,14 @@
 import 'package:abc_cash_n_carry/Configs/Strings/text_fields_strings.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
 import 'package:abc_cash_n_carry/Screens/abc_cart_screen.dart';
-import 'package:abc_cash_n_carry/Screens/abc_create_address_screen.dart';
 import 'package:abc_cash_n_carry/Screens/abc_favorite_screen.dart';
-import 'package:abc_cash_n_carry/Screens/abc_featured_screen.dart';
 import 'package:abc_cash_n_carry/Screens/abc_home_version_1_screen.dart';
 import 'package:abc_cash_n_carry/Screens/abc_login_screen.dart';
 import 'package:abc_cash_n_carry/Screens/abc_my_order_screen.dart';
 import 'package:abc_cash_n_carry/Screens/abc_user_profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'navigator_help.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -83,7 +82,7 @@ class CustomDrawer extends StatelessWidget {
                 ),
                 GestureDetector(
                   child:
-                  Text(aBC_MainMenuString_Logout, style: drawerTextStyle),
+                      Text(aBC_MainMenuString_Logout, style: drawerTextStyle),
                   onTap: () {
                     gotoScreen(context: context, screen: ABCLoginScreen());
                   },

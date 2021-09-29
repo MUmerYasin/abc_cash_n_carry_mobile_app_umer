@@ -1,10 +1,8 @@
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/Configs/fonts/abc_cash_n_carry_text_style.dart';
-import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:dotted_border/dotted_border.dart';
 
 //use in All Buttons
 class MainCustomButton extends StatelessWidget {
@@ -187,7 +185,6 @@ class MainCustomButton extends StatelessWidget {
 // }
 //
 
-
 //use in Add Card Buttons
 class AddCardButton extends StatelessWidget {
   Function()? onPressed;
@@ -286,6 +283,7 @@ class SelectColorButton extends StatelessWidget {
   String? child;
   bool? color;
   Color? buttonColor;
+
   SelectColorButton({this.onPressed, this.child, this.color, this.buttonColor});
 
   @override
@@ -318,7 +316,6 @@ class SelectColorButton extends StatelessWidget {
     );
   }
 }
-
 
 // Button Buy NowCustom Design
 class BuyNowColorButton extends StatelessWidget {

@@ -38,7 +38,7 @@ const String aBC_StringDescription = 'Description';
 
 const String aBC_StringLottoLTD = 'Lotto.LTD';
 const String aBC_StringBata = 'Bata';
-const String aBC_StringNext ='Next';
+const String aBC_StringNext = 'Next';
 const String aBC_StringPlusPoint = 'plus point';
 
 const String aBC_StringFemaleTShirt = 'Female t- shirt';
@@ -55,6 +55,23 @@ const String aBC_StringSymbols = 'Symbols';
 const String aBC_Cash_N_Carry_StringMore = 'More';
 
 const String aBC_StringPrice = '\$ 55.00';
+
+const double aBC_DiscountPrice = 50.00;
+const double aBC_DiscountPrice1 = 100.00;
+const double aBC_DiscountPrice2 = 150.00;
+const double aBC_DiscountPrice3 = 60.00;
+const double aBC_DiscountPrice4 = 200.00;
+const double aBC_DiscountPrice5 = 80.00;
+const double aBC_DiscountPrice6 = 20.00;
+
+const double aBC_OriginalPrice = 80.00;
+const double aBC_OriginalPrice1 = 110.00;
+const double aBC_OriginalPrice2 = 170.00;
+const double aBC_OriginalPrice3 = 80.00;
+const double aBC_OriginalPrice4 = 250.00;
+const double aBC_OriginalPrice5 = 100.00;
+const double aBC_OriginalPrice6 = 60.00;
+
 const String aBC_StringDiscountPrice = '\$42';
 const String aBC_StringOriginalPrice = '\$62';
 

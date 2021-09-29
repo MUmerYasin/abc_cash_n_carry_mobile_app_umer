@@ -1,21 +1,5 @@
 import 'package:flutter/material.dart';
 
-// class Utils{
-//
-//   static void showToast(BuildContext context,String? message) {
-//     final scaffold = ScaffoldMessenger.of(context);
-//     scaffold.showSnackBar(
-//       SnackBar(
-//         content: Text(message!),
-//         action: SnackBarAction(label: 'UNDO', onPressed: scaffold.hideCurrentSnackBar),
-//       ),
-//     );
-//   }
-//
-// }
-
-import 'package:flutter/material.dart';
-
 successSnackBar(BuildContext context, {String? msg}) {
   final snackBar = SnackBar(
     content: Text(

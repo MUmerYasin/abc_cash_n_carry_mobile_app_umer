@@ -8,6 +8,7 @@ import 'package:abc_cash_n_carry/Screens/abc_login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import 'help_cart.dart';
 import 'help_my_orders.dart';
 
@@ -167,7 +168,7 @@ class CustomCategoriesListView extends StatelessWidget {
 /// Picture, Price, Name
 class CustomProductListViewSingleItems extends StatelessWidget {
   String imagePaths;
-  String priceText;
+  double priceText;
   String nameText;
   Widget? screen;
 
@@ -211,14 +212,29 @@ class CustomProductListViewSingleItems extends StatelessWidget {
                 ),
               ),
             ),
+            // Padding(
+            //   padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
+            //   child: Text(
+            //     priceText.toString(),
+            //     style: ProductPriceStyle,
+            //     textAlign: TextAlign.left,
+            //   ),
+            // ),
+
+            /// Discount Price,
             Padding(
               padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
-              child: Text(
-                priceText,
-                style: ProductPriceStyle,
-                textAlign: TextAlign.left,
+              child: RichText(
+                text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: <TextSpan>[
+                    TextSpan(text: '\$ ', style: ProductPriceStyle),
+                    TextSpan(text: "$priceText", style: ProductPriceStyle),
+                  ],
+                ),
               ),
             ),
+
             Text(
               nameText,
               style: ProductPriceStyle,
@@ -228,48 +244,53 @@ class CustomProductListViewSingleItems extends StatelessWidget {
         ),
       ),
       onTap: () {
-        _modalBottomSheetMenu(context);
-        // Navigator.push(context, CupertinoPageRoute(builder: (context) {
-        //   return screen ?? ABCLoginScreen();
-        // },
-        // ),
-        // );
+        // _modalBottomSheetMenu(context);
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (context) {
+              return screen ?? ABCItemDetailsAddToCardScreen();
+            },
+          ),
+        );
       },
     );
   }
-/// Modal Bottom Sheet Menu Called
-  void _modalBottomSheetMenu(BuildContext context) {
-    showModalBottomSheet<void>(
-        context: context,
-        enableDrag: true,
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        // shape: RoundedRectangleBorder(
-        //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
-        // ),
-        builder: (context) {
-          return Container(
-            height: MediaQuery.of(context).size.height * 0.8,
-            color: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ClipRRect(
-                borderRadius:
-                    // BorderRadius.only(
-                    //   topLeft: const Radius.circular(10.0),
-                    //   topRight: const Radius.circular(10.0),
-                    // ),
-                    BorderRadius.circular(12.0),
-                child: Container(
-                  // decoration: BoxDecoration(
-                  // ),
-                  child: ABCItemDetailsAddToCardScreen(),
-                ),
-              ),
-            ),
-          );
-        });
-  }
+
+// /// Modal Bottom Sheet Menu Called
+//   void _modalBottomSheetMenu(BuildContext context) {
+//     showModalBottomSheet<void>(
+//         context: context,
+//         enableDrag: true,
+//         elevation: 0.0,
+//         backgroundColor: Colors.transparent,
+//         // shape: RoundedRectangleBorder(
+//         //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
+//         // ),
+//         builder: (context) {
+//           return Container(
+//             height: MediaQuery.of(context).size.height * 0.8,
+//             color: Colors.transparent,
+//             child: Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: ClipRRect(
+//                 borderRadius:
+//                     // BorderRadius.only(
+//                     //   topLeft: const Radius.circular(10.0),
+//                     //   topRight: const Radius.circular(10.0),
+//                     // ),
+//                     BorderRadius.circular(12.0),
+//                 child: Container(
+//                   // decoration: BoxDecoration(
+//                   // ),
+//                   child: ABCItemDetailsAddToCardScreen(),
+//                 ),
+//               ),
+//             ),
+//           );
+//         });
+//   }
+
 }
 
 // /// Feature Screen
@@ -621,7 +642,7 @@ class _AddToCartProductsShowState extends State<AddToCartProductsShow> {
                 key: Key(item),
                 child: CustomCartOfSingleItems(
                     imagePaths: imgListProductsImage[i],
-                    priceText: listProductsPrice[i],
+                    priceText: listOfDiscountProductsPrice[i],
                     nameText: listProductName[i],
                     subTitleText: listProductSubTitle[i],
                     onDelete: () {
@@ -665,9 +686,18 @@ class FeatureProductsShowInHomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 child: CustomProductListViewSingleItems(
                   imagePaths: imgListProductsImage[i],
-                  priceText: listProductsPrice[i],
+                  priceText: listOfDiscountProductsPrice[i],
                   nameText: listProductName[i],
-                  screen: ABCItemDetailsAddToCardScreen(),
+                  screen: ABCItemDetailsAddToCardScreen(
+                    productName: listProductName[i],
+                    originalPriceText: listOfOriginalProductsPrice[i],
+                    discountPriceText: listOfDiscountProductsPrice[i],
+                    productImagePath: [
+                      imgListProductsImage[i],
+                      imgListProductsImage[i],
+                      imgListProductsImage[i]
+                    ],
+                  ),
                 ),
               );
             },
@@ -696,7 +726,7 @@ class MyOrderAgainListView extends StatelessWidget {
             itemBuilder: (context, i) {
               return CustomMyOrdersOfSingleItems(
                 imagePaths: imgListProductsImage[i],
-                priceText: listProductsPrice[i],
+                priceText: listOfDiscountProductsPrice[i],
                 nameText: listProductName[i],
                 subTitleText: listProductSubTitle[i],
                 child: aBC_StringOrderAgain,
@@ -769,7 +799,7 @@ class AllFavoriteScreenScrollViewProducts extends StatelessWidget {
           listProductName.length,
           (index) {
             return CustomProductListViewSingleItems(
-              priceText: listProductsPrice[index],
+              priceText: listOfDiscountProductsPrice[index],
               nameText: listProductName[index],
               imagePaths: imgListProductsImage[index],
               screen: ABCItemDetailsAddToCardScreen(),

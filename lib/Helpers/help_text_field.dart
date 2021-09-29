@@ -122,7 +122,6 @@ class _SearchBarTextFieldState extends State<SearchBarTextField> {
   }
 }
 
-
 /// Custom Text Fields (Provided by Sir Usama )
 class CustomFields extends StatefulWidget {
   final IconData? prefixIcon;
@@ -215,10 +214,12 @@ class _CustomFieldsState extends State<CustomFields> {
                   // ),
 
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: TextFieldBorderColor, width: 1.5),
+                    borderSide:
+                        BorderSide(color: TextFieldBorderColor, width: 1.5),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: TextFieldBorderColor, width: 1.5),
+                    borderSide:
+                        BorderSide(color: TextFieldBorderColor, width: 1.5),
                   ),
 
                   fillColor: Colors.white,
@@ -244,9 +245,19 @@ class _CustomFieldsState extends State<CustomFields> {
                   // //Icon(widget.prefixIcon,),
                   // suffixIcon: null, // Icon(widget.postfixIcon)
 
-                  prefixIcon:widget.prefixIcon == null ? null :  Icon(widget.prefixIcon,color: Color(0xFF818181),),
-                  suffixIcon:widget.postfixIcon == null ? null : IconButton(icon: Icon(widget.postfixIcon),onPressed: widget.onPressed,color:Color(0xFF818181),),
-
+                  prefixIcon: widget.prefixIcon == null
+                      ? null
+                      : Icon(
+                          widget.prefixIcon,
+                          color: Color(0xFF818181),
+                        ),
+                  suffixIcon: widget.postfixIcon == null
+                      ? null
+                      : IconButton(
+                          icon: Icon(widget.postfixIcon),
+                          onPressed: widget.onPressed,
+                          color: Color(0xFF818181),
+                        ),
                 ),
               ),
             ),

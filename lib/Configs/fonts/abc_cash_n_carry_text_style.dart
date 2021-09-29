@@ -183,11 +183,20 @@ const TextStyle discountPriceTextStyle = TextStyle(
   fontSize: 20.0,
   height: 1.8,
   fontFamily: textFontFamilySegoeUI,
+  fontWeight: FontWeight.w800,
 );
 const TextStyle originalPriceTextStyle = TextStyle(
   color: PriceTextColor,
   fontSize: 18.0,
   height: 1.8,
+  decoration: TextDecoration.lineThrough,
+  fontFamily: textFontFamilySegoeUI,
+);
+
+const TextStyle originalPriceCartScreenTextStyle = TextStyle(
+  color: PriceTextColor,
+  fontSize: 16.0,
+  height: 1.2000000476837158,
   decoration: TextDecoration.lineThrough,
   fontFamily: textFontFamilySegoeUI,
 );
@@ -283,4 +292,5 @@ const TextStyle skipButtonTextStyle = TextStyle(
   fontFamily: textFontFamilySegoeUI,
 );
 
-const TextStyle veryGoodStyle = TextStyle(color: Colors.black, fontSize: 18.0);
+const TextStyle SelectColorAndSizeStyle =
+    TextStyle(color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.w600);

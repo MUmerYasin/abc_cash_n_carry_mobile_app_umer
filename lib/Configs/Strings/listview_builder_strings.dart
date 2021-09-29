@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:abc_cash_n_carry/Configs/Strings/product_details_strings.dart';
 import 'package:abc_cash_n_carry/Configs/colors/abc_cash_n_carry_colors.dart';
 import 'package:abc_cash_n_carry/generated/assets_images_path.dart';
+import 'package:flutter/material.dart';
 
 import 'listview_Data_strings.dart';
 import 'text_fields_strings.dart';
@@ -14,7 +15,7 @@ import 'text_fields_strings.dart';
 /// Cart Screen
 
 /// products images
-final List<String> imgListProductsImage = [
+const List<String> imgListProductsImage = [
   imagePathProductImage1,
   imagePathProductImage2,
   imagePathProductImage3,
@@ -24,15 +25,26 @@ final List<String> imgListProductsImage = [
   imagePathProductImage7
 ];
 
-/// Price
-final List<String> listProductsPrice = [
-  aBC_StringPrice,
-  aBC_StringPrice,
-  aBC_StringPrice,
-  aBC_StringPrice,
-  aBC_StringPrice,
-  aBC_StringPrice,
-  aBC_StringPrice,
+/// Price Discount
+final List<double> listOfDiscountProductsPrice = [
+  aBC_DiscountPrice,
+  aBC_DiscountPrice1,
+  aBC_DiscountPrice2,
+  aBC_DiscountPrice3,
+  aBC_DiscountPrice4,
+  aBC_DiscountPrice5,
+  aBC_DiscountPrice6,
+];
+
+/// Price Original
+final List<double> listOfOriginalProductsPrice = [
+  aBC_OriginalPrice,
+  aBC_OriginalPrice1,
+  aBC_OriginalPrice2,
+  aBC_OriginalPrice3,
+  aBC_OriginalPrice4,
+  aBC_OriginalPrice5,
+  aBC_OriginalPrice6,
 ];
 
 /// Product name
@@ -93,8 +105,6 @@ final List<String> imgListCategories = [
   imagePathGroceries,
   imagePathElectronicProductFirst,
   imagePathElectronicProductTwo,
-
-
 ];
 
 /// Names
@@ -110,13 +120,25 @@ final List<String> categoriesNames = [
   aBC_ListViewHeadingStringHomeAppliances,
 ];
 
-
 /// Profile Screen
 /// Gender
 
-
-final List<String> genderType =[
+final List<String> genderType = [
   aBC_StringMale,
   aBC_StringFemale,
   aBC_StringOthers
+];
+
+/// Product Size
+List<String> singleProductSize = ["S", "M", "L", "XL", "XXL"];
+
+///singleProductColors
+List<Color> singleProductColors = [
+  Colors.black,
+  Colors.purple,
+  Colors.orange.shade200,
+  Colors.blueGrey,
+  Colors.red,
+  Colors.green,
+  Colors.amber,
 ];
