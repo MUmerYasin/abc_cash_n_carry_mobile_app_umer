@@ -52,13 +52,13 @@ class CustomDrawer extends StatelessWidget {
                     gotoScreen(context: context, screen: ABCCartScreen());
                   },
                 ),
-                GestureDetector(
-                  child:
-                      Text(aBC_MainMenuString_Favorite, style: drawerTextStyle),
-                  onTap: () {
-                    gotoScreen(context: context, screen: ABCFavoriteScreen());
-                  },
-                ),
+                // GestureDetector(
+                //   child:
+                //       Text(aBC_MainMenuString_Favorite, style: drawerTextStyle),
+                //   onTap: () {
+                //     gotoScreen(context: context, screen: ABCFavoriteScreen());
+                //   },
+                // ),
                 GestureDetector(
                   child:
                       Text(aBC_MainMenuString_MyOrders, style: drawerTextStyle),
@@ -66,13 +66,13 @@ class CustomDrawer extends StatelessWidget {
                     gotoScreen(context: context, screen: ABCMyOrdersScreen());
                   },
                 ),
-                GestureDetector(
-                  child:
-                      Text(aBC_MainMenuString_Language, style: drawerTextStyle),
-                  onTap: () {
-                    // gotoScreen(context: context, screen: ABCCreateAddressScreen());
-                  },
-                ),
+                // GestureDetector(
+                //   child:
+                //       Text(aBC_MainMenuString_Language, style: drawerTextStyle),
+                //   onTap: () {
+                //     // gotoScreen(context: context, screen: ABCCreateAddressScreen());
+                //   },
+                // ),
                 GestureDetector(
                   child:
                       Text(aBC_MainMenuString_Settings, style: drawerTextStyle),

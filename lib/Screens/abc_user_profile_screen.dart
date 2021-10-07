@@ -81,6 +81,7 @@ class _ABCUserProfileScreenState extends State<ABCUserProfileScreen> {
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             child: SingleChildScrollView(
+              keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
               physics: ClampingScrollPhysics(),
               child: Form(
                 child: Column(

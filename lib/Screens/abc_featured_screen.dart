@@ -28,6 +28,7 @@ class _ABCFeaturedScreenState extends State<ABCFeaturedScreen> {
           top: 0.0,
         ),
         child: SingleChildScrollView(
+          keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
           physics: ClampingScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

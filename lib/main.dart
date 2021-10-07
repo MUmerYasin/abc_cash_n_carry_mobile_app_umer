@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'Configs/Strings/screen_titles_strings.dart';
 import 'Screens/abc_home_version_1_screen.dart';
+import 'Screens/abc_signup_screen.dart';
+import 'Screens/abc_splash_screen.dart';
+import 'Screens/abc_welcome_to_bolt.dart';
 
 void main() => runApp(
   DevicePreview(
@@ -19,7 +22,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-
       locale: DevicePreview.locale(context),
       // Add the locale here
       builder: DevicePreview.appBuilder,

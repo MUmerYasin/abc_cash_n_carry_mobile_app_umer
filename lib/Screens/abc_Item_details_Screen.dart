@@ -49,6 +49,7 @@ class _ABCItemDetailsScreenState extends State<ABCItemDetailsScreen> {
       backgroundColor: Colors.white,
       // appBar: CustomAppBarBackAndNotificationButtons(),
       body: SingleChildScrollView(
+        keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
         physics: ClampingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(16.0),

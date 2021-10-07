@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.newseedforme.abc_cash_n_carry">
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
         android:label="abc_cash_n_carry"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -37,6 +39,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+       
 
    </application>
 </manifest>

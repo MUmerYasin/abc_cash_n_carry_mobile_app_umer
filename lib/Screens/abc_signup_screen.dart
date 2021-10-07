@@ -16,7 +16,6 @@ import 'abc_home_version_1_screen.dart';
 
 class ABCSignupScreen extends StatefulWidget {
   const ABCSignupScreen({Key? key}) : super(key: key);
-
   @override
   _ABCSignupScreenState createState() => _ABCSignupScreenState();
 }
@@ -27,10 +26,17 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
       TextEditingController();
   TextEditingController _signupPasswordTextFieldController =
       TextEditingController();
+TextEditingController _signupSecondPasswordTextFieldController =
+      TextEditingController();
+  TextEditingController _signupAddressFieldController = TextEditingController();
+
 
   FocusNode _signupTextFieldFocusNode = FocusNode();
   FocusNode _signupEmailTextFieldFocusNode = FocusNode();
   FocusNode _signupPasswordTextFieldFocusNode = FocusNode();
+  FocusNode _signupSecondPasswordTextFieldFocusNode = FocusNode();
+  FocusNode _signupAddressFieldFocusNode = FocusNode();
+
 
   bool _isObscure = true;
 
@@ -44,10 +50,14 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
     _signupTextFieldController.dispose();
     _signupEmailTextFieldController.dispose();
     _signupPasswordTextFieldController.dispose();
+    _signupSecondPasswordTextFieldController.dispose();
+    _signupAddressFieldController.dispose();
 
     _signupTextFieldFocusNode.dispose();
     _signupEmailTextFieldFocusNode.dispose();
     _signupPasswordTextFieldFocusNode.dispose();
+    _signupSecondPasswordTextFieldFocusNode.dispose();
+    _signupAddressFieldFocusNode.dispose();
     super.dispose();
   }
 
@@ -64,6 +74,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             child: SingleChildScrollView(
+              keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
               physics: ClampingScrollPhysics(),
               child: Form(
                 child: Column(
@@ -104,6 +115,7 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                         textInputAction: TextInputAction.next,
                       ),
                     ),
+
 
                     // /// NAME Custom Text Field
                     // Padding(
@@ -244,6 +256,48 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
                       ),
                     ),
 
+                    /// Second Password Custom Text Field
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 16,
+                      ),
+                      child: CustomFields(
+                        labelText: aBC_StringPassword,
+                        hintText: aBC_StringPasswordValues,
+                        obscure: _isObscure,
+                        controller: _signupSecondPasswordTextFieldController,
+                        focusNode: _signupSecondPasswordTextFieldFocusNode,
+                        type: TextInputType.visiblePassword,
+                        textInputAction: TextInputAction.done,
+                        postfixIcon: _isObscure
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        onPressed: () {
+                          setState(
+                            () {
+                              _isObscure = !_isObscure;
+                            },
+                          );
+                        },
+                      ),
+                    ),
+
+                    /// Address Custom Text Field
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 8,
+                      ),
+                      child: CustomFields(
+                        labelText: aBC_StringAddress,
+                        hintText: aBC_StringSecondAddressValue,
+                        obscure: false,
+                        controller: _signupAddressFieldController,
+                        focusNode: _signupAddressFieldFocusNode,
+                        type: TextInputType.name,
+                        textInputAction: TextInputAction.next,
+                      ),
+                    ),
+
                     SizedBox(
                       height: 30.0,
                     ),
@@ -317,16 +371,51 @@ class _ABCSignupScreenState extends State<ABCSignupScreen> {
       failedSnackBar(context, msg: 'Please Enter Your Name');
       _signupTextFieldFocusNode.requestFocus();
       return false;
-    } else if (_signupEmailTextFieldController.text.isEmpty ||
+    }
+    else if (_signupEmailTextFieldController.text.isEmpty ||
         !_validateEmail(_signupEmailTextFieldController.text)) {
-      failedSnackBar(context, msg: 'Please Enter Your Email address');
+      failedSnackBar(context, msg: ' Enter Valid Email address');
       _signupEmailTextFieldFocusNode.requestFocus();
       return false;
-    } else if (_signupPasswordTextFieldController.text.length < 6) {
+    }
+
+    else if (_signupPasswordTextFieldController.text.isEmpty) {
+      failedSnackBar(context, msg: "Please Enter New Password");
+      _signupPasswordTextFieldFocusNode.requestFocus();
+      return false;
+    }
+
+    else if (_signupSecondPasswordTextFieldController.text.isEmpty) {
+      failedSnackBar(context, msg: "Please Enter Again New Password");
+      _signupSecondPasswordTextFieldFocusNode.requestFocus();
+      return false;
+    }
+
+    else if (_signupPasswordTextFieldController.text.length < 6) {
       failedSnackBar(context, msg: "Enter Valid Password");
       _signupPasswordTextFieldFocusNode.requestFocus();
       return false;
-    } else {
+    }
+
+    else if (_signupSecondPasswordTextFieldController.text.length < 6) {
+      failedSnackBar(context, msg: "Enter Valid Password");
+      _signupSecondPasswordTextFieldFocusNode.requestFocus();
+      return false;
+    }
+
+    else if (_signupPasswordTextFieldController.text!= _signupSecondPasswordTextFieldController.text) {
+      failedSnackBar(context, msg: "Both Passwords NOT match");
+      _signupSecondPasswordTextFieldFocusNode.requestFocus();
+      return false;
+    }
+
+    if (_signupAddressFieldController.text.isEmpty) {
+      failedSnackBar(context, msg: 'Please Enter Your Address');
+      _signupAddressFieldFocusNode.requestFocus();
+      return false;
+    }
+
+    else {
       return true;
     }
   }

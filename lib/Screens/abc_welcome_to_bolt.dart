@@ -9,7 +9,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeToABCScreen extends StatefulWidget {
   const WelcomeToABCScreen({Key? key}) : super(key: key);
-
   @override
   _WelcomeToABCScreenState createState() => _WelcomeToABCScreenState();
 }
@@ -20,30 +19,31 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
         physics: ClampingScrollPhysics(),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 70.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RichText(
-                    text: TextSpan(
-                        text: aBC_StringWelcomeTo,
-                        style: welcomeToABCStyle,
-                        children: [
-                          TextSpan(
-                            text: aBC_StringABC,
-                            style: aBCStyle,
-                          ),
-                        ]),
-                    textAlign: TextAlign.center,
-                    textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
-                  ),
-                ],
-              ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.1,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RichText(
+                  text: TextSpan(
+                      text: aBC_StringWelcomeTo,
+                      style: welcomeToABCStyle,
+                      children: [
+                        TextSpan(
+                          text: aBC_StringABC,
+                          style: aBCStyle,
+                        ),
+                      ]),
+                  textAlign: TextAlign.center,
+                  textHeightBehavior:
+                      TextHeightBehavior(applyHeightToFirstAscent: false),
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -57,15 +57,21 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
                 Text(aBC_StringExploreUs, style: exploreUsStyle),
               ],
             ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.05,
+            ),
             Container(
               width: MediaQuery.of(context).size.width * 0.85,
-              padding: EdgeInsets.symmetric(vertical: 50.0),
+              // padding: EdgeInsets.symmetric(vertical: 50.0),
               child: SvgPicture.asset(
                 imagePathWelcomeToBolt,
                 width: MediaQuery.of(context).size.width * 0.85,
                 height: 240.0,
                 fit: BoxFit.contain,
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.05,
             ),
             MainCustomButton(
               child: aBC_StringLogin,
@@ -77,6 +83,9 @@ class _WelcomeToABCScreenState extends State<WelcomeToABCScreen> {
                   );
                 });
               },
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.03,
             ),
             TextButton(
                 onPressed: () {},

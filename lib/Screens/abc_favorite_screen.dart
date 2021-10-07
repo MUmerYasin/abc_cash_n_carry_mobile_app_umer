@@ -28,7 +28,8 @@ class _ABCFavoriteScreenState extends State<ABCFavoriteScreen> {
           top: 0.0,
         ),
         child: SingleChildScrollView(
-          physics: ClampingScrollPhysics(),
+        keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
+        physics: ClampingScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,

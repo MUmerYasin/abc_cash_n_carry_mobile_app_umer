@@ -39,6 +39,7 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
             top: 0.0,
           ),
           child: SingleChildScrollView(
+            keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
             physics: ClampingScrollPhysics(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -51,14 +52,14 @@ class _ABCHomeVersionOneScreenState extends State<ABCHomeVersionOneScreen> {
                 ),
 
                 /// Carousel With Indicator
-                Container(
-                  // width: MediaQuery.of(context).size.width * 0.85,
-                  // padding: EdgeInsets.symmetric(vertical: 65.0),
-                  child: HomePageCarouselWithIndicator(
-                    imgList: imgListHomePage,
-                    heightOfSlider: 150,
-                  ),
-                ),
+                // Container(
+                //   // width: MediaQuery.of(context).size.width * 0.85,
+                //   // padding: EdgeInsets.symmetric(vertical: 65.0),
+                //   child: HomePageCarouselWithIndicator(
+                //     imgList: imgListHomePage,
+                //     heightOfSlider: 150,
+                //   ),
+                // ),
 
                 ///Text Categories and See All
                 CustomSellAllRow(

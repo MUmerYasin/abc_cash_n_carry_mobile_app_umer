@@ -71,6 +71,7 @@ class _ABCCreateAddressScreenState extends State<ABCCreateAddressScreen> {
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             child: SingleChildScrollView(
+              keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
               physics: ClampingScrollPhysics(),
               child: Form(
                 child: Column(

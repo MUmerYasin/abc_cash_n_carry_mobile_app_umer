@@ -35,6 +35,7 @@ class _ABCAddressScreenState extends State<ABCAddressScreen> {
           backgroundColor: ButtonWhiteTextColor,
           appBar: CustomBackScreenButton(),
           body: SingleChildScrollView(
+            keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
             physics: ClampingScrollPhysics(),
             child: Padding(
               padding: const EdgeInsets.only(

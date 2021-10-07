@@ -30,6 +30,7 @@ class _ABCPaymentScreenState extends State<ABCPaymentScreen> {
         appBar: CustomBackScreenButton(),
         backgroundColor: ButtonWhiteTextColor,
         body: SingleChildScrollView(
+          keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
           physics: ClampingScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.only(

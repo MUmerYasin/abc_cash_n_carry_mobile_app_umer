@@ -36,6 +36,7 @@ class _ABCConfirmationScreenState extends State<ABCConfirmationScreen> {
     return Scaffold(
         backgroundColor: ButtonWhiteTextColor,
         body: SingleChildScrollView(
+          keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
           physics: ClampingScrollPhysics(),
           child: Container(
             decoration: BoxDecoration(

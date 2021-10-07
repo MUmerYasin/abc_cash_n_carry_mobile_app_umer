@@ -50,6 +50,7 @@ class _ABCItemDetailsAddToCardScreenState
       backgroundColor: Colors.white,
       appBar: CustomAppBarBackAndNotificationButtons(),
       body: SingleChildScrollView(
+        keyboardDismissBehavior : ScrollViewKeyboardDismissBehavior.onDrag,
         physics: ClampingScrollPhysics(),
         child: Column(
           children: [

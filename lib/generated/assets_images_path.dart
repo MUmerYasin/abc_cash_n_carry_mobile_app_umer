@@ -84,3 +84,7 @@ const String imagePathHomePageSlider2 =
     imagesMainPath + 'home_page_slider2.png';
 const String imagePathHomePageSlider3 =
     imagesMainPath + 'home_page_slider3.png';
+
+
+ // Logo Icon
+const String imagePathLogoIcon = imagesMainPath + 'logo_icon.ico';
